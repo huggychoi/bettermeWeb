@@ -6,10 +6,18 @@ export default {
   ],
   theme: {
     extend: {
-      minWidth: {
-        'screen': '320px',
+      fontFamily: {
+        sans: ['Pretendard', 'sans-serif'],
+      },
+      screens: {
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
       },
     },
   },
   plugins: [],
+  darkMode: 'class',
 }
