@@ -1,5 +1,7 @@
 import React from 'react';
 import { 
+  UserPlus,
+  Rocket,
   Syringe, 
   Sparkles,
   Star,
@@ -12,12 +14,22 @@ import {
   Droplets,
   Scissors,
   Diamond,
-  Gift,
-  Rocket,
-  UserPlus
+  Gift
 } from 'lucide-react';
 
 export const tabsConfig = {
+  firstVisit: {
+    icon: <UserPlus size={18} />,
+    label: "첫방문",
+    title: "첫방문",
+    subtitle: "First Visit",
+  },
+  new: {
+    icon: <Rocket size={18} />,
+    label: "신규런칭",
+    title: "신규런칭",
+    subtitle: "New Launch",
+  },
   botox: {
     icon: <Syringe size={18} />,
     label: "보톡스",
@@ -95,17 +107,5 @@ export const tabsConfig = {
     label: "웨딩",
     title: "웨딩",
     subtitle: "Wedding",
-  },
-  new: {
-    icon: <Rocket size={18} />,
-    label: "신규런칭",
-    title: "신규런칭",
-    subtitle: "New Launch",
-  },
-  firstVisit: {
-    icon: <UserPlus size={18} />,
-    label: "첫방문",
-    title: "첫방문",
-    subtitle: "First Visit",
   }
 };

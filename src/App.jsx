@@ -3,10 +3,22 @@ import TabButton from './components/TabButton';
 import BotoxPage from './pages/BotoxPage';
 import RejuranPage from './pages/RejuranPage';
 import LiftingPage from './pages/LiftingPage';
+import UltheraPage from './pages/UltheraPage';
+import WhiteningPage from './pages/WhiteningPage';
+import BodyPage from './pages/BodyPage';
+import VirizenPage from './pages/VirizenPage';
+import SkincarePage from './pages/SkincarePage';
+import BoosterPage from './pages/BoosterPage';
+import AcnePage from './pages/AcnePage';
+import RemovalPage from './pages/RemovalPage';
+import FillerPage from './pages/FillerPage';
+import WeddingPage from './pages/WeddingPage';
+import NewPage from './pages/NewPage';
+import FirstVisitPage from './pages/FirstVisitPage';
 import { tabsConfig } from './config/tabsConfig';
 
 function App() {
-  const [activeTab, setActiveTab] = React.useState('botox');
+  const [activeTab, setActiveTab] = React.useState('FirstVisitPage');
 
   const renderActivePage = () => {
     switch(activeTab) {
@@ -16,6 +28,30 @@ function App() {
         return <RejuranPage />;
       case 'lifting':
         return <LiftingPage />;
+      case 'ulthera':
+        return <UltheraPage />;
+      case 'whitening':
+        return <WhiteningPage />;
+      case 'body':
+        return <BodyPage />;
+      case 'virizen':
+        return <VirizenPage />;
+      case 'skincare':
+        return <SkincarePage />;
+      case 'booster':
+        return <BoosterPage />;
+      case 'acne':
+        return <AcnePage />;
+      case 'removal':
+        return <RemovalPage />;
+      case 'filler':
+        return <FillerPage />;
+      case 'wedding':
+        return <WeddingPage />;
+      case 'new':
+        return <NewPage />;
+      case 'firstVisit':
+        return <FirstVisitPage />;
       default:
         return (
           <div className="w-full min-h-[400px] flex items-center justify-center">
