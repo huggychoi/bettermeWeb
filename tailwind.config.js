@@ -6,9 +6,6 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['Pretendard', 'sans-serif'],
-      },
       minWidth: {
         'screen': '320px',
       },
