@@ -18,7 +18,7 @@ import FirstVisitPage from './pages/FirstVisitPage';
 import { tabsConfig } from './config/tabsConfig';
 
 function App() {
-  const [activeTab, setActiveTab] = React.useState('FirstVisitPage');
+  const [activeTab, setActiveTab] = React.useState('firstVisit');
 
   const renderActivePage = () => {
     switch(activeTab) {
