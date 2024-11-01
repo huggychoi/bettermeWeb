@@ -81,17 +81,19 @@ function App() {
         {/* 왼쪽 탭 메뉴 */}
         <div className="w-14 flex-shrink-0 border-r border-gray-200 bg-white">
           <div className="flex flex-col sticky top-0">
-            {Object.entries(tabsConfig).map(([key, tab]) => (
-              <TabButton
-                key={key}
-                icon={tab.icon}
-                label={tab.label}
-                isActive={activeTab === key}
-                onClick={() => setActiveTab(key)}
-              />
-            ))}
-          </div>
         </div>
+        <div className="p-2">
+          {Object.entries(tabsConfig).map(([key, { icon, label }]) => (
+            <TabButton
+              key={key}
+              icon={icon}
+              label={label}
+              isActive={activeTab === key}
+              onClick={() => setActiveTab(key)}
+            />
+          ))}
+        </div>
+      </div>
 
         {/* 메뉴 내용 */}
         <div className="flex-1 min-w-[306px]"> {/* 320px - 14px(탭메뉴) = 306px */}
