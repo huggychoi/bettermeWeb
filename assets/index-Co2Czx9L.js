@@ -187,11 +187,11 @@ CHA-High+CHA-VEGF (성장인자) 세포 재생, 성장 촉진`,originalPrice:"1,
 +슈모근 고주파+여리미주사 80cc
 +바디 윤곽주사 6cc`,originalPrice:"3,197,000",salePrices:"1,599,000"}]}]},af=()=>p.jsx(p.Fragment,{children:uf.sections.map((e,n)=>p.jsx(G,{...e},n))}),cf={sections:[{title:"VIP 멤버십",description:`베러미 법어점 VIP들을 위한
 할인 멤버십 안내`,items:[{name:"베러미 10",description:`100만원 결제 시 10만원 추가 적립
-10% 할인 멤버십`,price:"1,000,000"},{name:"베러미 15",description:`200만원 결제 시 30만원 추가 적립
-15% 할인 멤버십`,price:"2,000,000"},{name:"베러미 16",description:`300만원 결제 시 50만원 추가 적립
-16% 할인 멤버십`,price:"3,000,000"},{name:"베러미 17",description:`400만원 결제 시 70만원 추가 적립
-17% 할인 멤버십`,price:"4,000,000"},{name:"베러미 18",description:`500만원 결제 시 90만원 추가 적립
-18% 할인 멤버십`,price:"5,000,000"}]},{title:"유효기간 1년",description:"가족 양도 1회 가능, 초진고객 동반 내원시 본인 결제 금액의 5% 적립금 페이백",items:[]}]},df=()=>p.jsx(p.Fragment,{children:cf.sections.map((e,n)=>p.jsx(G,{...e},n))}),ff={sections:[{title:"항노화주사",description:"Anti-aging Treatment",items:[{name:"백옥주사",description:`체내 대사활동을 촉진하고 활성산소를 제거하여
+10% 할인 멤버십`,originalPrice:"1,100,000",salePrices:"1,000,000"},{name:"베러미 15",description:`200만원 결제 시 30만원 추가 적립
+15% 할인 멤버십`,originalPrice:"2,300,000",salePrices:"2,000,000"},{name:"베러미 16",description:`300만원 결제 시 50만원 추가 적립
+16% 할인 멤버십`,originalPrice:"3,500,000",salePrices:"3,000,000"},{name:"베러미 17",description:`400만원 결제 시 70만원 추가 적립
+17% 할인 멤버십`,originalPrice:"4,700,000",salePrices:"4,000,000"},{name:"베러미 18",description:`500만원 결제 시 90만원 추가 적립
+18% 할인 멤버십`,originalPrice:"5,900,000",salePrices:"5,000,000"}]},{title:"유효기간 1년",description:"가족 양도 1회 가능, 초진고객 동반 내원시 본인 결제 금액의 5% 적립금 페이백",items:[]}]},df=()=>p.jsx(p.Fragment,{children:cf.sections.map((e,n)=>p.jsx(G,{...e},n))}),ff={sections:[{title:"항노화주사",description:"Anti-aging Treatment",items:[{name:"백옥주사",description:`체내 대사활동을 촉진하고 활성산소를 제거하여
 면역력강화, 피로회복, 피부톤 개선`,originalPrice:"57,000",salePrices:"29,000",additionalPrices:[{price:"79,000"},{price:"250,000"}]},{name:"더블 백옥주사",description:"글루타치온 함량 2배",originalPrice:"97,000",salePrices:"49,000",additionalPrices:[{price:"129,000"},{price:"399,000"}]},{name:"비타민C 주사",description:"면역력 강화, 피로회복, 피부톤 개선",originalPrice:"57,000",salePrices:"29,000",additionalPrices:[{price:"79,000"},{price:"250,000"}]},{name:"태반주사",description:`*상타입으로 미리예 주사
 피로회복! FDA 승인 영양주사`,originalPrice:"97,000",salePrices:"49,000",additionalPrices:[{price:"129,000"},{price:"399,000"}]},{name:"마늘주사",description:`피로회복과 체력증강, 스트레스회복,
 피부미용, 노화예방`,originalPrice:"97,000",salePrices:"49,000",additionalPrices:[{price:"129,000"},{price:"399,000"}]},{name:"신데렐라주사",description:`체내 활성산소를 제거하여
