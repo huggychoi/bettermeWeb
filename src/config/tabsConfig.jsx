@@ -1,6 +1,6 @@
 import React from 'react';
 import { 
-  UserPlus,
+  Users, // 멤버십용 아이콘
   Rocket,
   Syringe, 
   Sparkles,
@@ -14,15 +14,19 @@ import {
   Droplets,
   Scissors,
   Diamond,
-  Gift
+  Gift,
+  Clock, // 항노화용 아이콘
+  Fingerprint, // 히라셀용 아이콘
+  Flask, // 히스토랩용 아이콘
+  Apple // 건강기능식품용 아이콘
 } from 'lucide-react';
 
 export const tabsConfig = {
-  firstVisit: {
-    icon: <UserPlus size={18} />,
-    label: "첫방문",
-    title: "첫방문",
-    subtitle: "First Visit",
+  membership: {
+    icon: <Users size={18} />,
+    label: "멤버십",
+    title: "멤버십",
+    subtitle: "Membership",
   },
   new: {
     icon: <Rocket size={18} />,
@@ -59,6 +63,12 @@ export const tabsConfig = {
     label: "미백/기미",
     title: "미백/기미",
     subtitle: "Whitening",
+  },
+  antiaging: {
+    icon: <Clock size={18} />,
+    label: "항노화",
+    title: "항노화",
+    subtitle: "Anti-aging",
   },
   body: {
     icon: <Heart size={18} />,
@@ -107,5 +117,23 @@ export const tabsConfig = {
     label: "웨딩",
     title: "웨딩",
     subtitle: "Wedding",
+  },
+  hiracell: {
+    icon: <Fingerprint size={18} />,
+    label: "히라셀",
+    title: "히라셀",
+    subtitle: "Hiracell",
+  },
+  histolab: {
+    icon: <Flask size={18} />,
+    label: "히스토랩",
+    title: "히스토랩",
+    subtitle: "Histolab",
+  },
+  supplements: {
+    icon: <Apple size={18} />,
+    label: "건강기능식품",
+    title: "건강기능식품",
+    subtitle: "Health Supplements",
   }
 };

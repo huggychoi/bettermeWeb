@@ -13,15 +13,21 @@ import AcnePage from './pages/AcnePage';
 import RemovalPage from './pages/RemovalPage';
 import FillerPage from './pages/FillerPage';
 import WeddingPage from './pages/WeddingPage';
-import NewPage from './pages/NewPage';
-import FirstVisitPage from './pages/FirstVisitPage';
+import MembershipPage from './pages/MembershipPage';
+import AntiagingPage from './pages/AntiagingPage';
+import HiracellPage from './pages/HiracellPage';
+import HistolabPage from './pages/HistolabPage';
+import SupplementsPage from './pages/SupplementsPage';
 import { tabsConfig } from './config/tabsConfig';
+import FirstVisitPage from './pages/FirstVisitPage';
 
 function App() {
-  const [activeTab, setActiveTab] = React.useState('firstVisit');
+  const [activeTab, setActiveTab] = React.useState('firstVisit'); // 초기값 변경
 
   const renderActivePage = () => {
     switch(activeTab) {
+      case 'firstVisit': // firstVisit을 membership으로 변경
+        return <FirstVisitPage />;
       case 'botox':
         return <BotoxPage />;
       case 'rejuran':
@@ -32,6 +38,8 @@ function App() {
         return <UltheraPage />;
       case 'whitening':
         return <WhiteningPage />;
+      case 'antiaging': // 새로 추가
+        return <AntiagingPage />;
       case 'body':
         return <BodyPage />;
       case 'virizen':
@@ -48,10 +56,14 @@ function App() {
         return <FillerPage />;
       case 'wedding':
         return <WeddingPage />;
-      case 'new':
-        return <NewPage />;
-      case 'firstVisit':
-        return <FirstVisitPage />;
+      case 'membership':
+        return <MembershipPage />;
+      case 'hiracell': // 새로 추가
+        return <HiracellPage />;
+      case 'histolab': // 새로 추가
+        return <HistolabPage />;
+      case 'supplements': // 새로 추가
+        return <SupplementsPage />;
       default:
         return (
           <div className="w-full min-h-[400px] flex items-center justify-center">
