@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import TabButton from './components/TabButton';
 import BotoxPage from './pages/BotoxPage';
 import RejuranPage from './pages/RejuranPage';
+import LiftingPage from './pages/LiftingPage';
 import { tabsConfig } from './config/tabsConfig';
 
 function App() {
@@ -13,6 +14,8 @@ function App() {
         return <BotoxPage />;
       case 'rejuran':
         return <RejuranPage />;
+      case 'lifting':
+        return <LiftingPage />;
       default:
         return (
           <div className="w-full min-h-[400px] flex items-center justify-center">
