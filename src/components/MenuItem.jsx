@@ -9,7 +9,7 @@ const MenuItem = ({ name, description, originalPrice, salePrices }) => (
           <p className="text-xs text-gray-500 mt-0.5 text-left">{description}</p>
         )}
       </div>
-      <div className="text-right min-w-[100px] ml-4">
+      <div className="text-right min-w-[90px] ml-3">
         {originalPrice && (
           <p className="text-xs text-gray-400 line-through">{originalPrice}원</p>
         )}
