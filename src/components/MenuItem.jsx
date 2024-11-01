@@ -6,7 +6,9 @@ const MenuItem = ({ name, description, originalPrice, salePrices }) => (
       <div className="flex-1">
         <h3 className="text-sm font-medium text-gray-900 text-left">{name}</h3>
         {description && (
-          <p className="text-xs text-gray-500 mt-0.5 text-left">{description}</p>
+          <p className="text-xs text-gray-500 mt-0.5 text-left whitespace-pre-line">
+            {description}
+          </p>
         )}
       </div>
       <div className="text-right min-w-[90px] ml-3">
