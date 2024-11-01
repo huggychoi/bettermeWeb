@@ -4,7 +4,7 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/medical-spa-menu/',
+  base: '/bettermeWeb/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
