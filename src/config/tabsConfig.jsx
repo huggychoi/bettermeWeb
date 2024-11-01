@@ -22,12 +22,7 @@ import {
 } from 'lucide-react';
 
 export const tabsConfig = {
-  membership: {
-    icon: <Users size={18} />,
-    label: "멤버십",
-    title: "멤버십",
-    subtitle: "Membership",
-  },
+  
   firstVisit: {
     icon: <Rocket size={18} />,
     label: "첫방문",
@@ -135,5 +130,11 @@ export const tabsConfig = {
     label: "건강기능식품",
     title: "건강기능식품",
     subtitle: "Health Supplements",
+  },
+  membership: {
+    icon: <Users size={18} />,
+    label: "멤버십",
+    title: "멤버십",
+    subtitle: "Membership",
   }
 };
