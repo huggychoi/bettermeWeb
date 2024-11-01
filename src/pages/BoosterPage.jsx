@@ -1,141 +1,137 @@
 import React from 'react';
 import MenuSection from '../components/MenuSection';
 
-const rejuranData = {
+const boosterData = {
   sections: [
     {
-      title: "리쥬란 힐러",
-      description: "피부재생, 탄력생성, 피부복원",
+      title: "물광주사",
+      description: "피부 진정, 진주름, 물광 어드븐 개선, 노화 예방",
       items: [
         {
-          name: "리쥬란 아이힐러",
-          originalPrice: "217,000",
-          salePrices: "109,000"
-        },
-        {
-          name: "리쥬란 아이힐러 + 국산 눈가보톡스",
-          originalPrice: "237,000",
-          salePrices: "119,000"
-        },
-        {
-          name: "풀페이스 리쥬란",
-          description: "리쥬란힐러 2cc + 아이리쥬란 1cc",
-          originalPrice: "597,000",
-          salePrices: "299,000"
+          name: "물광주사 2.5cc",
+          description: "",
+          originalPrice: "157,000",
+          salePrices: "79,000"
         }
       ]
     },
     {
-      title: "리쥬란 HB plus [무통리쥬란]",
-      description: "통증 최소화, 붓짐 성유 함께!",
+      title: "톡톡광채 톡신",
+      description: "강한 보습력으로 촉촉하게!",
       items: [
         {
-          name: "무통리쥬란 1cc + 크라이오",
-          description: "리쥬란 HB plus (무통리쥬란) 1cc + 히알루론산(HA) + 리드카인 수분강화효과 보강! 눈가, 볼, 목소 부위",
-          originalPrice: "397,000",
-          salePrices: "199,000"
-        },
-        {
-          name: "풀페이스 리쥬란HB",
-          description: "리쥬란HB 2cc + 아이리쥬란 1cc",
-          originalPrice: "797,000",
-          salePrices: "399,000"
-        },
-        {
-          name: "나비존 리쥬란HB 1cc + 리쥬란 스킨부스터 or 톤업부스터 + LDM 재생관리",
-          originalPrice: "657,000",
-          salePrices: "329,000"
-        }
-      ]
-    },
-    {
-      title: "연어주사/아기주사",
-      description: "피부재생, 탄력생성, 피부복원",
-      items: [
-        {
-          name: "연어주사 2cc",
-          originalPrice: "197,000",
-          salePrices: "99,000"
-        },
-        {
-          name: "아기주사(베네브) MTS",
-          originalPrice: "197,000",
-          salePrices: "99,000"
-        }
-      ]
-    },
-    {
-      title: "리쥬란 SET",
-      description: "리쥬란과 여러 스킨부스터들의 만남",
-      items: [
-        {
-          name: "연어리쥬란힐러",
-          description: "리쥬란힐러 2cc + 아이리쥬란 1cc",
-          originalPrice: "397,000",
-          salePrices: "199,000"
-        },
-        {
-          name: "연어주사 + 물광주사 4cc + 크라이오",
-          description: "하이록스 사용",
-          originalPrice: "337,000",
-          salePrices: "169,000"
-        },
-        {
-          name: "리쥬란힐러 + 물광주사 4cc + 크라이오",
-          description: "하이록스 사용",
-          originalPrice: "517,000",
-          salePrices: "259,000"
-        }
-      ]
-    },
-    {
-      title: "리쥬란 스킨부스터/톤업부스터",
-      description: "피부재생, 탄력생성, 피부복원",
-      items: [
-        {
-          name: "리쥬란 스킨부스터 or 톤업부스터 + LDM 약물침투모드 1회",
-          originalPrice: "317,000",
-          salePrices: "159,000"
-        },
-        {
-          name: "리쥬란 스킨부스터 or 톤업부스터 + 베이직 스킨케어 1회",
+          name: "물광 2.5cc + 모공톡신 2.5cc (국산)",
+          description: "",
           originalPrice: "297,000",
           salePrices: "149,000"
-        },
-        {
-          name: "리쥬란 스킨부스터 or 톤업부스터 + MTS + 피코슈어토닝 1",
-          originalPrice: "437,000",
-          salePrices: "219,000"
         }
       ]
     },
     {
-      title: "리쥬란 프로그램",
-      description: "피부재생, 탄력생성, 피부복원",
+      title: "프리미엄 물광주사 릴리이드",
+      description: "기존 물광주사와 차별화, 빠른 엘보싱 흡수",
       items: [
         {
-          name: "리쥬란 미백-재생-리프팅 케어 (4주)",
-          description: "[1주] 리쥬란 스킨부스터 or 톤업부스터 + LDM 재생관리 + 백옥주사 원커\n[2주] 클라렌 리프팅 케어\n[3주] 리쥬란힐러 2cc + 크라이오 관리\n[4주] LDM 물방울리프팅 12분",
-          originalPrice: "997,000",
-          salePrices: "499,000"
+          name: "릴리이드 물광주사 5cc",
+          description: "연어에서 추출한 DNA 성분 PN을\n엄격하게 정제 뒤어난 흡수력과 직은 엘보",
+          originalPrice: "357,000",
+          salePrices: "179,000"
+        }
+      ]
+    },
+    {
+      title: "엑제 실리프팅 울트라콜",
+      description: "울트라V실 1400개를 한방에!, 엑체형 PDO 실리프팅",
+      items: [
+        {
+          name: "울트라콜 100 2cc",
+          description: "울트라V 실 1400개를 한방에!",
+          originalPrice: "299,000",
+          salePrices: "150,000"
         },
         {
-          name: "리쥬란 부스터 미백-재생-리프팅 케어 (4주)",
-          description: "[1주] IBPS 부스터필 + 리쥬란 스킨부스터 or 톤업부스터 MTS\n[2주] 리쥬란 스킨부스터 or 톤업부스터 MTS + LDM 약물침투 + 백옥주사 원커\n[3주] LDM 물방울리프팅 12분\n[4주] 리쥬란 스킨부스터 or 톤업부스터 + 비타민 미백관리 + 비타민C 원커",
-          originalPrice: "797,000",
-          salePrices: "399,000"
+          name: "울트라콜 200 2cc",
+          description: "자연스럽고 안전한 볼륨 울트라콜 200\n필러 부작용이 걱정된다면 차세대 스킨트라 울트라콜",
+          originalPrice: "499,000",
+          salePrices: "250,000"
+        },
+        {
+          name: "울트라콜 200 한 보톨 (6cc)",
+          description: "6cc 당일 진행 시",
+          originalPrice: "1,099,000",
+          salePrices: "550,000"
+        }
+      ]
+    },
+    {
+      title: "쥬베룩 스킨부스터",
+      description: "자가 콜라겐 재생 촉진으로 자연스러운 효과",
+      items: [
+        {
+          name: "쥬베룩 스킨부스터 2cc",
+          description: "콜라겐 재생 부스터 쥬베룩\n진주름, 모공, 흉터 즉각 개선!",
+          originalPrice: "299,000",
+          salePrices: "200,000"
+        },
+        {
+          name: "쥬베룩 스킨부스터 1cc",
+          description: "다른 시술에 추가 진행 시",
+          originalPrice: "199,000",
+          salePrices: "100,000"
+        }
+      ]
+    },
+    {
+      title: "쥬베룩 볼륨",
+      description: "자연스럽게 오래 지속되는 자가콜라겐 스킨부스터",
+      items: [
+        {
+          name: "4cc",
+          description: "PDLLA 성분으로 기존 스킬트러보다 부작용은 줄이고\n효과는 더 좋아진 자가 콜라겐 생성 볼륨 부스터\n눈밑 고랑 부위 시술 제외",
+          originalPrice: "899,000",
+          salePrices: "450,000"
+        },
+        {
+          name: "한 보톨 (8cc)",
+          description: "8cc 당일 진행 시",
+          originalPrice: "1,499,000",
+          salePrices: "750,000"
+        }
+      ]
+    },
+    {
+      title: "ISCE 엑소좀",
+      description: "ISCE 인체표피줄기세포배양액 함유된 스킨부스터\n피부 재생, 노화로 인한 피부 탄력을 증점으로 개선",
+      items: [
+        {
+          name: "ISCE 더블엑소좀",
+          description: "ISCE 엑소좀 1차+2차 MIX 3cc MTS + 시트팩",
+          originalPrice: "357,000",
+          salePrices: "179,000"
+        },
+        {
+          name: "ISCE 코어 재생 더블리프팅(ISCE+비쥬RF)",
+          description: "비쥬RF + ISCE 엑소좀 1차+2차 MIX 3cc MTS + 시트팩",
+          originalPrice: "597,000",
+          salePrices: "299,000"
+        },
+        {
+          name: "멜라부스터 더블토닝(ISCE+피코슈어토닝) 5회",
+          description: "피코슈어토닝 + ISCE 엑소좀 1차+2차 MIX 3cc MTS + 시트팩\n\nEPC-CM 콜라겐 생성 촉진, 항노화 증폭개선\nMD-EXOSOME 피부항영 및 재생, 항산산소 제거\nCHA-High+CHA-VEGF (성장인자) 세포 재생, 성장 촉진",
+          originalPrice: "1,979,000",
+          salePrices: "990,000"
         }
       ]
     }
   ]
 };
 
-const RejuranPage = () => (
+const BoosterPage = () => (
   <>
-    {rejuranData.sections.map((section, idx) => (
+    {boosterData.sections.map((section, idx) => (
       <MenuSection key={idx} {...section} />
     ))}
   </>
 );
 
-export default RejuranPage;
+export default BoosterPage;
