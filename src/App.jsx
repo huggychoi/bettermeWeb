@@ -23,19 +23,18 @@ import FirstVisitPage from './pages/FirstVisitPage';
 
 function App() {
   const [activeTab, setActiveTab] = React.useState('membership');
-  const menuContentRef = React.useRef(null);
+  const contentRef = React.useRef(null);
 
   const handleTabClick = (key) => {
     setActiveTab(key);
     // 메뉴판 영역을 최상단으로 스크롤
-    if (menuContentRef.current) {
-      menuContentRef.current.scrollTo({
+    if (contentRef.current) {
+      contentRef.current.scrollTo({
         top: 0,
         behavior: 'smooth'
       });
     }
   };
-
   const renderActivePage = () => {
     switch(activeTab) {
       case 'firstVisit': // firstVisit을 membership으로 변경
@@ -88,41 +87,32 @@ function App() {
   };
 
   return (
-    <div className="flex justify-center min-h-screen bg-gray-50 w-full">
-      <div className="w-full md:w-[768px] flex">
-        {/* 왼쪽 탭 메뉴 */}
-        <div className="w-14 flex-shrink-0 border-r border-gray-200 bg-white">
-          <div className="flex flex-col sticky top-0">
+    <div className="fixed inset-0 flex bg-gray-50">
+      {/* 왼쪽 카테고리 영역 - 독립 스크롤 */}
+      <div className="w-72 h-full overflow-y-auto bg-white border-r flex-shrink-0">
+        <div className="sticky top-0 bg-white z-10 p-4 border-b">
+      
         </div>
-        <div className="p-2">
+        <div className="p-4">
           {Object.entries(tabsConfig).map(([key, { icon, label }]) => (
             <TabButton
               key={key}
               icon={icon}
               label={label}
               isActive={activeTab === key}
-              onClick={() => setActiveTab(key)}
+              onClick={() => handleTabClick(key)}
             />
           ))}
         </div>
       </div>
 
-        {/* 메뉴 내용 */}
-        <div className="flex-1 min-w-[306px]"> {/* 320px - 14px(탭메뉴) = 306px */}
-          <div className="p-3 md:p-4">
-            <h1 className="text-lg font-bold text-center">
-              {tabsConfig[activeTab].title}
-            </h1>
-            <p className="text-xs text-gray-500 mt-0.5 mb-3 text-center">
-              {tabsConfig[activeTab].subtitle}
-            </p>
-
-            {renderActivePage()}
-
-            <div className="text-center text-xs text-gray-500 mt-3 pb-4">
-              부가세 10% 별도
-            </div>
-          </div>
+    {/* 오른쪽 메뉴판 영역 - 독립 스크롤 */}
+    <div 
+        ref={contentRef}
+        className="flex-1 h-full overflow-y-auto"
+      >
+        <div className="max-w-4xl mx-auto p-6">
+          {renderActivePage()}
         </div>
       </div>
     </div>
