@@ -22,7 +22,7 @@ import { tabsConfig } from './config/tabsConfig';
 import FirstVisitPage from './pages/FirstVisitPage';
 
 function App() {
-  const [activeTab, setActiveTab] = React.useState('membership');
+  const [activeTab, setActiveTab] = React.useState('firstVisit');
   const contentRef = React.useRef(null);
 
   const handleTabClick = (key) => {
@@ -37,7 +37,7 @@ function App() {
   };
   const renderActivePage = () => {
     switch(activeTab) {
-      case 'firstVisit': // firstVisit을 membership으로 변경
+      case 'firstVisit': // firstVisit을
         return <FirstVisitPage />;
       case 'botox':
         return <BotoxPage />;

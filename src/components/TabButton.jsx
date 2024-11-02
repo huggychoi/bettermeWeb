@@ -3,8 +3,8 @@ const TabButton = ({ icon, label, isActive, onClick }) => {
     <button
       onClick={onClick}
       className={`
-        w-full px-4 py-3 mb-1 rounded-lg
-        flex items-center gap-3
+        w-full px-3 py-2 mb-1 rounded-lg
+        flex items-center gap-2
         transition-all duration-200
         ${isActive 
           ? 'bg-rose-50 text-rose-600 font-medium' 
@@ -15,7 +15,7 @@ const TabButton = ({ icon, label, isActive, onClick }) => {
       <span className="flex-shrink-0">
         {icon}
       </span>
-      <span className="text-sm">
+      <span className="text-sm truncate">
         {label}
       </span>
     </button>
