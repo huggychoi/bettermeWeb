@@ -88,12 +88,18 @@ function App() {
 
   return (
     <div className="fixed inset-0 flex bg-gray-50">
-      {/* 왼쪽 카테고리 영역 - 독립 스크롤 */}
-      <div className="w-72 h-full overflow-y-auto bg-white border-r flex-shrink-0">
-        <div className="sticky top-0 bg-white z-10 p-4 border-b">
-      
+      {/* 왼쪽 카테고리 영역 - 너비 축소 및 스크롤바 숨김 */}
+      <div 
+        className="w-14 h-full overflow-y-auto bg-white border-r flex-shrink-0 scrollbar-hide"
+        style={{
+          msOverflowStyle: 'none',  /* IE and Edge */
+          scrollbarWidth: 'none'     /* Firefox */
+        }}
+      >
+        <div className="sticky top-0 bg-white z-10 p-3 border-b">
+
         </div>
-        <div className="p-4">
+        <div className="p-2">
           {Object.entries(tabsConfig).map(([key, { icon, label }]) => (
             <TabButton
               key={key}
@@ -105,6 +111,7 @@ function App() {
           ))}
         </div>
       </div>
+
 
     {/* 오른쪽 메뉴판 영역 - 독립 스크롤 */}
     <div 
