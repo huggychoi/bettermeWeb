@@ -22,7 +22,19 @@ import { tabsConfig } from './config/tabsConfig';
 import FirstVisitPage from './pages/FirstVisitPage';
 
 function App() {
-  const [activeTab, setActiveTab] = React.useState('firstVisit'); // 초기값 변경
+  const [activeTab, setActiveTab] = React.useState('membership');
+  const menuContentRef = React.useRef(null);
+
+  const handleTabClick = (key) => {
+    setActiveTab(key);
+    // 메뉴판 영역을 최상단으로 스크롤
+    if (menuContentRef.current) {
+      menuContentRef.current.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   const renderActivePage = () => {
     switch(activeTab) {
