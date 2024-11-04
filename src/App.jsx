@@ -91,14 +91,14 @@ function App() {
     <div className="fixed inset-0 flex bg-gray-50">
       {/* 왼쪽 카테고리 영역 */}
       <div 
-        className="w-14 h-full overflow-y-auto bg-white border-r flex-shrink-0 scrollbar-hide"
+        className="w-min h-full overflow-y-auto bg-white border-r flex-shrink-0 scrollbar-hide"
         style={{
           msOverflowStyle: 'none',
           scrollbarWidth: 'none'
         }}
       >
         <div className="sticky top-0 bg-white z-10 p-3 border-b">
-          <h1 className="text-base font-bold">베터미 법어점</h1>
+          
           <p className="text-sm text-gray-500 mt-1">MENU</p>
         </div>
         <div className="p-2">
@@ -122,7 +122,7 @@ function App() {
         {/* 현재 메뉴의 제목 */}
         <div className="sticky top-0 bg-white border-b z-10">
           <div className="max-w-4xl mx-auto px-6 py-4">
-            <h1 className="text-xl font-bold">{tabsConfig[activeTab].title}</h1>
+            <h1 className="text-xl font-bold">{tabsConfig[activeTab].label}</h1>
             <p className="text-sm text-gray-500 mt-1">{tabsConfig[activeTab].subtitle}</p>
           </div>
         </div>
