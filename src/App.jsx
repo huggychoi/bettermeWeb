@@ -129,6 +129,9 @@ function App() {
         
         <div className="max-w-4xl mx-auto p-6">
           {renderActivePage()}
+          <div className="text-left text-xs text-gray-500 mt-3 pb-4">
+              부가세 10% 별도
+          </div>
         </div>
       </div>
     </div>
