@@ -22,12 +22,11 @@ import { tabsConfig } from './config/tabsConfig';
 import FirstVisitPage from './pages/FirstVisitPage';
 
 function App() {
-  const [activeTab, setActiveTab] = React.useState('firstVisit');
+  const [activeTab, setActiveTab] = React.useState('membership');
   const contentRef = React.useRef(null);
 
   const handleTabClick = (key) => {
     setActiveTab(key);
-    // 메뉴판 영역을 최상단으로 스크롤
     if (contentRef.current) {
       contentRef.current.scrollTo({
         top: 0,
@@ -35,6 +34,7 @@ function App() {
       });
     }
   };
+  
   const renderActivePage = () => {
     switch(activeTab) {
       case 'firstVisit': // firstVisit을
@@ -75,6 +75,7 @@ function App() {
         return <HistolabPage />;
       case 'supplements': // 새로 추가
         return <SupplementsPage />;
+      
       default:
         return (
           <div className="w-full min-h-[400px] flex items-center justify-center">
@@ -88,23 +89,24 @@ function App() {
 
   return (
     <div className="fixed inset-0 flex bg-gray-50">
-      {/* 왼쪽 카테고리 영역 - 너비 축소 및 스크롤바 숨김 */}
+      {/* 왼쪽 카테고리 영역 */}
       <div 
         className="w-14 h-full overflow-y-auto bg-white border-r flex-shrink-0 scrollbar-hide"
         style={{
-          msOverflowStyle: 'none',  /* IE and Edge */
-          scrollbarWidth: 'none'     /* Firefox */
+          msOverflowStyle: 'none',
+          scrollbarWidth: 'none'
         }}
       >
         <div className="sticky top-0 bg-white z-10 p-3 border-b">
-
+          <h1 className="text-base font-bold">베터미 법어점</h1>
+          <p className="text-sm text-gray-500 mt-1">MENU</p>
         </div>
         <div className="p-2">
-          {Object.entries(tabsConfig).map(([key, { icon, label }]) => (
+          {Object.entries(tabsConfig).map(([key, config]) => (
             <TabButton
               key={key}
-              icon={icon}
-              label={label}
+              icon={config.icon}
+              label={config.label}
               isActive={activeTab === key}
               onClick={() => handleTabClick(key)}
             />
@@ -112,12 +114,19 @@ function App() {
         </div>
       </div>
 
-
-    {/* 오른쪽 메뉴판 영역 - 독립 스크롤 */}
-    <div 
+      {/* 오른쪽 메뉴판 영역 */}
+      <div 
         ref={contentRef}
         className="flex-1 h-full overflow-y-auto"
       >
+        {/* 현재 메뉴의 제목 */}
+        <div className="sticky top-0 bg-white border-b z-10">
+          <div className="max-w-4xl mx-auto px-6 py-4">
+            <h1 className="text-xl font-bold">{tabsConfig[activeTab].title}</h1>
+            <p className="text-sm text-gray-500 mt-1">{tabsConfig[activeTab].subtitle}</p>
+          </div>
+        </div>
+        
         <div className="max-w-4xl mx-auto p-6">
           {renderActivePage()}
         </div>
