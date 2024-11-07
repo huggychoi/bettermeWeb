@@ -8,13 +8,13 @@ const acneData = {
       description: "지울 수 저자극 모공 어드룸, 흉터 재생, 피부 탄력개선",
       items: [
         {
-          name: "힐리우드 프락셀 (나비존) + 크라이오 + 모델링팩",
+          name: "헐리우드 프락셀 (나비존) + 크라이오 + 모델링팩",
           description: "다운타임 적은 저통증 프락셀",
           originalPrice: "117,000",
           salePrices: "59,000"
         },
         {
-          name: "힐리우드 프락셀 (전체) + 크라이오 + 모델링팩",
+          name: "헐리우드 프락셀 (전체) + 크라이오 + 모델링팩",
           description: "다운타임 적은 저통증 프락셀",
           originalPrice: "157,000",
           salePrices: "79,000"
