@@ -185,7 +185,7 @@ CHA-High+CHA-VEGF (성장인자) 세포 재생, 성장 촉진`,originalPrice:"1,
 [드레스라인 바디케어]
 슈모근 보톡스 200U (국산)
 +슈모근 고주파+여리미주사 80cc
-+바디 윤곽주사 6cc`,originalPrice:"3,197,000",salePrices:"1,599,000"}]}]},af=()=>p.jsx(p.Fragment,{children:uf.sections.map((e,n)=>p.jsx(G,{...e},n))}),cf={sections:[{title:"VIP 멤버십",description:`베러미 법어점 VIP들을 위한
++바디 윤곽주사 6cc`,originalPrice:"3,197,000",salePrices:"1,599,000"}]}]},af=()=>p.jsx(p.Fragment,{children:uf.sections.map((e,n)=>p.jsx(G,{...e},n))}),cf={sections:[{title:"VIP 멤버십",description:`베러미 범어점 VIP들을 위한
 할인 멤버십 안내`,items:[{name:"베러미 10",description:`100만원 결제 시 10만원 추가 적립
 10% 할인 멤버십`,originalPrice:"1,100,000",salePrices:"1,000,000"},{name:"베러미 15",description:`200만원 결제 시 30만원 추가 적립
 15% 할인 멤버십`,originalPrice:"2,300,000",salePrices:"2,000,000"},{name:"베러미 16",description:`300만원 결제 시 50만원 추가 적립
