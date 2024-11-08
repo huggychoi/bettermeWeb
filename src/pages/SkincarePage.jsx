@@ -152,8 +152,20 @@ const skincareData = {
       ]
     },
     {
+      title: "스킨케어 패키지 프로그램",
+      description: "패키지 프로그램",
+      items: [
+        {
+          name: "프리미엄 스킨케어",
+          description: "선택관리(플라필/부스터필/라라필/물톡스/LDM 12분) \n+ + 선택관리(수분/진정/재생/미백)",
+          originalPrice: "199,000",
+          salePrices: "100,000"
+        }
+      ]
+    },
+    {
       title: "LDM 재생/홍조/여드름/물방울",
-      description: "저자극 프리미엄 보습 관리, 고편포 초음파",
+      description: "저자극 프리미엄 보습 관리, 고밀도 초음파",
       items: [
         {
           name: "LDM 베이직 8분",
@@ -167,10 +179,22 @@ const skincareData = {
           salePrices: "45,000"
         },
         {
+          name: "LDM 베이직 8분 + 빛타민케어",
+          description: "LDM 8분 + 빛타민케어 + LED + 모델링팩",
+          originalPrice: "97,000",
+          salePrices: "49,000"
+        }
+        {
           name: "LDM 물방울 리프팅 12분",
           description: "LDM 12분 물방울리프팅 + LED + 모델링팩",
           originalPrice: "117,000",
           salePrices: "59,000"
+        }
+        {
+          name: "LDM 물방울 리프팅 20분",
+          description: "LDM 20분 물방울리프팅 + LED + 모델링팩",
+          originalPrice: "157,000",
+          salePrices: "79,000"
         }
       ]
     }
