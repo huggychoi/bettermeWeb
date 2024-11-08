@@ -21,7 +21,7 @@ const skincareData = {
       items: [
         {
           name: "고주파 작은 얼굴 붓기 케어",
-          description: "고주파 관리(7분)+LED+상온수딤팩\n얼굴붓기&림프순환 작은 얼굴 만들기",
+          description: "고주파 관리(7분)+LED+상온수딩팩\n얼굴붓기& 림프순환 작은 얼굴 만들기",
           originalPrice: "97,000",
           salePrices: "49,000"
         }

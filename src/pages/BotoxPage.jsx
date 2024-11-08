@@ -47,7 +47,7 @@ const botoxData = {
     },
     {
       title: "더모톡신",
-      description: "전주름 개선, 맹글맹글한 피부탄력",
+      description: "잔주름 개선, 탱글탱글한 피부탄력",
       items: [
         {
           name: "더모톡신(스킨보톡스) 1부위 [국산]",
@@ -105,7 +105,7 @@ const botoxData = {
     },
     {
       title: "다한증 보톡스",
-      description: "원래 어터셔나 보송보송해지자",
+      description: "원래 어디서나 보송보송 해지자",
       items: [
         {
           name: "다한증 보톡스 50u [국산]",
@@ -125,11 +125,11 @@ const botoxData = {
       ]
     },
     {
-      title: "보이올렛 주사",
+      title: "브이올렛 주사",
       items: [
         {
-          name: "보이올렛 주사 2cc 1회",
-          description: "이중턱 파괴!! 지방세포파 자체를 파괴, 콜라겐 합성 도움으로 턱선 유지까지! 지방 세포의 수가 줄어 반영구적인 효과 *이중턱 복원안 가능",
+          name: "브이올렛 주사 2cc 1회",
+          description: "이중턱 파괴!! 지방세포 자체를 파괴, 콜라겐 합성 도움으로 턱선 유지까지! \n지방 세포의 수가 줄어 반영구적인 효과 *이중턱 복원 가능",
           originalPrice: "497,000",
           salePrices: "249,000"
         }

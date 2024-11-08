@@ -61,7 +61,7 @@ const firstVisitData = {
         },
         {
           name: "리프테라2 2000샷",
-          description: "세상한 부위 콜라 리프팅\n통증 최소화!",
+          description: "세심한 부위별 리프팅\n통증 최소화!",
           salePrices: "40,000"
         },
         {
