@@ -181,8 +181,6 @@ const whiteningData = {
           salePrices: "1,199,000"
         }
       ]
-     }
-    ]
     }
   ]
 };
