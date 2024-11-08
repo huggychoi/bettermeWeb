@@ -147,6 +147,3 @@ const BotoxPage = () => (
 );
 
 export default BotoxPage;
-
-
-

@@ -13,7 +13,7 @@ const firstVisitData = {
           salePrices: "10,000"
         },
         {
-          name: "비타민주사",
+          name: "비타민 주사",
           description: "부족한 비타민 보충\n면역력 강화, 피로회복, 피부톤 개선",
           salePrices: "10,000"
         },

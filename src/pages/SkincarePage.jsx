@@ -81,7 +81,7 @@ const skincareData = {
       items: [
         {
           name: "프리미엄 물톡스",
-          description: "높은 보습효과와 피부 보호 장벽 개선 효과를 통해 속부터 반짝이는 물광 피부를 만들어 줄 물톡스\n+ 피부탄력 & 보습효과",
+          description: "높은 보습효과와 피부 보호 장벽 개선 효과를 통해 속부터 반짝이는 물광 피부를 만들어 줄 물톡스\n 피부탄력 & 보습효과",
           originalPrice: "137,000",
           salePrices: "69,000"
         }
@@ -96,17 +96,13 @@ const skincareData = {
           description: "*압출 유무 20,000원 추가",
           originalPrice: "57,000",
           salePrices: "29,000"
-        }
-      ]
-      items: [
+        },      
         {
           name: "2세대 오투덤 산소테라피",
           description: "산소폭탄 휘핑마스크 + 오투덤 활력앰플 \n+ + 산소이온돔 + 모델링팩",
           originalPrice: "97,000",
           salePrices: "49,000"
-        }
-      ]
-      items: [
+        },
         {
           name: "여드름 스케일링",
           description: "전체 압출+ 진정 관리",
@@ -183,13 +179,13 @@ const skincareData = {
           description: "LDM 8분 + 빛타민케어 + LED + 모델링팩",
           originalPrice: "97,000",
           salePrices: "49,000"
-        }
+        },
         {
           name: "LDM 물방울 리프팅 12분",
           description: "LDM 12분 물방울리프팅 + LED + 모델링팩",
           originalPrice: "117,000",
           salePrices: "59,000"
-        }
+        },
         {
           name: "LDM 물방울 리프팅 20분",
           description: "LDM 20분 물방울리프팅 + LED + 모델링팩",
