@@ -92,7 +92,7 @@ Error generating stack: `+l.message+`
 침투 시켜주는 신개념 솔루션
 *압출유무(+10,000원 추가)`,originalPrice:"117,000",salePrices:"59,000"},{name:"라라샷 + LDM 베이직 8분",description:"라라샷 + LDM 8분 + LED + 마스크팩",originalPrice:"197,000",salePrices:"99,000"}]},{title:"라라젯",description:"물 맛이 다른 모공 케어, 라라젯",items:[{name:"라라젯",description:"매우 미세한 고압의 물줄기로 진행되는 프리미엄 피지관리",originalPrice:"157,000",salePrices:"79,000"}]},{title:"콜라겐 리프팅케어",description:"마이크로 초음파로 리프팅과 콜라겐 관리를 동시에!",items:[{name:"콜라겐 리프팅케어",description:`플로리스 리프팅 1500샷 + 콜라겐앰플
 + LDM 관리 6분 + 마스크팩`,originalPrice:"117,000",salePrices:"59,000"}]},{title:"연예인 필링, 물톡스",description:"PHA 물톡스 필링, 르네상스 필링",items:[{name:"프리미엄 물톡스",description:`높은 보습효과와 피부 보호 장벽 개선 효과를 통해 속부터 반짝이는 물광 피부를 만들어 줄 물톡스
-+ 피부탄력 & 보습효과`,originalPrice:"137,000",salePrices:"69,000"}]},{title:"아쿠아필 / 오투덤 산소테라피",description:"저자극 모공관리와 프리미엄 스킨케어",items:[{name:"아쿠아필 3단계",description:"*압출 유무 20,000원 추가",originalPrice:"57,000",salePrices:"29,000"},{name:"2세대 오투덤 산소테라피",description:`산소폭탄 휘핑마스크 + 오투덤 활력앰플 
+ 피부탄력 & 보습효과`,originalPrice:"137,000",salePrices:"69,000"}]},{title:"아쿠아필 / 오투덤 산소테라피",description:"저자극 모공관리와 프리미엄 스킨케어",items:[{name:"아쿠아필 3단계",description:"*압출 유무 20,000원 추가",originalPrice:"57,000",salePrices:"29,000"},{name:"2세대 오투덤 산소테라피",description:`산소폭탄 휘핑마스크 + 오투덤 활력앰플 
 + + 산소이온돔 + 모델링팩`,originalPrice:"97,000",salePrices:"49,000"},{name:"여드름 스케일링",description:"전체 압출+ 진정 관리",originalPrice:"117,000",salePrices:"59,000"}]},{title:"프리미엄 필링 관리",description:"건강하고 탄력있는 피부 개선",items:[{name:"플래티넘 클라필",description:`플래티넘 클라필 + LED + 시트팩
 * LDM 침투모드 추가시 +35,000원
 백금(플래티넘)으로 하는 궁극의 피부 강화 신개념 필링`,originalPrice:"137,000",salePrices:"69,000"},{name:"블랙필",description:`블랙필 + 세보마스크 + 크라이오 + LED
@@ -115,30 +115,30 @@ CHA-High+CHA-VEGF (성장인자) 세포 재생, 성장 촉진`,originalPrice:"1,
 * 압출유무(+10,000원 추가)`,originalPrice:"255,000",salePrices:"128,000"}]},{title:"버츄RF",description:"모공, 여드름 흉터 재생, 피부 탄력개선",items:[{name:"버츄RF(나비존) + 크라이오 진정관리",originalPrice:"257,000",salePrices:"129,000"},{name:"버츄RF(얼굴전체) + 크라이오 진정관리",originalPrice:"457,000",salePrices:"179,000"}]},{title:"골드 PTT",description:"깊숙히 침투하는 골드 입자, 강력한 레이저로 피지샘 파괴, 여드름 치료",items:[{name:"골드 PTT 여드름/주름/미백 치료",description:`스크럽 + 골드 PTT 도포 + 초음파 5분
 + 엑셀V 듀얼모드 + 시트팩 + LED`,originalPrice:"397,000",salePrices:"199,000"}]},{title:"여드름 케어 프로그램",description:"베러미만의 여드름 케어 프로그램",items:[{name:"베러미 여드름 케어 프로그램 (4주)",description:`[1주] 아쿠아필(압출 포함) + 네오빔 + 크라이오 + LED + 모델링팩 + 염증주사 or 여드름약처방
 [2주] 라라샷 + 수분침투관리 + 엑셀V제네시스 + 진정팩
-[3주] 네오빔(망출포함) + 크라이오 + LED + 모델링팩
-[4주] 라라샷 + 수분침투관리 + 엑셀V제네시스 + 진정팩 (염증 주사 시술 가능)`,originalPrice:"797,000",salePrices:"399,000"}]},{title:"모공 축소 프로그램",description:"모공 살균, 흉터 재생, 모공 수축, 피부결 개선",items:[{name:"베러미 모공 베이직 프로그램 (4주)",description:`[1주] 아쿠아필 + 스펙트라필 + 크라이오 + LED + 모델링팩
-[2주] 피코슈어토닝팩 + 모공주사 + 크라이오 + LED + 모델링팩
-[3주] 버츄RF 열굴전체 + 재생관리 + LED + 모델링팩
-[4주] 피코슈어토닝 + 아기주사 + 크라이오 + LED + 모델링팩`,originalPrice:"797,000",salePrices:"399,000"}]},{title:"아기 모공 프로그램",description:"늘어진 모공에 대한 고민을 위한 아기 모공 프로그램",items:[{name:"베러미 여드름 흉터 프로그램 (5주)",description:`[1주] 아쿠아필 + 피코프락셀 + PDRN재생주사 + 크라이오 + LED + 모델링
+[3주] 네오빔(압출포함) + 크라이오 + LED + 모델링팩
+[4주] 라라샷 + 수분침투관리 + 엑셀V제네시스 + 진정팩 (염증 주사 시술 가능)`,originalPrice:"797,000",salePrices:"399,000"}]},{title:"모공 쫀쫀 프로그램",description:"모공 살균, 콜라겐 재생, 모공 수축, 피부결 개선",items:[{name:"베러미 모공 베이직 프로그램 (4주)",description:`[1주] 아쿠아필 + 스펙트라필 + 크라이오 + LED + 모델링팩
+[2주] 피코슈어 프락셀 + 모공주사 + 크라이오 + LED + 모델링팩
+[3주] 버츄RF 얼굴전체 + 재생관리 + LED + 모델링팩
+[4주] 피코슈어 프락셀 + 아기주사 + 크라이오 + LED + 모델링팩`,originalPrice:"797,000",salePrices:"399,000"}]},{title:"아기 모공 프로그램",description:"늘어진 모공에 대한 고민을 위한 아기 모공 프로그램",items:[{name:"베러미 여드름 흉터 프로그램 (5주)",description:`[1주] 아쿠아필 + 피코프락셀 + PDRN재생주사 + 크라이오 + LED + 모델링
 [2주] 버츄RF 얼굴 전체 + 아기주사 + 초음파관리 + LED + 모델링
 [3주] 쥬베룩 모공주사 2cc + LDM재생관리 + 진정팩
 [4주] 헐리우드 프락셀 + 아기주사 + 크라이오 + LED + 모델링팩
-[5주] 아쿠아필 + 피코프락셀 + PDRN재생주사 + 크라이오 + LED + 모델링`,originalPrice:"997,000",salePrices:"499,000"}]},{title:"여드름 흉터 프로그램",description:"여드름 흉터, 쥬베룩과 버츄RF로 관리",items:[{name:"베리미 모공 프리미엄 프로그램 (8주)",description:`[1주] 아쿠아필 + 스펙트라필 + 크라이오 + LED + 모델링팩
+[5주] 아쿠아필 + 피코프락셀 + PDRN재생주사 + 크라이오 + LED + 모델링팩`,originalPrice:"997,000",salePrices:"499,000"}]},{title:"여드름 흉터 프로그램",description:"여드름 흉터, 프락셀과 버츄RF로 관리",items:[{name:"베리미 모공 프리미엄 프로그램 (8주)",description:`[1주] 아쿠아필 + 스펙트라필 + 크라이오 + LED + 모델링팩
 [2주] 쥬베룩물광4cc + LDM재생관리+LED + 모델링팩
-[3주] 피코슈어토닝 + 모공주사 + 크라이오 + LED + 모델링팩
-[4주] 버츄RF 열굴전체 + 아기주사 + 크라이오 + LED + 모델링팩
-[5주] 라라빔 + 엑셀V제네시스 + LDM재생관리 + LED + 모델링팩
-[6주] 헐리우드프락셀 + 아기주사 + LED + 모델링팩
+[3주] 피코슈어 프락셀 + 모공주사 + 크라이오 + LED + 모델링팩
+[4주] 버츄RF 얼굴전체 + 아기주사 + 크라이오 + LED + 모델링팩
+[5주] 라라필 + 엑셀V제네시스 + LDM재생관리 + LED + 모델링팩
+[6주] 헐리우드프락셀 + 아기주사 + 크라이오+ LED + 모델링팩
 [7주] 쥬베룩물광4cc + LDM재생관리 + LED + 모델링팩
-[8주] 버츄RF 열굴전체 + 아기주사 + 크라이오 + LED + 모델링팩`,originalPrice:"1,997,000",salePrices:"999,000"}]},{title:"여드름 자국/흉터 프로그램",description:"여드름 자국/흉터를 한번에 해결하는 올인원 패키지",items:[{name:"베러미 여드름 자국/흉터 프리미엄 프로그램 (10주)",description:`[1주] 스펙트라필 + 피코프락셀 + PDRN재생주사 + 크라이오 + LED + 모델링
+[8주] 버츄RF 얼굴전체 + 아기주사 + 크라이오 + LED + 모델링팩`,originalPrice:"1,997,000",salePrices:"999,000"}]},{title:"여드름 자국/흉터 프로그램",description:"여드름 자국/흉터를 한번에 해결하는 올인원 패키지",items:[{name:"베러미 여드름 자국/흉터 프리미엄 프로그램 (10주)",description:`[1주] 스펙트라필 + 피코프락셀 + PDRN재생주사 + 크라이오 + LED + 모델링
 [2주] 엑셀V제네시스 + 엑셀V레드스카 + 진정관리 + LED + 모델링
-[3주] 버츄RF 열굴전체 + 아기주사 + 초음파관리 + LED + 모델링
-[4주] 헐리우드 듀얼토닝 + LDM + LED + 모델링
+[3주] 버츄RF 얼굴전체 + 아기주사 + 초음파관리 + LED + 모델링
+[4주] 헐리우드 듀얼토닝 + LDM 홍조 + LED + 모델링
 [5주] 쥬베룩모공주사4cc + LDM재생관리 + 진정팩
-[6주] 스펙트라필 + 엑셀V 홍조/레드스카 + 크라이오 + LED + 모델링팩
+[6주] 스펙트라필 + 엑셀V 홍조/레드스카 + 크라이오 + LED + 모델링
 [7주] 피코프락셀 + PDRN재생주사 + LDM재생관리 + 진정팩
-[8주] 버츄RF 열굴전체 + ISCE 엑소좀 + 초음파관리 + LED + 모델링팩
-[9주] 헐리우드 듀얼토닝 + LDM + LED + 모델링
+[8주] 버츄RF 얼굴전체 + ISCE 엑소좀 + 초음파관리 + LED + 모델링
+[9주] 헐리우드 듀얼토닝 + LDM 홍조+ LED + 모델링
 [10주] 피코슈어토닝 + 엑셀V제네시스 + 수분관리 + LED + 모델링팩`,originalPrice:"2,597,000",salePrices:"1,299,000"}]}]},tf=()=>p.jsx(p.Fragment,{children:nf.sections.map((e,n)=>p.jsx(G,{...e},n))}),rf={sections:[{title:"아포지 플러스 제모 [남성]",description:"공홈하격/플원요버 레이저 제모",items:[{name:"얼굴 부위(턱/인중/볼/구렛나루/앞목) 중 선택",description:"*권장 추가: 2-3주 간격",originalPrice:"57,000",salePrices:"29,000"},{name:"턱 + 인중",originalPrice:"77,000",salePrices:"39,000"},{name:"풀페이스 (턱+인중+턱라인+구렛나루)",originalPrice:"117,000",salePrices:"59,000"},{name:"겨드랑이",originalPrice:"39,000",salePrices:"20,000"},{name:"이마/눈썹 위/눈두덩이/미간 중 선택",originalPrice:"57,000",salePrices:"29,000"},{name:"뒷목 + 헤어라인",originalPrice:"97,000",salePrices:"49,000"},{name:"팔 상완",originalPrice:"79,000",salePrices:"40,000"},{name:"팔 하완 + 손등+ 손가락",originalPrice:"97,000",salePrices:"49,000"},{name:"팔 전체 + 손등 + 손가락",originalPrice:"177,000",salePrices:"89,000"},{name:"가슴/배/등 상부/등 하부",originalPrice:"137,000",salePrices:"69,000"},{name:"등 전체",originalPrice:"297,000",salePrices:"149,000"},{name:"종아리 + 무릎",originalPrice:"137,000",salePrices:"69,000"},{name:"허벅지",originalPrice:"179,000",salePrices:"90,000"},{name:"다리 전체 + 발등 + 발가락",originalPrice:"337,000",salePrices:"169,000"},{name:"손등 + 손가락 / 발등 + 발가락",originalPrice:"39,000",salePrices:"20,000"}]},{title:"아포지 플러스 제모 [여성]",description:"공홈하격/플원요버 레이저 제모",items:[{name:"겨드랑이",description:"*권장 추가: 2-3주 간격",originalPrice:"23,000",salePrices:"12,000"},{name:"인중",originalPrice:"23,000",salePrices:"12,000"},{name:"얼굴전체",originalPrice:"117,000",salePrices:"59,000"},{name:"3자 이마",originalPrice:"37,000",salePrices:"19,000"},{name:"눈썹 위/눈두덩이/미간",originalPrice:"57,000",salePrices:"29,000"},{name:"이마/볼 or 구렛나루",originalPrice:"57,000",salePrices:"29,000"},{name:"목 or 뒷목/턱수염",originalPrice:"57,000",salePrices:"29,000"},{name:"팔 하완 + 손등+ 손가락",originalPrice:"77,000",salePrices:"39,000"},{name:"팔 전체 + 손등 + 손가락",originalPrice:"117,000",salePrices:"59,000"},{name:"종아리 + 무릎",originalPrice:"117,000",salePrices:"59,000"},{name:"다리 전체 + 발등 + 발가락",originalPrice:"157,000",salePrices:"79,000"},{name:"가슴/배/등 상부 or 등 하부",originalPrice:"117,000",salePrices:"59,000"},{name:"허벅지",originalPrice:"137,000",salePrices:"69,000"},{name:"손등+손가락/발등+발가락",originalPrice:"37,000",salePrices:"19,000"}]}]},lf=()=>p.jsx(p.Fragment,{children:rf.sections.map((e,n)=>p.jsx(G,{...e},n))}),of={sections:[{title:"레스틸렌",description:"26년 역사의 레스틸렌 필러",items:[{name:"1cc",description:`높은 점재율과 손도로 지속력, 안정성, 자연스러움까지
 모두 담은 프리미엄 필러! *눈밑, 애교 제외`,originalPrice:"477,000",salePrices:"239,000"},{name:"3cc",originalPrice:"1,197,000",salePrices:"599,000"},{name:"5cc",originalPrice:"1,899,000",salePrices:"950,000"},{name:"[입술+입꼬리] 1cc + 입꼬리 보톡스(국산)",description:"첫 입술 전용 프리미엄 수입 필러, 내 입술 같이 이쁘감 제로",originalPrice:"497,000",salePrices:"249,000"},{name:"[입술+입꼬리] 1cc + 입꼬리 보톡스(제오민)",originalPrice:"537,000",salePrices:"269,000"}]},{title:"벨로테로 필러",description:"필러의 정석, 벨로테로 / 엠스 CPM 공법",items:[{name:"소프트, 주름 필러 1cc",description:`팔자/이마/볼 등 얼굴의 깊수름에
 탁월한 프리미엄 필러`,originalPrice:"497,000",salePrices:"249,000"},{name:"소프트, 주름 필러 2cc",originalPrice:"937,000",salePrices:"469,000"},{name:"흉터 필러 1cc",description:`깊고 넓게 패인 여드름 흉터에
