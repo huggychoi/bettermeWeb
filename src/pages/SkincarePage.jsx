@@ -29,17 +29,17 @@ const skincareData = {
     },
     {
       title: "4세대 LHA 필링",
-      description: "반복만 하게 되는 연예인 필링, 4세대 라라필",
+      description: "반짝반짝 광채 나는 연예인 필링, 4세대 라라필",
       items: [
         {
           name: "라라필",
-          description: "베이직 1회 + 홈트라 2배 + LED + 모델링팩",
+          description: "베이직1제 + 울트라2제 + LED + 모델링팩",
           originalPrice: "117,000",
           salePrices: "59,000"
         },
         {
           name: "라라샷",
-          description: "다른 정비의 도움 없이 약물을 깊숙이\n필뜸 시켜주는 신개념 홈케션\n*입출유무(+10,000원 추가)",
+          description: "다른 정비의 도움 없이 약물을 깊숙이\n침투 시켜주는 신개념 솔루션\n*압출유무(+10,000원 추가)",
           originalPrice: "117,000",
           salePrices: "59,000"
         },
@@ -52,12 +52,12 @@ const skincareData = {
       ]
     },
     {
-      title: "라라겟",
-      description: "흉 많이 다른 모공 케어, 화이겟",
+      title: "라라젯",
+      description: "물 맛이 다른 모공 케어, 라라젯",
       items: [
         {
-          name: "라라겟",
-          description: "매우 미세한 고압의 플루기로 진행되는 프리미엄 피지관리",
+          name: "라라젯",
+          description: "매우 미세한 고압의 물줄기로 진행되는 프리미엄 피지관리",
           originalPrice: "157,000",
           salePrices: "79,000"
         }
@@ -76,18 +76,58 @@ const skincareData = {
       ]
     },
     {
+      title: "연예인 필링, 물톡스",
+      description: "PHA 물톡스 필링, 르네상스 필링",
+      items: [
+        {
+          name: "프리미엄 물톡스",
+          description: "높은 보습효과와 피부 보호 장벽 개선 효과를 통해 속부터 반짝이는 물광 피부를 만들어 줄 물톡스\n+ 피부탄력 & 보습효과",
+          originalPrice: "137,000",
+          salePrices: "69,000"
+        }
+      ]
+    },
+    {
+      title: "아쿠아필 / 오투덤 산소테라피",
+      description: "저자극 모공관리와 프리미엄 스킨케어",
+      items: [
+        {
+          name: "아쿠아필 3단계",
+          description: "*압출 유무 20,000원 추가",
+          originalPrice: "57,000",
+          salePrices: "29,000"
+        }
+      ]
+      items: [
+        {
+          name: "2세대 오투덤 산소테라피",
+          description: "산소폭탄 휘핑마스크 + 오투덤 활력앰플 \n+ + 산소이온돔 + 모델링팩",
+          originalPrice: "97,000",
+          salePrices: "49,000"
+        }
+      ]
+      items: [
+        {
+          name: "여드름 스케일링",
+          description: "전체 압출+ 진정 관리",
+          originalPrice: "117,000",
+          salePrices: "59,000"
+        }
+      ]
+    },    
+    {
       title: "프리미엄 필링 관리",
       description: "건강하고 탄력있는 피부 개선",
       items: [
         {
           name: "플래티넘 클라필",
-          description: "플래티넘 클라필 + LED + 시트팩\n* LDM 첨두 무료 추가시 +35,000원\n백금(플래티넘)으로 하는 궁극의 피부 강화 신개념 필링",
+          description: "플래티넘 클라필 + LED + 시트팩\n* LDM 침투모드 추가시 +35,000원\n백금(플래티넘)으로 하는 궁극의 피부 강화 신개념 필링",
           originalPrice: "137,000",
           salePrices: "69,000"
         },
         {
           name: "블랙필",
-          description: "블랙필 + 세보마스크 + 크라이오 + LED\n자연유래 천연 탄보 특효 베이스\n피지 배출과 염증 완화, 예민한 피부도 가능",
+          description: "블랙필 + 세보마스크 + 크라이오 + LED\n자연유래 천연 발효 흑초 베이스\n피지 배출과 염증 완화, 예민한 피부도 가능",
           originalPrice: "77,000",
           salePrices: "39,000"
         },
@@ -100,14 +140,14 @@ const skincareData = {
       ]
     },
     {
-      title: "스킨케어 패키지 프로그램",
-      description: "패키지 프로그램",
+      title: "프리미엄 비타민 미백관리",
+      description: "빛나는 광채피부 만들기",
       items: [
         {
-          name: "프리미엄 스킨케어",
-          description: "선택관리(클라필/부스터필/라라필/물톡스/LDM 12분)\n+ 선택관리(수분/진정/재생/미백)",
-          originalPrice: "199,000",
-          salePrices: "100,000"
+          name: "프리미엄 비타민 미백관리",
+          description: "프리미엄 비타민 앰플 이온토+ \n+ 비타민C 앰플 초음파 + LED + 모델링팩",
+          originalPrice: "117,000",
+          salePrices: "59,000"
         }
       ]
     },
