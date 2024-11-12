@@ -81,26 +81,26 @@ function App() {
   };
 
 // 랜딩 페이지
-if (showLanding) {
-  return (
-    <div className="fixed inset-0 bg-pink-50/30 flex items-center justify-center">
-      <div className="max-w-2xl w-full mx-4 relative">
-        <button 
-          onClick={() => setShowLanding(false)}
-          className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/80 hover:bg-white shadow-md"
-        >
-          <X size={16} className="text-gray-600" />
-        </button>
-        <img 
-          src="/events/suneung-event.jpg" 
-          alt="수험생 이벤트" 
-          className="w-full rounded-xl shadow-lg cursor-pointer hover:opacity-95 transition-opacity"
-          onClick={() => setShowLanding(false)}
-        />
-      </div>
-    </div>
-  );
-}
+// if (showLanding) {
+//   return (
+//     <div className="fixed inset-0 bg-pink-50/30 flex items-center justify-center">
+//       <div className="max-w-2xl w-full mx-4 relative">
+//         <button 
+//           onClick={() => setShowLanding(false)}
+//           className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/80 hover:bg-white shadow-md"
+//         >
+//           <X size={16} className="text-gray-600" />
+//         </button>
+//         <img 
+//           src="/events/suneung-event.jpg" 
+//           alt="수험생 이벤트" 
+//           className="w-full rounded-xl shadow-lg cursor-pointer hover:opacity-95 transition-opacity"
+//           onClick={() => setShowLanding(false)}
+//         />
+//       </div>
+//     </div>
+//   );
+// }
 
   return (
     <div className="fixed inset-0 flex bg-gradient-to-br from-pink-50/90 via-yellow-50/80 to-pink-50/70 font-pretendard">
