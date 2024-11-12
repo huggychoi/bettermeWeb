@@ -1,27 +1,18 @@
 import React from 'react';
 
-const TabButton = ({ icon, label, isActive, onClick }) => {
-  return (
-    <button
-      onClick={onClick}
-      className={`
-        w-full px-1.5 py-1.5 mb-0.5 rounded-lg
-        flex flex-col items-center justify-center gap-1
-        transition-all duration-200
-        ${isActive 
-          ? 'bg-pink-50/50 text-black font-medium' 
-          : 'text-black/70 hover:bg-pink-50/30'
-        }
-      `}
-    >
-      <div className="flex-shrink-0">
-        {icon}
-      </div>
-      <span className="text-[9px] text-center leading-tight break-keep whitespace-normal">
-        {label}
-      </span>
-    </button>
-  );
-};
+const TabButton = ({ icon, label, isActive, onClick }) => (
+  <button
+    onClick={onClick}
+    className={`flex flex-col items-center w-16 py-3 px-1 transition-colors
+      ${isActive 
+        ? 'bg-white text-rose-500 border-r-2 border-rose-500' 
+        : 'text-gray-500 hover:bg-gray-100'}`}
+  >
+    {React.cloneElement(icon, { size: 20 })}
+    <span className="mt-1 text-[10px] font-medium text-center whitespace-nowrap">
+      {label}
+    </span>
+  </button>
+);
 
 export default TabButton;
