@@ -113,7 +113,7 @@ function App() {
 
           {/* 이미지 */}
           <img 
-            src="/events/suneung-event.jpg" 
+            src="/events/suneung-event.png" 
             alt="수험생 이벤트" 
             className="w-full rounded-xl shadow-lg cursor-pointer"
             onClick={closeLanding}
@@ -124,31 +124,31 @@ function App() {
   }
 
   // 메인 앱 UI
-return (
-  <div className="fixed inset-0 flex bg-pink-50/30">
-    {/* 왼쪽 카테고리 영역 - 너비 증가 */}
-    <div 
-      className="w-20 h-full overflow-y-auto bg-white/80 border-r border-pink-100 flex-shrink-0 scrollbar-hide"
-      style={{
-        msOverflowStyle: 'none',
-        scrollbarWidth: 'none'
-      }}
-    >
-      <div className="sticky top-0 bg-white/80 backdrop-blur-sm z-10 p-1 border-b border-pink-100">
-        <p className="text-[10px] text-center text-gray-500">MENU</p>
+  return (
+    <div className="fixed inset-0 flex bg-pink-50/30">
+      {/* 왼쪽 카테고리 영역 - 너비 증가 */}
+      <div 
+        className="w-20 h-full overflow-y-auto bg-white/80 border-r border-pink-100 flex-shrink-0 scrollbar-hide"
+        style={{
+          msOverflowStyle: 'none',
+          scrollbarWidth: 'none'
+        }}
+      >
+        <div className="sticky top-0 bg-white/80 backdrop-blur-sm z-10 p-1 border-b border-pink-100">
+          <p className="text-[10px] text-center text-gray-500">MENU</p>
+        </div>
+        <div className="py-1">
+          {Object.entries(tabsConfig).map(([key, config]) => (
+            <TabButton
+              key={key}
+              icon={config.icon}
+              label={config.label}
+              isActive={activeTab === key}
+              onClick={() => handleTabClick(key)}
+            />
+          ))}
+        </div>
       </div>
-      <div className="py-1">
-        {Object.entries(tabsConfig).map(([key, config]) => (
-          <TabButton
-            key={key}
-            icon={config.icon}
-            label={config.label}
-            isActive={activeTab === key}
-            onClick={() => handleTabClick(key)}
-          />
-        ))}
-      </div>
-    </div>
 
       {/* 오른쪽 메뉴판 영역 */}
       <div 
