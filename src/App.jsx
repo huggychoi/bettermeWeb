@@ -136,7 +136,7 @@ function App() {
 
             {/* 이미지 */}
             <img 
-              src="https://huggychoi.github.io/betterme-menu/suneung-event.png"
+              src="https://raw.githubusercontent.com/huggychoi/bettermeWeb/refs/heads/main/public/suneung-event.png"
               alt="수능 이벤트"
               className="w-full rounded-xl shadow-lg cursor-pointer hover:opacity-95 transition-opacity"
               onClick={handleCloseLanding}
@@ -148,7 +148,7 @@ function App() {
           </div>
         </div>
       )}
-      
+
       {/* 메인 앱 UI */}
       <div className="fixed inset-0 flex bg-gradient-to-br from-pink-100/80 via-pink-50/70 to-yellow-50/70">
         {/* 왼쪽 카테고리 영역 */}
