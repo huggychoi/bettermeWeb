@@ -20,9 +20,10 @@ import AntiagingPage from './pages/AntiagingPage';
 //import SupplementsPage from './pages/SupplementsPage';
 import { tabsConfig } from './config/tabsConfig';
 import FirstVisitPage from './pages/FirstVisitPage';
+import EventPage from './pages/EventPage';
 
 function App() {
-  const [activeTab, setActiveTab] = React.useState('membership');
+  const [activeTab, setActiveTab] = React.useState('firstVisit');
   const contentRef = React.useRef(null);
 
   const handleTabClick = (key) => {
@@ -75,6 +76,8 @@ function App() {
         return <HistolabPage />;
       case 'supplements': // 새로 추가
         return <SupplementsPage />;
+      case 'event':
+        return <EventPage />;
       
       default:
         return (
@@ -88,20 +91,19 @@ function App() {
   };
 
   return (
-    <div className="fixed inset-0 flex bg-gray-50">
-      {/* 왼쪽 카테고리 영역 */}
+    <div className="fixed inset-0 flex bg-pink-50/30">
+      {/* 왼쪽 카테고리 영역 - 너비 축소 */}
       <div 
-        className="w-min h-full overflow-y-auto bg-white border-r flex-shrink-0 scrollbar-hide"
+        className="w-16 h-full overflow-y-auto bg-white/80 border-r border-pink-100 flex-shrink-0 scrollbar-hide"
         style={{
           msOverflowStyle: 'none',
           scrollbarWidth: 'none'
         }}
       >
-        <div className="sticky top-0 bg-white z-10 p-3 border-b">
-          
-          <p className="text-sm text-gray-500 mt-1">MENU</p>
+        <div className="sticky top-0 bg-white/80 backdrop-blur-sm z-10 p-1 border-b border-pink-100">
+          <p className="text-[10px] text-center text-gray-500">MENU</p>
         </div>
-        <div className="p-2">
+        <div className="py-1">
           {Object.entries(tabsConfig).map(([key, config]) => (
             <TabButton
               key={key}
@@ -121,13 +123,13 @@ function App() {
       >
         {/* 현재 메뉴의 제목 */}
         <div className="sticky top-0 bg-white border-b z-10">
-          <div className="max-w-4xl mx-auto px-6 py-4">
-            <h1 className="text-xl font-bold">{tabsConfig[activeTab].label}</h1>
-            <p className="text-sm text-gray-500 mt-1">{tabsConfig[activeTab].subtitle}</p>
+          <div className="max-w-4xl mx-auto px-4 py-3">
+            <h1 className="text-base font-bold">{tabsConfig[activeTab].label}</h1>
+            <p className="text-xs text-gray-500 mt-0.5">{tabsConfig[activeTab].subtitle}</p>
           </div>
         </div>
         
-        <div className="max-w-4xl mx-auto p-6">
+        <div className="max-w-4xl mx-auto p-4">
           {renderActivePage()}
         </div>
       </div>

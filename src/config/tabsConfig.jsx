@@ -16,6 +16,7 @@ import {
   Diamond,
   Gift,
   Clock,
+  Bell,
   Fingerprint,
   Microscope,
   Leaf
@@ -117,5 +118,11 @@ export const tabsConfig = {
     label: "멤버십",
     title: "멤버십",
     subtitle: "Membership",
+  },
+  event: {
+    icon: <Bell size={14} />,
+    label: "이벤트",
+    title: "이벤트",
+    subtitle: "Event",
   }
 };
