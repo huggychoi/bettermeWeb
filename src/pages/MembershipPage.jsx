@@ -5,7 +5,7 @@ const membershipData = {
   sections: [
     {
       title: "VIP 멤버십",
-      description: "베러미 법어점 VIP들을 위한\n할인 멤버십 안내",
+      description: "베러미 범어점 VIP들을 위한\n할인 멤버십 안내",
       items: [
         {
           name: "베러미 10",
