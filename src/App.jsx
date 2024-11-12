@@ -103,19 +103,19 @@ if (showLanding) {
 }
 
   return (
-    <div className="fixed inset-0 flex bg-gradient-to-br from-pink-50/90 via-yellow-50/80 to-rose-50/70 font-pretendard">
-      {/* 왼쪽 카테고리 영역 - 유동적 너비 */}
+    <div className="fixed inset-0 flex bg-gradient-to-br from-pink-50/90 via-yellow-50/80 to-pink-50/70 font-pretendard">
+      {/* 왼쪽 카테고리 영역 - 더 축소 */}
       <div 
-        className="min-w-[5rem] w-auto h-full overflow-y-auto bg-white/80 border-r border-pink-100/30 flex-shrink-0 scrollbar-hide backdrop-blur-sm"
+        className="w-16 h-full overflow-y-auto bg-white/90 border-r border-pink-100/50 flex-shrink-0 scrollbar-hide backdrop-blur-sm"
         style={{
           msOverflowStyle: 'none',
           scrollbarWidth: 'none'
         }}
       >
-        <div className="sticky top-0 bg-white/70 backdrop-blur-sm z-10 p-1.5 border-b border-pink-100/30">
-          <p className="text-[10px] text-center text-pink-400 tracking-wider font-medium">MENU</p>
+        <div className="sticky top-0 bg-white/80 backdrop-blur-sm z-10 p-1 border-b border-pink-100/50">
+          <p className="text-[9px] text-center text-black tracking-wider font-medium">MENU</p>
         </div>
-        <div className="p-1.5">
+        <div className="py-0.5">
           {Object.entries(tabsConfig).map(([key, config]) => (
             <TabButton
               key={key}
@@ -128,13 +128,13 @@ if (showLanding) {
         </div>
       </div>
 
-      {/* 오른쪽 메뉴판 영역 */}
+      {/* 오른쪽 메뉴판 영역 - 배경색 짙게 */}
       <div 
         ref={contentRef}
-        className="flex-1 h-full overflow-y-auto bg-gradient-to-br from-white/60 via-pink-50/30 to-yellow-50/30 backdrop-blur-sm"
+        className="flex-1 h-full overflow-y-auto bg-gradient-to-br from-pink-100/80 via-pink-50/70 to-yellow-50/70 backdrop-blur-sm"
       >
-        <div className="sticky top-0 bg-white/70 backdrop-blur-sm border-b border-pink-100/30 z-10">
-          <div className="max-w-4xl mx-auto px-4 py-2.5">
+        <div className="sticky top-0 bg-white/85 backdrop-blur-sm border-b border-pink-100/50 z-10">
+          <div className="max-w-4xl mx-auto px-4 py-2">
             <h1 className="text-sm font-bold text-pink-700 tracking-wide">
               {tabsConfig[activeTab].title}
             </h1>
