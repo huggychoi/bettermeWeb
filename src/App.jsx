@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TabButton from './components/TabButton';
 import BotoxPage from './pages/BotoxPage';
 import RejuranPage from './pages/RejuranPage';
@@ -15,22 +15,31 @@ import FillerPage from './pages/FillerPage';
 import WeddingPage from './pages/WeddingPage';
 import MembershipPage from './pages/MembershipPage';
 import AntiagingPage from './pages/AntiagingPage';
-// import HiracellPage from './pages/HiracellPage';
-// import HistolabPage from './pages/HistolabPage';
-// import SupplementsPage from './pages/SupplementsPage';
 import FirstVisitPage from './pages/FirstVisitPage';
-import { X } from 'lucide-react';
+import { X, XCircle, EyeOff } from 'lucide-react';
 import { tabsConfig } from './config/tabsConfig';
 
-
 function App() {
-  const [showLanding, setShowLanding] = useState(true);
+  const [showLanding, setShowLanding] = useState(() => {
+    const today = new Date().toDateString();
+    const hideUntil = localStorage.getItem('hideUntilDate');
+    
+    // 날짜가 지났거나, 저장된 날짜가 없으면 true 반환
+    if (!hideUntil || new Date(hideUntil) < new Date()) {
+      localStorage.removeItem('hideUntilDate'); // 오래된 날짜 삭제
+      return true;
+    }
+    return false;
+  });
   const [activeTab, setActiveTab] = useState('firstVisit');
   const contentRef = React.useRef(null);
 
+  useEffect(() => {
+    localStorage.setItem('showLanding', JSON.stringify(showLanding));
+  }, [showLanding]);
+
   const handleTabClick = (key) => {
     setActiveTab(key);
-    setShowLanding(false);
     if (contentRef.current) {
       contentRef.current.scrollTo({
         top: 0,
@@ -39,9 +48,24 @@ function App() {
     }
   };
 
+  const handleCloseLanding = () => {
+    setShowLanding(false);
+  };
+
+  // 오늘 하루 안보기
+  const handleHideToday = () => {
+    const today = new Date();
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    tomorrow.setHours(0, 0, 0, 0);
+    
+    localStorage.setItem('hideUntilDate', tomorrow.toISOString());
+    setShowLanding(false);
+  };
+
   const renderActivePage = () => {
     switch(activeTab) {
-      case 'firstVisit': // firstVisit을
+      case 'firstVisit':
         return <FirstVisitPage />;
       case 'botox':
         return <BotoxPage />;
@@ -53,7 +77,7 @@ function App() {
         return <UltheraPage />;
       case 'whitening':
         return <WhiteningPage />;
-      case 'antiaging': // 새로 추가
+      case 'antiaging':
         return <AntiagingPage />;
       case 'body':
         return <BodyPage />;
@@ -73,13 +97,6 @@ function App() {
         return <WeddingPage />;
       case 'membership':
         return <MembershipPage />;
-      // case 'hiracell': // 새로 추가
-      //   return <HiracellPage />;
-      // case 'histolab': // 새로 추가
-      //   return <HistolabPage />;
-      // case 'supplements': // 새로 추가
-      //   return <SupplementsPage />;
-      
       default:
         return (
           <div className="w-full min-h-[400px] flex items-center justify-center">
@@ -91,35 +108,47 @@ function App() {
     }
   };
 
-  
-
   return (
-    <>
+    <div className="relative">
       {/* 랜딩 페이지 */}
       {showLanding && (
         <div className="fixed inset-0 bg-pink-50/30 flex items-center justify-center z-50">
           <div className="max-w-2xl w-full mx-4 relative">
-            <button 
-              onClick={() => setShowLanding(false)}
-              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/80 hover:bg-white shadow-md"
-            >
-              <X size={16} className="text-gray-600" />
-            </button>
+            {/* 버튼 그룹 */}
+            <div className="absolute top-4 right-4 z-10 flex gap-2">
+              {/* 오늘 하루 안보기 버튼 */}
+              <button 
+                onClick={handleHideToday}
+                className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-white/80 hover:bg-white shadow-md text-gray-600 hover:text-gray-900 text-xs"
+              >
+                <EyeOff size={14} />
+                <span>오늘 하루 안보기</span>
+              </button>
+              
+              {/* 닫기 버튼 */}
+              <button 
+                onClick={handleCloseLanding}
+                className="p-2 rounded-full bg-white/80 hover:bg-white shadow-md text-gray-600 hover:text-gray-900"
+              >
+                <X size={16} />
+              </button>
+            </div>
 
+            {/* 이미지 */}
             <img 
-              src="/suneung-event.png"  // 이미지 파일명 확인 필요
+              src="https://huggychoi.github.io/betterme-menu/suneung-event.png"
               alt="수능 이벤트"
               className="w-full rounded-xl shadow-lg cursor-pointer hover:opacity-95 transition-opacity"
-              onClick={() => setShowLanding(false)}
+              onClick={handleCloseLanding}
               onError={(e) => {
                 console.error('Image load error:', e);
-                setShowLanding(false);
+                handleCloseLanding();
               }}
             />
           </div>
         </div>
       )}
-
+      
       {/* 메인 앱 UI */}
       <div className="fixed inset-0 flex bg-gradient-to-br from-pink-100/80 via-pink-50/70 to-yellow-50/70">
         {/* 왼쪽 카테고리 영역 */}
@@ -167,7 +196,7 @@ function App() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
