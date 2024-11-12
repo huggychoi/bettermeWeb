@@ -24,18 +24,13 @@ import { tabsConfig } from './config/tabsConfig';
 
 
 function App() {
-  const [showLanding, setShowLanding] = React.useState(true);  // 랜딩 페이지 표시 상태
-  const [activeTab, setActiveTab] = React.useState('firstVisit');
+  const [showLanding, setShowLanding] = useState(true);
+  const [activeTab, setActiveTab] = useState('firstVisit');
   const contentRef = React.useRef(null);
-
-  // 랜딩 페이지 닫기 함수
-  const closeLanding = () => {
-    setShowLanding(false);
-  };
 
   const handleTabClick = (key) => {
     setActiveTab(key);
-    setShowLanding(false);  // 탭 클릭시 랜딩 페이지 닫기
+    setShowLanding(false);
     if (contentRef.current) {
       contentRef.current.scrollTo({
         top: 0,
@@ -43,7 +38,7 @@ function App() {
       });
     }
   };
-  
+
   const renderActivePage = () => {
     switch(activeTab) {
       case 'firstVisit': // firstVisit을
@@ -98,79 +93,81 @@ function App() {
 
   
 
-  // 랜딩 페이지
-  if (showLanding) {
-    return (
-      <div className="fixed inset-0 bg-pink-50/30 flex items-center justify-center">
-        <div className="max-w-2xl w-full mx-4 relative">
-          <button 
-            onClick={() => setShowLanding(false)}
-            className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/80 hover:bg-white shadow-md"
-          >
-            <X size={16} className="text-gray-600" />
-          </button>
+  return (
+    <>
+      {/* 랜딩 페이지 */}
+      {showLanding && (
+        <div className="fixed inset-0 bg-pink-50/30 flex items-center justify-center z-50">
+          <div className="max-w-2xl w-full mx-4 relative">
+            <button 
+              onClick={() => setShowLanding(false)}
+              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/80 hover:bg-white shadow-md"
+            >
+              <X size={16} className="text-gray-600" />
+            </button>
 
-          <div className="relative">
             <img 
-              src="/suneung-event.png"
+              src="/suneung-event.png"  // 이미지 파일명 확인 필요
               alt="수능 이벤트"
               className="w-full rounded-xl shadow-lg cursor-pointer hover:opacity-95 transition-opacity"
               onClick={() => setShowLanding(false)}
               onError={(e) => {
                 console.error('Image load error:', e);
-                setShowLanding(false); // 이미지 로드 실패시 랜딩 페이지 닫기
+                setShowLanding(false);
               }}
             />
           </div>
         </div>
-      </div>
-    );
-  }
+      )}
 
-  // 메인 앱 UI
-return (
-  <div className="fixed inset-0 flex bg-pink-50/30">
-    {/* 왼쪽 카테고리 영역 - 너비 증가 */}
-    <div 
-      className="w-min h-full overflow-y-auto bg-white/80 border-r border-pink-100 flex-shrink-0 scrollbar-hide"
-      style={{
-        msOverflowStyle: 'none',
-        scrollbarWidth: 'none'
-      }}
-    >
-      <div className="sticky top-0 bg-white/80 backdrop-blur-sm z-10 p-1 border-b border-pink-100">
-        <p className="text-[10px] text-center text-gray-500">MENU</p>
-      </div>
-      <div className="py-1">
-        {Object.entries(tabsConfig).map(([key, config]) => (
-          <TabButton
-            key={key}
-            icon={config.icon}
-            label={config.label}
-            isActive={activeTab === key}
-            onClick={() => handleTabClick(key)}
-          />
-        ))}
-      </div>
-    </div>
-
-      {/* 오른쪽 메뉴판 영역 */}
-      <div 
-        ref={contentRef}
-        className="flex-1 h-full overflow-y-auto"
-      >
-        <div className="sticky top-0 bg-white/80 backdrop-blur-sm border-b border-pink-100 z-10">
-          <div className="max-w-4xl mx-auto px-4 py-3">
-            <h1 className="text-base font-bold">{tabsConfig[activeTab].label}</h1>
-            <p className="text-xs text-gray-500 mt-0.5">{tabsConfig[activeTab].subtitle}</p>
+      {/* 메인 앱 UI */}
+      <div className="fixed inset-0 flex bg-gradient-to-br from-pink-100/80 via-pink-50/70 to-yellow-50/70">
+        {/* 왼쪽 카테고리 영역 */}
+        <div 
+          className="w-16 h-full overflow-y-auto bg-white/90 border-r border-pink-100/50 flex-shrink-0 scrollbar-hide"
+          style={{
+            msOverflowStyle: 'none',
+            scrollbarWidth: 'none'
+          }}
+        >
+          <div className="sticky top-0 bg-white/80 backdrop-blur-sm z-10 p-1 border-b border-pink-100/50">
+            <p className="text-[9px] text-center text-black tracking-wider font-medium">MENU</p>
+          </div>
+          <div className="py-0.5">
+            {Object.entries(tabsConfig).map(([key, config]) => (
+              <TabButton
+                key={key}
+                icon={config.icon}
+                label={config.label}
+                isActive={activeTab === key}
+                onClick={() => handleTabClick(key)}
+              />
+            ))}
           </div>
         </div>
-        
-        <div className="max-w-4xl mx-auto p-4">
-          {renderActivePage()}
+
+        {/* 오른쪽 메뉴판 영역 */}
+        <div 
+          ref={contentRef}
+          className="flex-1 h-full overflow-y-auto"
+        >
+          <div className="sticky top-0 bg-white/85 backdrop-blur-sm border-b border-pink-100/50 z-10">
+            <div className="max-w-4xl mx-auto px-4 py-2">
+              <h1 className="text-sm font-bold text-pink-700 tracking-wide">
+                {tabsConfig[activeTab].title}
+              </h1>
+              <p className="text-[10px] text-pink-400 tracking-wider">
+                {tabsConfig[activeTab].subtitle}
+              </p>
+            </div>
+          </div>
+          
+          <div className="max-w-4xl mx-auto p-4">
+            {renderActivePage()}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
