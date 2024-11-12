@@ -20,6 +20,7 @@ import AntiagingPage from './pages/AntiagingPage';
 // import SupplementsPage from './pages/SupplementsPage';
 import { tabsConfig } from './config/tabsConfig';
 import FirstVisitPage from './pages/FirstVisitPage';
+import eventImage from './assets/suneung-event.png';
 
 function App() {
   const [showLanding, setShowLanding] = React.useState(true);  // 랜딩 페이지 표시 상태
@@ -103,20 +104,18 @@ function App() {
         <div className="max-w-2xl w-full mx-4 relative">
           {/* 닫기 버튼 */}
           <button 
-            onClick={closeLanding}
-            className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/80 hover:bg-white text-gray-600 hover:text-gray-900"
+            onClick={() => setShowLanding(false)}
+            className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/80 hover:bg-white shadow-md"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
-            </svg>
+            <X size={16} className="text-gray-600" />
           </button>
 
           {/* 이미지 */}
           <img 
-            src="/events/suneung-event.png" 
+            src={eventImage} 
             alt="수험생 이벤트" 
-            className="w-full rounded-xl shadow-lg cursor-pointer"
-            onClick={closeLanding}
+            className="w-full rounded-xl shadow-lg cursor-pointer hover:opacity-95 transition-opacity"
+            onClick={() => setShowLanding(false)}
           />
         </div>
       </div>
@@ -128,7 +127,7 @@ function App() {
     <div className="fixed inset-0 flex bg-pink-50/30">
       {/* 왼쪽 카테고리 영역 - 너비 증가 */}
       <div 
-        className="w-20 h-full overflow-y-auto bg-white/80 border-r border-pink-100 flex-shrink-0 scrollbar-hide"
+        className="w-min h-full overflow-y-auto bg-white/80 border-r border-pink-100 flex-shrink-0 scrollbar-hide"
         style={{
           msOverflowStyle: 'none',
           scrollbarWidth: 'none'
