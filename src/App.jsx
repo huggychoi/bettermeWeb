@@ -18,9 +18,10 @@ import AntiagingPage from './pages/AntiagingPage';
 // import HiracellPage from './pages/HiracellPage';
 // import HistolabPage from './pages/HistolabPage';
 // import SupplementsPage from './pages/SupplementsPage';
-import { tabsConfig } from './config/tabsConfig';
 import FirstVisitPage from './pages/FirstVisitPage';
-import eventImage from './assets/suneung-event.png';
+import { X } from 'lucide-react';
+import { tabsConfig } from './config/tabsConfig';
+
 
 function App() {
   const [showLanding, setShowLanding] = React.useState(true);  // 랜딩 페이지 표시 상태
@@ -97,12 +98,11 @@ function App() {
 
   
 
-  // 랜딩 페이지 컴포넌트
+  // 랜딩 페이지
   if (showLanding) {
     return (
       <div className="fixed inset-0 bg-pink-50/30 flex items-center justify-center">
         <div className="max-w-2xl w-full mx-4 relative">
-          {/* 닫기 버튼 */}
           <button 
             onClick={() => setShowLanding(false)}
             className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/80 hover:bg-white shadow-md"
@@ -110,44 +110,49 @@ function App() {
             <X size={16} className="text-gray-600" />
           </button>
 
-          {/* 이미지 */}
-          <img 
-            src={eventImage} 
-            alt="수험생 이벤트" 
-            className="w-full rounded-xl shadow-lg cursor-pointer hover:opacity-95 transition-opacity"
-            onClick={() => setShowLanding(false)}
-          />
+          <div className="relative">
+            <img 
+              src="/suneung-event.png"
+              alt="수능 이벤트"
+              className="w-full rounded-xl shadow-lg cursor-pointer hover:opacity-95 transition-opacity"
+              onClick={() => setShowLanding(false)}
+              onError={(e) => {
+                console.error('Image load error:', e);
+                setShowLanding(false); // 이미지 로드 실패시 랜딩 페이지 닫기
+              }}
+            />
+          </div>
         </div>
       </div>
     );
   }
 
   // 메인 앱 UI
-  return (
-    <div className="fixed inset-0 flex bg-pink-50/30">
-      {/* 왼쪽 카테고리 영역 - 너비 증가 */}
-      <div 
-        className="w-min h-full overflow-y-auto bg-white/80 border-r border-pink-100 flex-shrink-0 scrollbar-hide"
-        style={{
-          msOverflowStyle: 'none',
-          scrollbarWidth: 'none'
-        }}
-      >
-        <div className="sticky top-0 bg-white/80 backdrop-blur-sm z-10 p-1 border-b border-pink-100">
-          <p className="text-[10px] text-center text-gray-500">MENU</p>
-        </div>
-        <div className="py-1">
-          {Object.entries(tabsConfig).map(([key, config]) => (
-            <TabButton
-              key={key}
-              icon={config.icon}
-              label={config.label}
-              isActive={activeTab === key}
-              onClick={() => handleTabClick(key)}
-            />
-          ))}
-        </div>
+return (
+  <div className="fixed inset-0 flex bg-pink-50/30">
+    {/* 왼쪽 카테고리 영역 - 너비 증가 */}
+    <div 
+      className="w-min h-full overflow-y-auto bg-white/80 border-r border-pink-100 flex-shrink-0 scrollbar-hide"
+      style={{
+        msOverflowStyle: 'none',
+        scrollbarWidth: 'none'
+      }}
+    >
+      <div className="sticky top-0 bg-white/80 backdrop-blur-sm z-10 p-1 border-b border-pink-100">
+        <p className="text-[10px] text-center text-gray-500">MENU</p>
       </div>
+      <div className="py-1">
+        {Object.entries(tabsConfig).map(([key, config]) => (
+          <TabButton
+            key={key}
+            icon={config.icon}
+            label={config.label}
+            isActive={activeTab === key}
+            onClick={() => handleTabClick(key)}
+          />
+        ))}
+      </div>
+    </div>
 
       {/* 오른쪽 메뉴판 영역 */}
       <div 
