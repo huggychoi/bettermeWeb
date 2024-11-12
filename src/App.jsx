@@ -20,7 +20,7 @@ import { tabsConfig } from './config/tabsConfig';
 import { X } from 'lucide-react';
 
 function App() {
-  const [showLanding, setShowLanding] = React.useState(true);
+  // const [showLanding, setShowLanding] = React.useState(true);
   const [activeTab, setActiveTab] = React.useState('firstVisit');
   const contentRef = React.useRef(null);
 
