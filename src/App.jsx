@@ -15,19 +15,18 @@ import FillerPage from './pages/FillerPage';
 import WeddingPage from './pages/WeddingPage';
 import MembershipPage from './pages/MembershipPage';
 import AntiagingPage from './pages/AntiagingPage';
-//import HiracellPage from './pages/HiracellPage';
-//import HistolabPage from './pages/HistolabPage';
-//import SupplementsPage from './pages/SupplementsPage';
-import { tabsConfig } from './config/tabsConfig';
 import FirstVisitPage from './pages/FirstVisitPage';
-import EventPage from './pages/EventPage';
+import { tabsConfig } from './config/tabsConfig';
+import { X } from 'lucide-react';
 
 function App() {
+  const [showLanding, setShowLanding] = React.useState(true);
   const [activeTab, setActiveTab] = React.useState('firstVisit');
   const contentRef = React.useRef(null);
 
   const handleTabClick = (key) => {
     setActiveTab(key);
+    setShowLanding(false);
     if (contentRef.current) {
       contentRef.current.scrollTo({
         top: 0,
@@ -35,10 +34,10 @@ function App() {
       });
     }
   };
-  
+
   const renderActivePage = () => {
     switch(activeTab) {
-      case 'firstVisit': // firstVisit을
+      case 'firstVisit':
         return <FirstVisitPage />;
       case 'botox':
         return <BotoxPage />;
@@ -50,7 +49,7 @@ function App() {
         return <UltheraPage />;
       case 'whitening':
         return <WhiteningPage />;
-      case 'antiaging': // 새로 추가
+      case 'antiaging':
         return <AntiagingPage />;
       case 'body':
         return <BodyPage />;
@@ -70,19 +69,10 @@ function App() {
         return <WeddingPage />;
       case 'membership':
         return <MembershipPage />;
-      case 'hiracell': // 새로 추가
-        return <HiracellPage />;
-      case 'histolab': // 새로 추가
-        return <HistolabPage />;
-      case 'supplements': // 새로 추가
-        return <SupplementsPage />;
-      case 'event':
-        return <EventPage />;
-      
       default:
         return (
           <div className="w-full min-h-[400px] flex items-center justify-center">
-            <div className="text-center text-sm text-gray-500">
+            <div className="text-center text-xs text-gray-500">
               준비 중입니다
             </div>
           </div>
@@ -90,20 +80,42 @@ function App() {
     }
   };
 
+// 랜딩 페이지
+if (showLanding) {
   return (
-    <div className="fixed inset-0 flex bg-pink-50/30">
-      {/* 왼쪽 카테고리 영역 - 너비 축소 */}
+    <div className="fixed inset-0 bg-pink-50/30 flex items-center justify-center">
+      <div className="max-w-2xl w-full mx-4 relative">
+        <button 
+          onClick={() => setShowLanding(false)}
+          className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/80 hover:bg-white shadow-md"
+        >
+          <X size={16} className="text-gray-600" />
+        </button>
+        <img 
+          src="/events/suneung-event.jpg" 
+          alt="수험생 이벤트" 
+          className="w-full rounded-xl shadow-lg cursor-pointer hover:opacity-95 transition-opacity"
+          onClick={() => setShowLanding(false)}
+        />
+      </div>
+    </div>
+  );
+}
+
+  return (
+    <div className="fixed inset-0 flex bg-gradient-to-br from-pink-50/90 via-yellow-50/80 to-rose-50/70 font-pretendard">
+      {/* 왼쪽 카테고리 영역 - 유동적 너비 */}
       <div 
-        className="w-16 h-full overflow-y-auto bg-white/80 border-r border-pink-100 flex-shrink-0 scrollbar-hide"
+        className="min-w-[5rem] w-auto h-full overflow-y-auto bg-white/80 border-r border-pink-100/30 flex-shrink-0 scrollbar-hide backdrop-blur-sm"
         style={{
           msOverflowStyle: 'none',
           scrollbarWidth: 'none'
         }}
       >
-        <div className="sticky top-0 bg-white/80 backdrop-blur-sm z-10 p-1 border-b border-pink-100">
-          <p className="text-[10px] text-center text-gray-500">MENU</p>
+        <div className="sticky top-0 bg-white/70 backdrop-blur-sm z-10 p-1.5 border-b border-pink-100/30">
+          <p className="text-[10px] text-center text-pink-400 tracking-wider font-medium">MENU</p>
         </div>
-        <div className="py-1">
+        <div className="p-1.5">
           {Object.entries(tabsConfig).map(([key, config]) => (
             <TabButton
               key={key}
@@ -119,13 +131,16 @@ function App() {
       {/* 오른쪽 메뉴판 영역 */}
       <div 
         ref={contentRef}
-        className="flex-1 h-full overflow-y-auto"
+        className="flex-1 h-full overflow-y-auto bg-gradient-to-br from-white/60 via-pink-50/30 to-yellow-50/30 backdrop-blur-sm"
       >
-        {/* 현재 메뉴의 제목 */}
-        <div className="sticky top-0 bg-white border-b z-10">
-          <div className="max-w-4xl mx-auto px-4 py-3">
-            <h1 className="text-base font-bold">{tabsConfig[activeTab].label}</h1>
-            <p className="text-xs text-gray-500 mt-0.5">{tabsConfig[activeTab].subtitle}</p>
+        <div className="sticky top-0 bg-white/70 backdrop-blur-sm border-b border-pink-100/30 z-10">
+          <div className="max-w-4xl mx-auto px-4 py-2.5">
+            <h1 className="text-sm font-bold text-pink-700 tracking-wide">
+              {tabsConfig[activeTab].title}
+            </h1>
+            <p className="text-[10px] text-pink-400 tracking-wider">
+              {tabsConfig[activeTab].subtitle}
+            </p>
           </div>
         </div>
         
@@ -136,5 +151,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

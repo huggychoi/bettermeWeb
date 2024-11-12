@@ -1,35 +1,57 @@
 import React from 'react';
-import MenuItem from './MenuItem';
 
-const formatDescription = (text) => {
-  return text.split('\\n').map((line, i) => (
-    <React.Fragment key={i}>
-      {line}
-      {i !== text.split('\\n').length - 1 && <br />}
-    </React.Fragment>
-  ));
+const MenuSection = ({ title, description, items }) => {
+  return (
+    <div className="mb-8">
+      {(title || description) && (
+        <div className="bg-white/50 backdrop-blur-sm rounded-lg p-4 mb-4">
+          {title && (
+            <h2 className="text-base font-bold text-pink-600 tracking-wide mb-1">
+              {title}
+            </h2>
+          )}
+          {description && (
+            <p className="text-xs text-pink-500/90 whitespace-pre-line tracking-wide">
+              {description}
+            </p>
+          )}
+        </div>
+      )}
+
+      <div className="space-y-4">
+        {items?.map((item, idx) => (
+          <div 
+            key={idx} 
+            className="bg-white/70 backdrop-blur-sm rounded-lg p-4 hover:bg-white/80 transition-colors duration-200"
+          >
+            <div className="flex justify-between items-start mb-2">
+              <h3 className="font-medium text-pink-700 tracking-wide">
+                {item.name}
+              </h3>
+              <div className="text-right">
+                {item.originalPrice && (
+                  <div className="text-pink-300 line-through text-xs">
+                    ￦{item.originalPrice}
+                  </div>
+                )}
+                {item.salePrices && (
+                  <div className="text-pink-500 font-bold">
+                    ￦{item.salePrices}
+                  </div>
+                )}
+              </div>
+            </div>
+            {item.description && (
+              <p className="text-xs text-pink-500/80 whitespace-pre-line tracking-wide">
+                {item.description}
+              </p>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
-const MenuSection = ({ title, description, items }) => (
-  <div className="mb-3 bg-white rounded-lg shadow-sm border border-gray-200">
-    <div className="bg-gray-50 p-2 border-b">
-      <h2 className="text-sm font-semibold text-gray-900 text-left">{title}</h2>
-      {description && (
-        <p className="text-xs text-gray-500 text-left whitespace-pre-line">
-          {formatDescription(description)}
-        </p>
-      )}
-    </div>
-    <div className="p-2.5">
-      {items.map((item, idx) => (
-        <MenuItem 
-          key={idx} 
-          {...item} 
-          description={item.description ? item.description.replace(/\\n/g, '\n') : null}
-        />
-      ))}
-    </div>
-  </div>
-);
-
+// 컴포넌트 내보내기 추가
 export default MenuSection;

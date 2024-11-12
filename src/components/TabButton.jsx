@@ -3,19 +3,19 @@ const TabButton = ({ icon, label, isActive, onClick }) => {
     <button
       onClick={onClick}
       className={`
-        w-16 px-1 py-2 mb-0.5
+        w-full px-2 py-1.5 mb-0.5 rounded-lg
         flex flex-col items-center justify-center gap-1
         transition-all duration-200
         ${isActive 
-          ? 'bg-pink-50 text-pink-400 font-medium' 
-          : 'text-gray-600 hover:bg-pink-50/50 hover:text-pink-400'
+          ? 'bg-pink-100/50 text-pink-500 font-medium' 
+          : 'text-pink-400 hover:bg-pink-50/50 hover:text-pink-500'
         }
       `}
     >
       <div className="flex-shrink-0">
         {icon}
       </div>
-      <span className="text-[10px] text-center leading-tight">
+      <span className="text-[10px] text-center leading-tight px-1 break-keep whitespace-normal">
         {label}
       </span>
     </button>
