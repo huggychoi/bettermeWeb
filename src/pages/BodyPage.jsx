@@ -17,7 +17,7 @@ const bodyData = {
     },
     {
       title: "바디보톡스",
-      description: "간단한 시술로 완벽한 바디라인",
+      description: "간단한 시술로 완성하는 바디라인",
       items: [
         {
           name: "바디보톡스 [국산]",
@@ -35,7 +35,7 @@ const bodyData = {
     },
     {
       title: "바디 윤곽주사",
-      description: "간편한 바디라인 정리",
+      description: "간편한 바디 라인 정리",
       items: [
         {
           name: "바디 윤곽주사 1부위",
@@ -47,7 +47,7 @@ const bodyData = {
     },
     {
       title: "바디 리프팅",
-      description: "마이크로 초음파 시스템으로 새멋한 리프팅",
+      description: "마이크로 초음파 시스템으로 진행하는 리프팅",
       items: [
         {
           name: "바디 플로리스 2000샷",
@@ -58,8 +58,8 @@ const bodyData = {
       ]
     },
     {
-      title: "바디인모드",
-      description: "2배 가진 탄 크기\n2배 강해진 에너지의 바디인모드",
+      title: "바디 인모드",
+      description: "2배 커진 핸드피스 크기\n2배 강해진 에너지의 바디 인모드",
       items: [
         {
           name: "바디인모드 FX 1부위",
@@ -71,16 +71,16 @@ const bodyData = {
     },
     {
       title: "바디 고주파관리",
-      description: "지방흡입 후 바이오본드 관리, 셀룰라이트 관리",
+      description: "지방 흡입 후 관리, 셀룰라이트 관리",
       items: [
         {
           name: "노블쉐이프 20분 2부위",
-          description: "의료용 레이저+고주파+저주파 조합 복부-허벅지, 종아리 등\n탄력, 붓기 셀룰라이트 체지방에 효과적!",
+          description: "의료용 레이저 + 고주파 + 저주파 조합 복부, 허벅지, 종아리 등\n탄력, 붓기 셀룰라이트 체지방에 효과적!",
           originalPrice: "157,000",
           salePrices: "79,000"
         },
         {
-          name: "바디고주파(10분)",
+          name: "바디 고주파 (10분)",
           description: "피부를 탄력, 붓기, 순환개선에 도움. 고주파 에너지로 진피층을 탄탄하게!",
           originalPrice: "197,000",
           salePrices: "99,000"
@@ -89,11 +89,11 @@ const bodyData = {
     },
     {
       title: "슬림 바디 케어 프로그램",
-      description: "군살 없는 예쁜 몸에 만들기",
+      description: "군살 없는 예쁜 몸매 만들기",
       items: [
         {
           name: "슬림 팔뚝 3회 프로그램",
-          description: "[1회차] 바디인모드(팔뚝) + 어리미주사 40cc\n[2회차] 노블쉐이프 + S킬러미주사 100cc\n[3회차] 바디 플로리스2000샷 + 바디고주파 + 어리미주사 40cc",
+          description: "[1회차] 바디 인모드(팔뚝) + 여리미주사 40cc\n[2회차] 노블쉐이프 + S퀸러미주사 100cc\n[3회차] 바디 플로리스2000샷 + 바디고주파 + 어리미주사 40cc",
           originalPrice: "997,000",
           salePrices: "499,000"
         }
@@ -113,11 +113,11 @@ const bodyData = {
     },
     {
       title: "S퀸러미 주사",
-      description: "기존 퀸그룹주사보다\n5배 고농축 지방분해 주사",
+      description: "기존 퀸러미 주사보다\n5배 고농축 지방분해 주사",
       items: [
         {
           name: "S퀸러미 주사",
-          description: "팔뚝, 종아리, 허벅지, 복부 등 넓은 부위 집중 시술\n기존 퀸그룹의 5배 고농축 주사",
+          description: "팔뚝, 종아리, 허벅지, 복부 등 넓은 부위 집중 시술\n기존 퀸러미 주사의 5배 고농축 주사",
           originalPrice: "197,000",
           salePrices: "99,000"
         }

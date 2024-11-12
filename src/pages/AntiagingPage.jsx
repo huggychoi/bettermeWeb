@@ -39,7 +39,7 @@ const antiagingData = {
         },
         {
           name: "태반주사",
-          description: "*상타입으로 미리예 주사\n피로회복! FDA 승인 영양주사",
+          description: "샷 타입으로 피하에 주사\n피로회복! FDA 승인 영양주사",
           originalPrice: "97,000",
           salePrices: "49,000",
           additionalPrices: [
@@ -49,7 +49,7 @@ const antiagingData = {
         },
         {
           name: "마늘주사",
-          description: "피로회복과 체력증강, 스트레스회복,\n피부미용, 노화예방",
+          description: "피로회복과 체력 증강, 스트레스 회복,\n피부미용, 노화예방",
           originalPrice: "97,000",
           salePrices: "49,000",
           additionalPrices: [
@@ -69,7 +69,7 @@ const antiagingData = {
         },
         {
           name: "감초주사",
-          description: "항알러지/항염작용, 간기능 개선, 콜라겐 형성 보조",
+          description: "항알러지/항염작용, 간기능 개선, 콜라겐 생성 보조 역할",
           originalPrice: "97,000",
           salePrices: "49,000",
           additionalPrices: [

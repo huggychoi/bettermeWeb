@@ -3,81 +3,82 @@ import MenuSection from '../components/MenuSection';
 
 const liftingData = {
   sections: [
-    {
-      title: "리프팅/탄력 케어",
-      description: "리프팅 / 탄력 개선 효과를 한번에!",
-      items: [
-        {
-          name: "베러미 리프팅/탄력 4주 베이직 케어 프로그램(볼륨유지)",
-          description: "[1주] 디자인 리프테라 3000샷 + 인모드 forma 얼굴 전체\n[2주] LDM 12분 리프팅모드 + LED + 모델링\n[3주] 홈리지오300샷 + 디마�쥬링크200샷\n[4주] 클라렌 리프팅케어(1500샷) 관리",
-          originalPrice: "1,197,000",
-          salePrices: "599,000"
-        },
-        {
-          name: "베러미 리프팅/탄력 4주 케어 베이직 프로그램(볼륨감소)",
-          description: "[1주] 디자인 리프테라(300+1500) + 인모드 Fx얼굴 전체\n[2주] LDM 12분 리프팅모드-LED-모델링\n[3주] 홈리지오300샷 + 유니슈링크200샷\n[4주] 고주파 착은 얼굴 찾기케어",
-          originalPrice: "1,197,000",
-          salePrices: "599,000"
-        }
-      ]
-    },
+  
     {
       title: "슈링크 유니버스 리프팅",
-      description: "속도는 UP! 홍충은 DOWN! 슈링크로 늘어난 탄력에 최적화! 아이슈링크 리프팅",
+      description: "속도는 UP! 통증은 DOWN!, 슈링크2 \n 눈가 탄력에 최적화 아이 슈링크 리프팅",
       items: [
         {
-          name: "유니 슈링크(라인) 100샷",
-          description: "빠른 시술시간!! 적아진 통증!! 더 강력해진 효과!!",
-          originalPrice: "117,000",
-          salePrices: "59,000"
+          name: "라인/부스터 100샷",
+          originalPrice: "137,000",
+          salePrices: "69,000"
         },
         {
-          name: "유니 슈링크(라인) 300샷",
+          name: "라인/부스터 300샷",
           originalPrice: "313,000",
           salePrices: "157,000"
         },
         {
-          name: "유니 슈링크(라인) 600샷",
+          name: "라인/부스터 600샷",
           originalPrice: "477,000",
           salePrices: "239,000"
         },
         {
-          name: "유니 슈링크(젠타임) 100샷",
-          originalPrice: "117,000",
-          salePrices: "59,000"
+          name: "라인 200 + 부스터 200 + 오로라 앰플",
+          originalPrice: "397,000",
+          salePrices: "199,000"
         },
         {
-          name: "유니 슈링크(젠타임) 300샷",
-          originalPrice: "313,000",
-          salePrices: "157,000"
+          name: "라인 300 + 부스터 300 + 오로라 앰플",
+          originalPrice: "597,000",
+          salePrices: "299,000"
+        },
+        {
+          name: "아이 슈링크 100샷",
+          originalPrice: "137,000",
+          salePrices: "69,000"
+        },
+        {
+          name: "아이 슈링크 300샷",
+          originalPrice: "357,000",
+          salePrices: "179,000"
         }
       ]
     },
     {
-      title: "리프테라 리프팅",
-      description: "피부 전체의 물라켄 재생 유도 및 주름 개선",
+      title: "리프테라2",
+      description: "통증을 줄인 리프팅에 초점을 둔 인기 리프팅\n 이마, 눈가, 눈밑, 팔자, 입가, 목주름 시술 가능",
       items: [
         {
-          name: "리프테라2 젠타임 1000샷",
-          description: "*이마, 눈가, 눈밑, 팔자, 입가, 목주름시술가능",
-          originalPrice: "157,000",
-          salePrices: "79,000"
+          name: "라인 100샷/ 펜타입 1000샷",
+          originalPrice: "117,000",
+          salePrices: "59,000"
         },
         {
-          name: "리프테라2 젠타임 2000샷",
-          originalPrice: "157,000",
-          salePrices: "79,000"
+          name: "라인 200샷/ 펜타입 2000샷",
+          originalPrice: "177,000",
+          salePrices: "89,000"
         },
         {
-          name: "리프테라2 라인 100샷",
-          originalPrice: "97,000",
-          salePrices: "49,000"
+          name: "라인 300샷/ 펜타입 3000샷",
+          originalPrice: "237,000",
+          salePrices: "119,000"
+        },
+        {
+          name: "라인 400샷/ 펜타입 4000샷",
+          originalPrice: "297,000",
+          salePrices: "149,000"
+        },
+        {
+          name: "라인 300샷/ 펜타입 4000샷",
+          originalPrice: "297,000",
+          salePrices: "149,000"
         }
       ]
     },
     {
       title: "인모드 리프팅",
-      description: "피부 전체의 물라켄 재생 유도 및 주름 개선",
+      description: "피부 전체의 콜라겐 재생 유도 및 주름 개선",
       items: [
         {
           name: "인모드 FX 1부위 1회",
@@ -97,21 +98,21 @@ const liftingData = {
       ]
     },
     {
-      title: "울리지오 리프팅",
-      description: "비침습 RF 고주파 리프팅",
+      title: "올리지오 리프팅",
+      description: "비침습적 고주파(RF) 리프팅",
       items: [
         {
-          name: "울리지오 300샷",
+          name: "올리지오 300샷",
           originalPrice: "719,000",
           salePrices: "360,000"
         },
         {
-          name: "울리지오 400샷",
+          name: "올리지오 400샷",
           originalPrice: "919,000",
           salePrices: "460,000"
         },
         {
-          name: "울리지오 300샷 + LDM 물방울 리프팅(12)",
+          name: "올리지오 300샷 + LDM 물방울 리프팅(12)",
           originalPrice: "797,000",
           salePrices: "399,000"
         }
@@ -119,7 +120,7 @@ const liftingData = {
     },
     {
       title: "버츄 리프팅",
-      description: "모공과 전주름에도 강력한 효과",
+      description: "모공과 잔주름에도 강력한 효과",
       items: [
         {
           name: "버츄 RF 아이 리프팅 1회",
@@ -127,33 +128,33 @@ const liftingData = {
           salePrices: "229,000"
         },
         {
-          name: "버츄 RF 이중턱 리프팅 + 크라이오_1회",
+          name: "버츄 RF 이중턱 리프팅 + 크라이오 1회",
           originalPrice: "517,000",
           salePrices: "259,000"
         },
         {
-          name: "버츄 RF 브이라인 리프팅 + 크라이오_1회",
+          name: "버츄 RF 브이라인 리프팅 + 크라이오 1회",
           originalPrice: "797,000",
           salePrices: "399,000"
         }
       ]
     },
     {
-      title: "쿨페이스",
-      description: "적온 응동, 강력한 고주파 리프팅",
+      title: "쿨페이즈",
+      description: "적은 통증, 강력한 고주파 리프팅",
       items: [
         {
-          name: "쿨페이스 300샷",
+          name: "쿨페이즈 300샷",
           originalPrice: "979,000",
           salePrices: "490,000"
         },
         {
-          name: "쿨페이스 600샷",
+          name: "쿨페이즈 600샷",
           originalPrice: "1,779,000",
           salePrices: "890,000"
         },
         {
-          name: "쿨페이스 300샷 + 리프테라2 젠타임 3000샷",
+          name: "쿨페이즈 300샷 + 리프테라2 펜타입 3000샷",
           originalPrice: "1,177,000",
           salePrices: "589,000"
         }

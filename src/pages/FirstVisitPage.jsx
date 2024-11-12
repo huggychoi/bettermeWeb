@@ -5,25 +5,25 @@ const firstVisitData = {
   sections: [
     {
       title: "행운이 가득한 첫 방문 이벤트",
-      description: "베러미 법어점을 처음 찾아 주시는\n고객님들을 위한 특별 웰컴 선물",
+      description: "베러미 범어점을 처음 찾아 주시는\n고객님들을 위한 특별 웰컴 선물",
       items: [
         {
           name: "백옥주사",
-          description: "채내 대사활동을 촉진하고 활성산소를 제거하여\n면역력 강화, 피로회복, 피부톤개선",
+          description: "체내 대사활동을 촉진하고 활성산소를 제거하여\n면역력 강화, 피로회복, 피부톤 개선",
           salePrices: "10,000"
         },
         {
-          name: "비타민주사",
+          name: "비타민 주사",
           description: "부족한 비타민 보충\n면역력 강화, 피로회복, 피부톤 개선",
           salePrices: "10,000"
         },
         {
-          name: "베이직스킨케어",
+          name: "베이직 스킨케어",
           description: "수분/재생/진정/미백 중 선택1",
           salePrices: "10,000"
         },
         {
-          name: "아이스아쿠아필",
+          name: "아이스 아쿠아필",
           description: "아쿠아필1,2,3단계 + 크라이오 +LED + 모델링팩",
           salePrices: "20,000"
         },
@@ -40,7 +40,7 @@ const firstVisitData = {
           salePrices: "20,000"
         },
         {
-          name: "힐리우드 토닝",
+          name: "헐리우드 토닝",
           salePrices: "30,000"
         },
         {
@@ -61,12 +61,12 @@ const firstVisitData = {
         },
         {
           name: "리프테라2 2000샷",
-          description: "세상한 부위 콜라 리프팅\n통증 최소화!",
+          description: "세심한 부위별 리프팅\n통증 최소화!",
           salePrices: "40,000"
         },
         {
-          name: "울리지오 100샷",
-          description: "한국형 써마지 울리지오!",
+          name: "올리지오 100샷",
+          description: "한국형 써마지 올리지오!",
           salePrices: "100,000"
         },
         {
@@ -82,11 +82,11 @@ const firstVisitData = {
           salePrices: "20,000"
         },
         {
-          name: "입술 필러 1cc(아띠에르)",
+          name: "입술 필러 1cc (아띠에르)",
           salePrices: "70,000"
         },
         {
-          name: "네오빔 1회(압출미포함)",
+          name: "네오빔 1회 (압출미포함)",
           description: "*압출추가시 20,000 원",
           salePrices: "60,000"
         }
