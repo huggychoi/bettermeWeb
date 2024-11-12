@@ -15,9 +15,9 @@ import FillerPage from './pages/FillerPage';
 import WeddingPage from './pages/WeddingPage';
 import MembershipPage from './pages/MembershipPage';
 import AntiagingPage from './pages/AntiagingPage';
-import HiracellPage from './pages/HiracellPage';
-import HistolabPage from './pages/HistolabPage';
-import SupplementsPage from './pages/SupplementsPage';
+//import HiracellPage from './pages/HiracellPage';
+//import HistolabPage from './pages/HistolabPage';
+//import SupplementsPage from './pages/SupplementsPage';
 import { tabsConfig } from './config/tabsConfig';
 import FirstVisitPage from './pages/FirstVisitPage';
 
