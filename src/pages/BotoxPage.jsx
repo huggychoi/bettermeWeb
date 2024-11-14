@@ -202,21 +202,15 @@ const botoxData = {
       ]
     },
     {
-      title: "골드 XV주사/브이올렛",
-      description: "무스테로이드 프리미엄 지방세포 파괴 주사", 
+      title: "코 조각 패키지",
+      description: "콧망울과 콧볼에 한번에!", 
       items: [
         {
-          name: "골드 XV주사 20cc 얼굴 1부위",
-          description: "허리는 X로, 얼굴은 V로 잘록하고 갸름하게",
+          name: "원데이 코조각 패키지",
+          description: "1회: 코조각 주사+ 콧볼 보톡스 \n 3회: 코조각 주사3회 + 콧볼 보톡스 1회",
           originalPrice: "117,000",
           salePrices: "59,000"
-        },
-        {
-          name: "브이올렛 주사 2cc 1회",
-          description: "이중턱 파괴!! 지방세포 자체를 파괴, 콜라겐 합성 도움으로 턱선 유지까지! \n지방 세포의 수가 줄어 반영구적인 효과 ",
-          originalPrice: "497,000",
-          salePrices: "249,000"
-        }
+        }        
       ]
     }
   ]
