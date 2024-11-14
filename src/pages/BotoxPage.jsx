@@ -5,43 +5,52 @@ const botoxData = {
   sections: [
     {
       title: "주름 & 사각턱 보톡스",
-      description: "주름, 사각턱 고민 한번에 해결하기",
+      description: "주름, 사각턱 고민 한번에 해결하기\n 부위: 눈가, 눈밑, 미간, 이마, 자갈턱, 콧등, 콧볼, 입꼬리 중 선택",
       items: [
         {
           name: "주름보톡스 1부위\n [국산]",
-          description: "부위: 눈가, 눈밑, 미간, 이마, 자갈턱, 콧등, 콧볼, 입꼬리 중 선택\n 다회권 유효기간 1년",
           originalPrice: "35,000",
           salePrices: "18,000"
         },
         {
           name: "주름보톡스 3부위\n [국산]",
+          originalPrice: "89,000",
+          salePrices: "45,000"
+        },
+        {
+          name: "주름보톡스 1부위\n [나보타]",
           originalPrice: "77,000",
           salePrices: "39,000"
         },
         {
-          name: "주름보톡스 1부위\n [나보타]",
-          originalPrice: "68,800",
-          salePrices: "34,900"
+          name: "주름보톡스 3부위\n [나보타]",
+          originalPrice: "197,000",
+          salePrices: "99,000"
         },
         {
           name: "수입 주름보톡스 1부위\n [제오민]",
-          originalPrice: "97,000",
-          salePrices: "49,000"
-        },
+          originalPrice: "117,000",
+          salePrices: "59,000"
+        },    
+        {
+          name: "수입 주름보톡스 3부위\n [제오민]",
+          originalPrice: "297,000",
+          salePrices: "149,000"
+        },        
         {
           name: "사각턱 보톡스 50u \n [국산]",
-          originalPrice: "37,000",
-          salePrices: "19,000"
+          originalPrice: "47,000",
+          salePrices: "24,000"
         },
         {
           name: "사각턱 보톡스 50u \n [나보타]",
-          originalPrice: "106,800",
-          salePrices: "53,900"
+          originalPrice: "109,000",
+          salePrices: "55,000"
         },
         {
           name: "수입 사각턱 보톡스 50u \n [제오민]",
-          originalPrice: "217,000",
-          salePrices: "109,000"
+          originalPrice: "237,000",
+          salePrices: "119,000"
         }
       ]
     },
