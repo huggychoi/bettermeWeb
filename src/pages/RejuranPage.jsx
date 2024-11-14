@@ -8,41 +8,46 @@ const rejuranData = {
       description: "피부재생, 탄력생성, 피부복원",
       items: [
         {
-          name: "리쥬란 아이힐러",
-          originalPrice: "217,000",
-          salePrices: "109,000"
+          name: "리쥬란 힐러 2cc",
+          originalPrice: "417,000",
+          salePrices: "209,000"
         },
         {
-          name: "리쥬란 아이힐러 + 국산 눈가보톡스",
-          originalPrice: "237,000",
-          salePrices: "119,000"
+          name: "아이 리쥬란 1cc",
+          originalPrice: "277,000",
+          salePrices: "139,000"
+        },
+        {
+          name: "아이 리쥬란 1cc + 눈가보톡스[국산]",
+          originalPrice: "277,000",
+          salePrices: "159,000"
         },
         {
           name: "풀페이스 리쥬란",
-          description: "리쥬란힐러 2cc + 아이리쥬란 1cc",
-          originalPrice: "597,000",
-          salePrices: "299,000"
+          description: "리쥬란 힐러 2cc + 아이 리쥬란 1cc",
+          originalPrice: "657,000",
+          salePrices: "329,000"
         }
       ]
     },
     {
       title: "리쥬란 HB plus [무통리쥬란]",
-      description: "통증 최소화, 붓짐 성유 함께!",
+      description: "통증 최소화, 물광 성분 함유!",
       items: [
         {
-          name: "무통리쥬란 1cc + 크라이오",
-          description: "리쥬란 HB plus (무통리쥬란) 1cc + 히알루론산(HA) + 리드카인 수분강화효과 보강! 눈가, 볼, 목소 부위",
-          originalPrice: "397,000",
-          salePrices: "199,000"
+          name: "무통리쥬란 1cc",
+          description: "수분 강화 효과 보강! 눈가, 목, 국소 부위",
+          originalPrice: "357,000",
+          salePrices: "179,000"
         },
         {
-          name: "풀페이스 리쥬란HB",
-          description: "리쥬란HB 2cc + 아이리쥬란 1cc",
-          originalPrice: "797,000",
-          salePrices: "399,000"
+          name: "풀페이스 리쥬란 HB",
+          description: "리쥬란HB 2cc + 아이 리쥬란 1cc",
+          originalPrice: "957,000",
+          salePrices: "479,000"
         },
         {
-          name: "나비존 리쥬란HB 1cc + 리쥬란 스킨부스터 or 톤업부스터 + LDM 재생관리",
+          name: "나비존 리쥬란 HB 1cc + 리쥬란 스킨부스터 or 톤업부스터 + LDM 재생관리",
           originalPrice: "657,000",
           salePrices: "329,000"
         }
@@ -58,33 +63,15 @@ const rejuranData = {
           salePrices: "99,000"
         },
         {
-          name: "아기주사(베네브) MTS",
+          name: "연어주사 0.1cc",
+          description: "다른 시술에 추가 진행시",
+          originalPrice: "19,000",
+          salePrices: "10,000"
+        },
+        {
+          name: "아기주사 MTS",
           originalPrice: "197,000",
           salePrices: "99,000"
-        }
-      ]
-    },
-    {
-      title: "리쥬란 SET",
-      description: "리쥬란과 여러 스킨부스터들의 만남",
-      items: [
-        {
-          name: "연어리쥬란힐러",
-          description: "리쥬란힐러 2cc + 아이리쥬란 1cc",
-          originalPrice: "397,000",
-          salePrices: "199,000"
-        },
-        {
-          name: "연어주사 + 물광주사 4cc + 크라이오",
-          description: "하이록스 사용",
-          originalPrice: "337,000",
-          salePrices: "169,000"
-        },
-        {
-          name: "리쥬란힐러 + 물광주사 4cc + 크라이오",
-          description: "하이록스 사용",
-          originalPrice: "517,000",
-          salePrices: "259,000"
         }
       ]
     },
@@ -93,19 +80,39 @@ const rejuranData = {
       description: "피부재생, 탄력생성, 피부복원",
       items: [
         {
-          name: "리쥬란 스킨부스터 or 톤업부스터 + LDM 약물침투모드 1회",
+          name: "리쥬란 스킨부스터 or 톤업부스터 + LDM 약물침투모드",
           originalPrice: "317,000",
           salePrices: "159,000"
         },
         {
-          name: "리쥬란 스킨부스터 or 톤업부스터 + 베이직 스킨케어 1회",
+          name: "리쥬란 스킨부스터 or 톤업부스터 + 베이직 스킨케어",
           originalPrice: "297,000",
           salePrices: "149,000"
         },
         {
-          name: "리쥬란 스킨부스터 or 톤업부스터 + MTS + 피코슈어토닝 1",
+          name: "리쥬란 스킨부스터 or 톤업부스터 + MTS + 피코슈어토닝",
           originalPrice: "437,000",
           salePrices: "219,000"
+        },
+        {
+          name: "리쥬란 스킨부스터 or 톤업부스터 + MTS + LDM 약물침투모드",
+          originalPrice: "397,000",
+          salePrices: "199,000"
+        },
+        {
+          name: "리쥬란 스킨부스터 or 톤업부스터 + MTS + 베이직 스킨케어",
+          originalPrice: "377,000",
+          salePrices: "189,000"
+        },
+        {
+          name: "리쥬란 스킨부스터 or 톤업부스터 + MTS + 헐리우드토닝",
+          originalPrice: "417,000",
+          salePrices: "209,000"
+        },
+        {
+          name: "리쥬란 스킨부스터 or 톤업부스터 + MTS + 엑셀V 제네시스",
+          originalPrice: "457,000",
+          salePrices: "229,000"
         }
       ]
     },
