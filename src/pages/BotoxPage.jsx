@@ -170,6 +170,54 @@ const botoxData = {
           salePrices: "249,000"
         }
       ]
+    },
+    {
+      title: "윤곽주사 & 아큐주사 & GPC주사",
+      description: "불필요한 페이스 지방 감소 주사", 
+      items: [
+        {
+          name: "윤곽주사 10cc",
+          description: "V라인을 위한 베러미만의 윤곽주사 레시피",
+          originalPrice: "47,000",
+          salePrices: "24,000"
+        },
+        {
+          name: "프리미엄 아큐주사 3cc",
+          description: "윤곽주사의 고농축 버전",
+          originalPrice: "57,000",
+          salePrices: "29,000"
+        },
+        {
+          name: "프리미엄 아큐주사 10cc",
+          description: "이중턱 부위 전용 \n 고용량 주사 1회",
+          originalPrice: "117,000",
+          salePrices: "59,000"
+        },
+        {
+          name: "GPC주사",
+          description: "무스테로이드 얼굴 지방 분해 주사",
+          originalPrice: "77,000",
+          salePrices: "39,000"
+        }
+      ]
+    },
+    {
+      title: "골드 XV주사/브이올렛",
+      description: "무스테로이드 프리미엄 지방세포 파괴 주사", 
+      items: [
+        {
+          name: "골드 XV주사 20cc 얼굴 1부위",
+          description: "허리는 X로, 얼굴은 V로 잘록하고 갸름하게",
+          originalPrice: "117,000",
+          salePrices: "59,000"
+        },
+        {
+          name: "브이올렛 주사 2cc 1회",
+          description: "이중턱 파괴!! 지방세포 자체를 파괴, 콜라겐 합성 도움으로 턱선 유지까지! \n지방 세포의 수가 줄어 반영구적인 효과 ",
+          originalPrice: "497,000",
+          salePrices: "249,000"
+        }
+      ]
     }
   ]
 };
