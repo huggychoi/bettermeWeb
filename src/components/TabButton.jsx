@@ -3,12 +3,12 @@ const TabButton = ({ icon, label, isActive, onClick }) => {
     <button
       onClick={onClick}
       className={`
-        w-16 px-1 py-2 mb-0.5
+        w-full px-1.5 py-1.5 mb-0.5 rounded-lg
         flex flex-col items-center justify-center gap-1
         transition-all duration-200
         ${isActive 
-          ? 'bg-pink-50 text-pink-400 font-medium' 
-          : 'text-gray-600 hover:bg-pink-50/50 hover:text-pink-400'
+          ? 'bg-pink-100/60 text-pink-600 font-medium' // 더 부드러운 핑크 계열
+          : 'text-gray-600 hover:bg-rose-50/40 hover:text-pink-500'
         }
       `}
     >

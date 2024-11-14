@@ -180,12 +180,12 @@ function App() {
           ref={contentRef}
           className="flex-1 h-full overflow-y-auto"
         >
-          <div className="sticky top-0 bg-white/85 backdrop-blur-sm border-b border-pink-100/50 z-10">
-            <div className="max-w-4xl mx-auto px-4 py-2">
-              <h1 className="text-sm font-bold text-pink-700 tracking-wide">
+          <div className="sticky top-0 bg-gradient-to-r from-pink-50/90 via-rose-50/80 to-pink-50/90 backdrop-blur-sm border-b border-pink-100/50 z-10">
+            <div className="max-w-4xl mx-auto px-4 py-3">
+              <h1 className="text-lg font-bold text-pink-700 tracking-wide">
                 {tabsConfig[activeTab].title}
               </h1>
-              <p className="text-[10px] text-pink-400 tracking-wider">
+              <p className="text-sm text-pink-500/80 tracking-wider">
                 {tabsConfig[activeTab].subtitle}
               </p>
             </div>
