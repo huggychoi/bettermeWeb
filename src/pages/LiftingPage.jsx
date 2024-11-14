@@ -78,7 +78,7 @@ const liftingData = {
     },
     {
       title: "인모드 리프팅",
-      description: "피부 전체의 콜라겐 재생 유도 및 주름 개선",
+      description: "피부 전체의 콜라겐 재생 유도 및 주름 개선\n 불필요한 피하 볼륨 감소",
       items: [
         {
           name: "인모드 FX 1부위 1회",
@@ -86,14 +86,39 @@ const liftingData = {
           salePrices: "59,000"
         },
         {
+          name: "인모드 FX 1부위 3회",
+          originalPrice: "317,000",
+          salePrices: "159,000"
+        },
+        {
           name: "인모드 FX 얼굴전체 1회",
           originalPrice: "217,000",
           salePrices: "109,000"
         },
         {
+          name: "인모드 FX 얼굴전체 3회",
+          originalPrice: "597,000",
+          salePrices: "299,000"
+        },
+        {
           name: "인모드 FORMA 1회",
           originalPrice: "217,000",
           salePrices: "109,000"
+        },
+        {
+          name: "인모드 FORMA 3회",
+          originalPrice: "657,000",
+          salePrices: "329,000"
+        },
+        {
+          name: "인모드 Fx + FORMA 1회",
+          originalPrice: "437,000",
+          salePrices: "219,000"
+        },
+        {
+          name: "인모드 Fx + FORMA 3회",
+          originalPrice: "1,197,000",
+          salePrices: "599,000"
         }
       ]
     },
@@ -103,45 +128,55 @@ const liftingData = {
       items: [
         {
           name: "올리지오 300샷",
-          originalPrice: "719,000",
-          salePrices: "360,000"
+          originalPrice: "779,000",
+          salePrices: "390,000"
         },
         {
-          name: "올리지오 400샷",
-          originalPrice: "919,000",
-          salePrices: "460,000"
+          name: "올리지오 300샷 진행시 100샷 당",
+          originalPrice: "199,000",
+          salePrices: "100,000"
         },
         {
           name: "올리지오 300샷 + LDM 물방울 리프팅(12)",
-          originalPrice: "797,000",
-          salePrices: "399,000"
+          originalPrice: "877,000",
+          salePrices: "439,000"
+        },
+        {
+          name: "올리지오 600샷 + LDM 물방울 리프팅(12)",
+          originalPrice: "1,437,000",
+          salePrices: "719,000"
         }
       ]
     },
     {
-      title: "버츄 리프팅",
+      title: "버츄RF 리프팅",
       description: "모공과 잔주름에도 강력한 효과",
       items: [
         {
-          name: "버츄 RF 아이 리프팅 1회",
+          name: "버츄RF 아이 리프팅 1회",
           originalPrice: "457,000",
           salePrices: "229,000"
         },
         {
-          name: "버츄 RF 이중턱 리프팅 + 크라이오 1회",
-          originalPrice: "517,000",
-          salePrices: "259,000"
+          name: "버츄RF 아이 리프팅 3회",
+          originalPrice: "1,197,000",
+          salePrices: "599,000"
         },
         {
-          name: "버츄 RF 브이라인 리프팅 + 크라이오 1회",
+          name: "버츄RF 브이라인 리프팅 + 크라이오 1회",
           originalPrice: "797,000",
           salePrices: "399,000"
+        },
+        {
+          name: "버츄RF 브이라인 리프팅 + 크라이오 3회",
+          originalPrice: "1,979,000",
+          salePrices: "990,000"
         }
       ]
     },
     {
       title: "쿨페이즈",
-      description: "적은 통증, 강력한 고주파 리프팅",
+      description: "적은 통증, 강력한 고주파 리프팅, 아프지 않은 써마지",
       items: [
         {
           name: "쿨페이즈 300샷",
@@ -157,6 +192,21 @@ const liftingData = {
           name: "쿨페이즈 300샷 + 리프테라2 펜타입 3000샷",
           originalPrice: "1,177,000",
           salePrices: "589,000"
+        },
+        {
+          name: "쿨페이즈 300샷 + 리프테라2 펜타입 5000샷",
+          originalPrice: "1,299,000",
+          salePrices: "650,000"
+        },
+        {
+          name: "쿨페이즈 300샷 + 슈링크 300샷",
+          originalPrice: "1,197,000",
+          salePrices: "599,000"
+        },
+        {
+          name: "쿨페이즈 300샷 + 울쎄라 300샷",
+          originalPrice: "2,579,000",
+          salePrices: "1,290,000"
         }
       ]
     }
