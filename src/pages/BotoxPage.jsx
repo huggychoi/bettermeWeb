@@ -8,38 +8,38 @@ const botoxData = {
       description: "주름, 사각턱 고민 한번에 해결하기",
       items: [
         {
-          name: "주름 보톡스 1부위 [국산]",
-          description: "부위: 눈가, 눈썹, 미간, 이마, 자갈턱, 콧볼, 입꼬리 등 선택",
-          originalPrice: "29,000",
-          salePrices: "15,000"
+          name: "주름보톡스 1부위\n [국산]",
+          description: "부위: 눈가, 눈밑, 미간, 이마, 자갈턱, 콧등, 콧볼, 입꼬리 중 선택\n 다회권 유효기간 1년",
+          originalPrice: "35,000",
+          salePrices: "18,000"
         },
         {
-          name: "주름 보톡스 3부위 [국산]",
+          name: "주름보톡스 3부위\n [국산]",
           originalPrice: "77,000",
           salePrices: "39,000"
         },
         {
-          name: "주름 보톡스 1부위 [나보타]",
+          name: "주름보톡스 1부위\n [나보타]",
           originalPrice: "68,800",
           salePrices: "34,900"
         },
         {
-          name: "수입 주름 보톡스 1부위 [제오민]",
+          name: "수입 주름보톡스 1부위\n [제오민]",
           originalPrice: "97,000",
           salePrices: "49,000"
         },
         {
-          name: "사각턱 보톡스 50u [국산]",
+          name: "사각턱 보톡스 50u \n [국산]",
           originalPrice: "37,000",
           salePrices: "19,000"
         },
         {
-          name: "사각턱 보톡스 50u [나보타]",
+          name: "사각턱 보톡스 50u \n [나보타]",
           originalPrice: "106,800",
           salePrices: "53,900"
         },
         {
-          name: "수입 사각턱 보톡스 50u [제오민]",
+          name: "수입 사각턱 보톡스 50u \n [제오민]",
           originalPrice: "217,000",
           salePrices: "109,000"
         }
@@ -50,23 +50,23 @@ const botoxData = {
       description: "잔주름 개선, 탱글탱글한 피부탄력",
       items: [
         {
-          name: "더모톡신(스킨보톡스) 1부위 [국산]",
+          name: "더모톡신(스킨보톡스) 1부위 \n [국산]",
           description: "부위: 이마, 볼, 목 중 선택",
           originalPrice: "117,000",
           salePrices: "59,000"
         },
         {
-          name: "수입 더모톡신 1부위 [제오민]",
+          name: "수입 더모톡신 1부위 \n [제오민]",
           originalPrice: "177,000",
           salePrices: "89,000"
         },
         {
-          name: "더모톡신 얼굴전체 [국산]",
+          name: "더모톡신 얼굴전체 \n [국산]",
           originalPrice: "157,000",
           salePrices: "79,000"
         },
         {
-          name: "더모톡신 얼굴전체 [나보타]",
+          name: "더모톡신 얼굴전체 \n [나보타]",
           originalPrice: "197,000",
           salePrices: "99,000"
         }
