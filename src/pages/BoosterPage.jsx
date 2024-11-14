@@ -5,11 +5,10 @@ const boosterData = {
   sections: [
     {
       title: "물광주사",
-      description: "피부 진정, 진주름, 물광 어드븐 개선, 노화 예방",
+      description: "피부 건조, 잔주름, 좁쌀 여드름 개선, 노화 예방",
       items: [
         {
           name: "물광주사 2.5cc",
-          description: "",
           originalPrice: "157,000",
           salePrices: "79,000"
         }
@@ -21,7 +20,6 @@ const boosterData = {
       items: [
         {
           name: "물광 2.5cc + 모공톡신 2.5cc (국산)",
-          description: "",
           originalPrice: "297,000",
           salePrices: "149,000"
         }
@@ -29,11 +27,11 @@ const boosterData = {
     },
     {
       title: "프리미엄 물광주사 릴리이드",
-      description: "기존 물광주사와 차별화, 빠른 엘보싱 흡수",
+      description: "기존 물광주사와 차별화, 빠른 엠보싱 흡수",
       items: [
         {
           name: "릴리이드 물광주사 5cc",
-          description: "연어에서 추출한 DNA 성분 PN을\n엄격하게 정제 뒤어난 흡수력과 직은 엘보",
+          description: "연어에서 추출한 DNA 성분 PN을\n엄격하게 정제 뛰어난 흡수력과 적은 엠보",
           originalPrice: "357,000",
           salePrices: "179,000"
         }
