@@ -5,7 +5,7 @@ const virizenData = {
   sections: [
     {
       title: "바이리즌 스킨부스터",
-      description: "높은 흡광의 히알루론산 프리미엄 스킨부스터",
+      description: "높은 함량의 히알루론산 프리미엄 스킨부스터",
       items: [
         {
           name: "바이리즌",
@@ -13,13 +13,13 @@ const virizenData = {
           salePrices: "199,000"
         },
         {
-          name: "바이리즌 1cc + 스킨보톡스",
+          name: "바이리즌 1cc + 스킨보톡스[국산]",
           description: "풀페이스 or 목주름 택1",
           originalPrice: "517,000",
           salePrices: "259,000"
         },
         {
-          name: "바이리즌 2cc + 스킨보톡스",
+          name: "바이리즌 2cc + 스킨보톡스[국산]",
           description: "풀페이스 or 목주름 택1",
           originalPrice: "997,000",
           salePrices: "499,000"
