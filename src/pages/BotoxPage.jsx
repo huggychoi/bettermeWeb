@@ -96,12 +96,12 @@ const botoxData = {
       description: "특수부위 보톡스",
       items: [
         {
-          name: "광대보톡스 [국산]",
+          name: "광대보톡스 \n [국산]",
           originalPrice: "59,000",
           salePrices: "30,000"
         },
         {
-          name: "광대보톡스 [나보타]",
+          name: "광대보톡스 \n [나보타]",
           originalPrice: "119,000",
           salePrices: "60,000"
         },
