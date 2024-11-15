@@ -1,7 +1,7 @@
 import React from 'react';
 import MenuSection from '../components/MenuSection';
 
-const whiteningData = {
+const supplementsData = {
   sections: [
     {
       title: "헐리우드 토닝",
@@ -112,12 +112,12 @@ const whiteningData = {
   ]
 };
 
-const WhiteningPage = () => (
+const SupplementsPage = () => (
   <>
-    {whiteningData.sections.map((section, idx) => (
+    {supplementsData.sections.map((section, idx) => (
       <MenuSection key={idx} {...section} />
     ))}
   </>
 );
 
-export default WhiteningPage;
+export default SupplementsPage;

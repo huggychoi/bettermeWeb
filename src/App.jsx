@@ -13,11 +13,16 @@ import AcnePage from './pages/AcnePage';
 import RemovalPage from './pages/RemovalPage';
 import FillerPage from './pages/FillerPage';
 import WeddingPage from './pages/WeddingPage';
+import HaracellPage from './pages/HaracellPage';
+import HistolabPage from './pages/HistolabPage';
+import SupplementsPage from './pages/SupplementsPage';
 import MembershipPage from './pages/MembershipPage';
 import AntiagingPage from './pages/AntiagingPage';
 import FirstVisitPage from './pages/FirstVisitPage';
 import { X, XCircle, EyeOff } from 'lucide-react';
 import { tabsConfig } from './config/tabsConfig';
+import { CardStyleSection, SectionStyle, MinimalGridStyle } from './components/MenuSectionSample';
+import TestUIPage from './pages/TestUIPage';
 
 function App() {
   const [showLanding, setShowLanding] = useState(() => {
@@ -37,6 +42,27 @@ function App() {
   useEffect(() => {
     localStorage.setItem('showLanding', JSON.stringify(showLanding));
   }, [showLanding]);
+
+  //
+  const renderTestStyles = () => (
+    <div className="space-y-12">
+      <div>
+        <h2 className="text-xl font-bold mb-4 px-6">스타일 1: 카드 스타일</h2>
+        <CardStyleSection />
+      </div>
+      
+      <div>
+        <h2 className="text-xl font-bold mb-4 px-6">스타일 2: 섹션 구분 스타일</h2>
+        <SectionStyle />
+      </div>
+      
+      <div>
+        <h2 className="text-xl font-bold mb-4 px-6">스타일 3: 미니멀 그리드 스타일</h2>
+        <MinimalGridStyle />
+      </div>
+    </div>
+  );
+
 
   const handleTabClick = (key) => {
     setActiveTab(key);
@@ -93,19 +119,18 @@ function App() {
         return <RemovalPage />;
       case 'filler':
         return <FillerPage />;
+      case 'haracell':
+        return <HaracellPage />;
+      case 'histolab':
+        return <HistolabPage />;
+      case 'supplements':
+        return <SupplementsPage />;
       case 'wedding':
         return <WeddingPage />;
       case 'membership':
         return <MembershipPage />;
-      default:
-        return (
-          <div className="w-full min-h-[400px] flex items-center justify-center">
-            <div className="text-center text-sm text-gray-500">
-              준비 중입니다
-            </div>
-          </div>
-        );
-    }
+      case 'test-ui':
+        return <TestUIPage />;
   };
 
   return (

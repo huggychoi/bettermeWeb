@@ -1,7 +1,7 @@
 import React from 'react';
 import MenuSection from '../components/MenuSection';
 
-const virizenData = {
+const haracellData = {
   sections: [
     {
       title: "아쿠아 블루 라인",
@@ -56,12 +56,12 @@ const virizenData = {
   ]
 };
 
-const VirizenPage = () => (
+const HaracellPage = () => (
   <>
-    {virizenData.sections.map((section, idx) => (
+    {haracellData.sections.map((section, idx) => (
       <MenuSection key={idx} {...section} />
     ))}
   </>
 );
 
-export default VirizenPage;
+export default HaracellPage;
