@@ -5,11 +5,11 @@ const removalData = {
   sections: [
     {
       title: "아포지 플러스 제모 [남성]",
-      description: "공홈하격/플원요버 레이저 제모",
+      description: "공중타격/쿨링요법 레이저 제모",
       items: [
         {
           name: "얼굴 부위(턱/인중/볼/구렛나루/앞목) 중 선택",
-          description: "*권장 추가: 2-3주 간격",
+          description: "*권장 주기: 2-3주 간격",
           originalPrice: "57,000",
           salePrices: "29,000"
         },
@@ -87,11 +87,11 @@ const removalData = {
     },
     {
       title: "아포지 플러스 제모 [여성]",
-      description: "공홈하격/플원요버 레이저 제모",
+      description: "공중타격/쿨링요법 레이저 제모",
       items: [
         {
           name: "겨드랑이",
-          description: "*권장 추가: 2-3주 간격",
+          description: "*권장 주기: 2-3주 간격",
           originalPrice: "23,000",
           salePrices: "12,000"
         },
