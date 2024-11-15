@@ -192,65 +192,65 @@ Error generating stack: `+l.message+`
  *입술, 코, 애교, 눈밑, 미간 제외/모든 부위 가능`,originalPrice:"297,000",salePrices:"149,000"},{name:"3cc",originalPrice:"837,000",salePrices:"419,000"},{name:"5cc",originalPrice:"1,377,000",salePrices:"689,000"},{name:"[입술+입꼬리] 1cc + 입꼬리 보톡스(국산)",originalPrice:"317,000",salePrices:"159,000"},{name:"코 필러",originalPrice:"357,000",salePrices:"179,000"}]},{title:"프리미엄 민트실 코 리프팅",description:"360도 입체 돌기가 있는 4세대 리프팅",items:[{name:"민트 콧대 2줄",description:"라인 & 각도 개선, 콜라겐 형성 활성화",originalPrice:"257,000",salePrices:"129,000"},{name:"민트 콧대 4줄",originalPrice:"437,000",salePrices:"219,000"},{name:"민트 코끝 2줄",originalPrice:"357,000",salePrices:"179,000"},{name:"민트 코 전체 실리프팅",description:"콧대 4줄 + 코끝 2줄",originalPrice:"657,000",salePrices:"329,000"},{name:"민트 모노실 30줄",description:`녹으면서 콜라겐이 합성되는 모노실 
  *모노실 30줄 추가 시 50,000원`,originalPrice:"257,000",salePrices:"129,000"},{name:"민트실 4줄 [시술 전 맞춤 디자인]",description:`비수술적인 요법으로 자연스럽게 리프팅 
  *1줄 추가시 50,000원`,originalPrice:"719,000",salePrices:"360,000"},{name:"슈퍼민트실 4줄 [시술 전 맞춤 디자인]",description:`세밀하게 앞광대, 필자를 효과적으로 UP
-*1줄 추가시 50,000원`,originalPrice:"639,000",salePrices:"320,000"}]}]},sf=()=>p.jsx(p.Fragment,{children:of.sections.map((e,n)=>p.jsx(G,{...e},n))}),af={sections:[{title:"웨딩 케어",description:"예비홍주 부모님들께 추천드립니다❤",items:[{name:"웨딩 혼주 베이직 케어",description:`주름 보톡스 (국산)
-+시크릿 보톡스 50U(국산)
-+아쿠아필 3단계
-+항산화 스킨케어(LDM/오투덤 중 택1)`,originalPrice:"197,000",salePrices:"99,000"},{name:"웨딩 혼주 프리미엄 케어",description:`주름 보톡스 (국산)
-+시크릿 보톡스 50U (국산)
-+필링 관리(리라필/물톡스/콜라겐 중 택1)
-+항산화 스킨케어(LDM/오투덤 중 택1)`,originalPrice:"257,000",salePrices:"129,000"}]},{title:"웨딩 D-7",description:"예비신부 고객님들께 추천드립니다❤",items:[{name:"[예식 D-7 케어] 혼주 맞춤 케어",description:`베이직 스킨케어 (스크러버 포함)
-+LDM 물방울리프팅 12분
-+백옥원장`,originalPrice:"217,000",salePrices:"109,000"},{name:"[예식 D-7 케어] 신랑&신부 맞춤 케어",description:`베이직 스킨케어 (스크러버 포함)
-+고주파 뷰기케어
-+LDM 물방울리프팅 12분
-+백옥원장`,originalPrice:"317,000",salePrices:"159,000"}]},{title:"웨딩 패키지",description:"예비신부 고객님들께 추천드립니다❤",items:[{name:"웨딩 베이직 패키지",description:`[미백/광채케어]
-라라필+릴리아토M 2.5cc+얼굴전체 스킨보톡스 (국산)+LDM 물방울리프팅 12분 +백옥원장
+*1줄 추가시 50,000원`,originalPrice:"639,000",salePrices:"320,000"}]}]},sf=()=>p.jsx(p.Fragment,{children:of.sections.map((e,n)=>p.jsx(G,{...e},n))}),af={sections:[{title:"웨딩 케어",description:"예비혼주 부모님들께 추천드립니다❤",items:[{name:"웨딩 혼주 베이직 케어",description:`주름 보톡스(국산)
++ 사각턱 보톡스 50U(국산)
++ 아쿠아필 3단계
++ 항산화 스킨케어(LDM/오투덤 중 택1)`,originalPrice:"197,000",salePrices:"99,000"},{name:"웨딩 혼주 프리미엄 케어",description:`주름 보톡스(국산)
++ 사각턱 보톡스 50U(국산)
++ 필링 관리(리라필/물톡스/플라필 중 택1)
++ 항산화 스킨케어(LDM/오투덤 중 택1)`,originalPrice:"257,000",salePrices:"129,000"}]},{title:"웨딩 D-7",description:"예비신부 고객님들께 추천드립니다❤",items:[{name:"[예식 D-7 케어] 혼주 맞춤 케어",description:`베이직 스킨케어(스크러버 포함)
++ LDM 물방울리프팅 12분
++ 백옥링거`,originalPrice:"217,000",salePrices:"109,000"},{name:"[예식 D-7 케어] 신랑&신부 맞춤 케어",description:`베이직 스킨케어(스크러버 포함)
++ 고주파 붓기케어
++ LDM 물방울리프팅 12분
++ 백옥링거`,originalPrice:"317,000",salePrices:"159,000"}]},{title:"웨딩 패키지",description:"예비신부 고객님들께 추천드립니다❤",items:[{name:"웨딩 베이직 패키지",description:`[미백/광채케어]
+라라필+릴리이드M 2.5cc+얼굴전체 스킨보톡스(국산)+LDM 물방울리프팅 12분 +백옥링거
 
-[페이스 V라인 턱케어]
-얼굴전체 인모드 FX or Forma+V라인 리프테라피 팁 3000샷+V라인 타이트닝 주사 +백옥원장
+[페이스 V라인 탄력케어]
+얼굴전체 인모드 FX or Forma+V라인 리프테라2 펜3000샷+V라인 타이트닝 주사 +백옥링거
 
 [드레스라인 바디케어]
-슈모근 보톡스 100U (국산)+슈모근 고주파+여리미주사 40cc+바디 윤곽주사6cc
+승모근 보톡스 100U(국산)+승모근 고주파+여리미주사 40cc+바디 윤곽주사6cc
 
-팔뚝,허벅지,리리펜돌`,originalPrice:"1,197,000",salePrices:"599,000"},{name:"웨딩 프리미엄 패키지",description:`[미백/광채케어 1]
-라라필+릴리아토M 2.5cc+얼굴전체 스킨보톡스 (국산)+LDM 물방울리프팅 12분 +백옥원장
+팔뚝,허벅지,러브핸들`,originalPrice:"1,197,000",salePrices:"599,000"},{name:"웨딩 프리미엄 패키지",description:`[미백/광채케어 1]
+라라필+릴리이드M 2.5cc+얼굴전체 스킨보톡스(국산)+LDM 물방울리프팅 12분 +백옥링거
 
 [미백/광채케어 2]
-물톡스+고주파 뷰기케어
-+LDM 물방울리프팅 12분+백옥원장
+물톡스+고주파 붓기케어
++LDM 물방울리프팅 12분+백옥링거
 
-[페이스 V라인 턱케어 1]
+[페이스 V라인 탄력케어 1]
 얼굴전체 인모드 FX or Forma
-+V라인 리프테라피 팁 3000샷+V라인 타이트닝 주사 +백옥원장
++V라인 리프테라2 펜 3000샷+V라인 타이트닝 주사 +백옥링거
 
-[페이스 V라인 턱케어 2]
-슈링크 라인 300샷+팬 300샷
-+LDM 물방울리프팅 12분+백옥원장
+[페이스 V라인 탄력케어 2]
+슈링크 라인 300샷+부스터 300샷
++LDM 물방울리프팅 12분+백옥링거
 
 [드레스라인 바디케어]
-슈모근 보톡스 150U (국산)
-+슈모근 고주파+여리미주사 80cc
+승모근 보톡스 150U(국산)
++승모근 고주파+여리미주사 80cc
 +바디 윤곽주사 6cc`,originalPrice:"2,397,000",salePrices:"1,199,000"},{name:"웨딩 하이엔드 패키지",description:`[미백/광채케어 1]
-라라필+릴리아토M 2.5cc+얼굴전체 스킨보톡스 (국산)+LDM 물방울리프팅 20분 +백옥원장
+라라필+릴리이드M 2.5cc+얼굴전체 스킨보톡스(국산)+LDM 물방울리프팅 20분 +백옥링거
 
 [미백/광채케어 2]
-물톡스+고주파 뷰기케어
-+LDM 물방울리프팅 20분+백옥원장
+물톡스+고주파 붓기케어
++LDM 물방울리프팅 20분+백옥링거
 
 [미백/광채케어 3]
-물라겐+ISCE 엑소좀
-+LDM 물방울리프팅 20분+백옥원장
+플라필+ISCE 엑소좀
++LDM 물방울리프팅 20분+백옥링거
 
-[페이스 V라인 턱케어 1]
+[페이스 V라인 탄력케어 1]
 얼굴전체 인모드 FX or Forma
-+V라인 리프테라피 팁 3000샷+V라인 타이트닝 주사+백옥원장
++V라인 리프테라2 펜 3000샷+V라인 타이트닝 주사+백옥링거
 
-[페이스 V라인 턱케어 2]
-슈링크 라인 300샷+팬 300샷+프리미엄 아큐주사 6cc+LDM 물방울리프팅 20분 +백옥원장
+[페이스 V라인 탄력케어 2]
+슈링크 라인 300샷+부스터 300샷+프리미엄 아큐주사 6cc+LDM 물방울리프팅 20분 +백옥링거
 
 [드레스라인 바디케어]
-슈모근 보톡스 200U (국산)
-+슈모근 고주파+여리미주사 80cc
+승모근 보톡스 200U(국산)
++승모근 고주파+여리미주사 80cc
 +바디 윤곽주사 6cc`,originalPrice:"3,197,000",salePrices:"1,599,000"}]}]},uf=()=>p.jsx(p.Fragment,{children:af.sections.map((e,n)=>p.jsx(G,{...e},n))}),cf={sections:[{title:"VIP 멤버십",description:`베러미 법어점 VIP들을 위한
 할인 멤버십 안내`,items:[{name:"베러미 10",description:`100만원 결제 시 10만원 추가 적립
 10% 할인 멤버십`,originalPrice:"1,100,000",salePrices:"1,000,000"},{name:"베러미 15",description:`200만원 결제 시 30만원 추가 적립
