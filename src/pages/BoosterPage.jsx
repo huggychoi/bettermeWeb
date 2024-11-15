@@ -38,8 +38,8 @@ const boosterData = {
       ]
     },
     {
-      title: "엑제 실리프팅 울트라콜",
-      description: "울트라V실 1400개를 한방에!, 엑체형 PDO 실리프팅",
+      title: "액체 실리프팅 울트라콜",
+      description: "울트라V실 1400개를 한방에!, 액체형 PDO 실리프팅",
       items: [
         {
           name: "울트라콜 100 2cc",
@@ -49,7 +49,7 @@ const boosterData = {
         },
         {
           name: "울트라콜 200 2cc",
-          description: "자연스럽고 안전한 볼륨 울트라콜 200\n필러 부작용이 걱정된다면 차세대 스킨트라 울트라콜",
+          description: "자연스럽고 안전한 볼륨 울트라콜 200\n필러 부작용 걱정된다면 차세대 스컬트라 울트라콜",
           originalPrice: "499,000",
           salePrices: "250,000"
         },
@@ -67,8 +67,8 @@ const boosterData = {
       items: [
         {
           name: "쥬베룩 스킨부스터 2cc",
-          description: "콜라겐 재생 부스터 쥬베룩\n진주름, 모공, 흉터 즉각 개선!",
-          originalPrice: "299,000",
+          description: "콜라겐 재생 부스터 쥬베룩\n 잔주름, 모공, 흉터 즉각 개선!",
+          originalPrice: "399,000",
           salePrices: "200,000"
         },
         {
@@ -76,6 +76,12 @@ const boosterData = {
           description: "다른 시술에 추가 진행 시",
           originalPrice: "199,000",
           salePrices: "100,000"
+        },
+        {
+          name: "[스킨부스터 옵션] 하이쿡스 인젝터",
+          description: "통증 절반, 일정한 주입량 \n 자동 기계식 피부인젝터!",
+          originalPrice: "57,000",
+          salePrices: "29,000"
         }
       ]
     },
@@ -85,8 +91,8 @@ const boosterData = {
       items: [
         {
           name: "4cc",
-          description: "PDLLA 성분으로 기존 스킬트러보다 부작용은 줄이고\n효과는 더 좋아진 자가 콜라겐 생성 볼륨 부스터\n눈밑 고랑 부위 시술 제외",
-          originalPrice: "899,000",
+          description: "PDLLA 성분으로 기존 스컬트라보다 부작용은 줄이고 \n 효과는 더 좋아진 자가 콜라겐 생성 볼륨 부스터 \n 눈밑 고랑 부위 시술 제외",
+          originalPrice: "999,000",
           salePrices: "450,000"
         },
         {
@@ -99,23 +105,23 @@ const boosterData = {
     },
     {
       title: "ISCE 엑소좀",
-      description: "ISCE 인체표피줄기세포배양액 함유된 스킨부스터\n피부 재생, 노화로 인한 피부 탄력을 증점으로 개선",
+      description: "ISCE 인체 표피줄기세포배양액 함유된 스킨부스터 \n 피부 재생, 노화로 인한 피부 탄력을 중점으로 개선",
       items: [
         {
           name: "ISCE 더블엑소좀",
-          description: "ISCE 엑소좀 1차+2차 MIX 3cc MTS + 시트팩",
+          description: "ISCE 엑소좀 1제+2제 MIX 3cc MTS + 시트팩",
           originalPrice: "357,000",
           salePrices: "179,000"
         },
         {
-          name: "ISCE 코어 재생 더블리프팅(ISCE+비쥬RF)",
-          description: "비쥬RF + ISCE 엑소좀 1차+2차 MIX 3cc MTS + 시트팩",
+          name: "ISCE 코어 재생 더블리프팅(ISCE엑소좀 + 버츄RF)",
+          description: "버츄 RF + ISCE 엑소좀 1제+2제 MIX 3cc MTS + 시트팩",
           originalPrice: "597,000",
           salePrices: "299,000"
         },
         {
-          name: "멜라부스터 더블토닝(ISCE+피코슈어토닝) 5회",
-          description: "피코슈어토닝 + ISCE 엑소좀 1차+2차 MIX 3cc MTS + 시트팩\n\nEPC-CM 콜라겐 생성 촉진, 항노화 증폭개선\nMD-EXOSOME 피부항영 및 재생, 항산산소 제거\nCHA-High+CHA-VEGF (성장인자) 세포 재생, 성장 촉진",
+          name: "멜라부스터 더블토닝(ISCE 엑소좀 + 피코슈어토닝) 5회",
+          description: "피코슈어토닝 + ISCE 엑소좀 1제+2제 MIX 3cc MTS + 시트팩\n\n 콜라겐 생성 촉진, 항노화 증폭 개선\n MD-EXOSOME 피부항염 및 재생 \n CHA-High+CHA-VEGF(성장인자) 세포재생, 성장촉진",
           originalPrice: "1,979,000",
           salePrices: "990,000"
         }
