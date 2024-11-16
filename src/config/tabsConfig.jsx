@@ -113,7 +113,7 @@ export const tabsConfig = {
     title: "웨딩",
     subtitle: "Wedding",
   },
-  hiracell: {
+  haracell: {
     icon: <Fingerprint size={16} strokeWidth={1} />,
     label: "하라셀",
     title: "하라셀",
