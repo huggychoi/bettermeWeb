@@ -267,7 +267,7 @@ function App() {
       <div className="fixed inset-0 flex">
         {/* 왼쪽 카테고리 영역 */}
         <div 
-          className="min-w-[5.5rem] w-auto h-full overflow-y-auto bg-[#F2EAE1] border-r border-[#E5D5C5]/40 flex-shrink-0 scrollbar-hide"
+          className="min-w-[5.5rem] w-min h-full overflow-y-auto bg-[#F2EAE1] border-r border-[#E5D5C5]/40 flex-shrink-0 scrollbar-hide"
           style={{
             msOverflowStyle: 'none',
             scrollbarWidth: 'none'
@@ -275,7 +275,7 @@ function App() {
         >
           {/* 상단 CATEGORY 텍스트 */}
           <div className="sticky top-0 bg-[#F2EAE1]/95 backdrop-blur-sm z-10 p-2.5 border-b border-[#E5D5C5]/40">
-            <p className="text-[11px] text-center font-nanum-square font-bold text-[#9B8777] tracking-[0.2em]">
+            <p className="text-[11px] text-center font-bold text-[#9B8777] tracking-[0.2em]">
               CATEGORY
             </p>
           </div>
@@ -289,7 +289,6 @@ function App() {
                 className={`
                   w-full px-3 py-2.5 rounded-lg transition-all duration-300 ease-in-out
                   flex flex-col items-center justify-center gap-1.5 group
-                  font-nanum-square
                   ${activeTab === key 
                     ? 'bg-[#E5D5C5] text-[#7A6B5B] shadow-sm transform scale-[1.02]' 
                     : 'text-[#9B8777] hover:bg-[#EAE0D5] hover:text-[#7A6B5B] hover:transform hover:scale-[1.02]'
@@ -319,18 +318,17 @@ function App() {
           </div>
         </div>
 
-
         {/* 오른쪽 메뉴판 영역 */}
         <div 
           ref={contentRef}
           className="flex-1 h-full overflow-y-auto bg-white"
         >
-          <div className="sticky top-0 bg-white/70 backdrop-blur-sm border-b border-pink-100/30 z-10">
+          <div className="sticky top-0 bg-white/70 backdrop-blur-sm border-b border-[#E5D5C5]/30 z-10">
             <div className="max-w-4xl mx-auto px-4 py-2.5">
-              <h1 className="text-sm font-bold text-pink-700 tracking-wide">
+              <h1 className="text-sm font-bold text-[#7A6B5B] tracking-wide">
                 {tabsConfig[activeTab].title}
               </h1>
-              <p className="text-[10px] text-pink-400 tracking-wider">
+              <p className="text-[10px] text-[#9B8777] tracking-wider">
                 {tabsConfig[activeTab].subtitle}
               </p>
             </div>
@@ -338,7 +336,7 @@ function App() {
           
           <div className="max-w-4xl mx-auto p-4 min-h-0">
             {renderActivePage()}
-            {renderVatNotice()}
+            {renderBottomNotice()} {/* 여기를 수정 */}
           </div>
         </div>
       </div>
