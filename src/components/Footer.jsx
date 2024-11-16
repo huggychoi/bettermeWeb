@@ -19,7 +19,7 @@ const Footer = () => {
 
       {/* 카카오상담 */}
       <a 
-        href="https://pf.kakao.com/_UUxdVG"
+        href="https://pf.kakao.com/_UUxdVG/chat"
         target="_blank" 
         rel="noopener noreferrer"
         className="flex-1 text-[#3C1E1E] flex items-center justify-center gap-1.5 
