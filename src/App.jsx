@@ -110,6 +110,111 @@ function App() {
     }
   };
 
+  const renderVatNotice = () => {
+    const taxIncludedPages = ['haracell', 'supplements', 'histolab'];
+    
+    return (
+      <div className="mt-8 pb-4 text-center text-gray-500 text-sm border-t border-gray-200 pt-4">
+        ※ 표시된 모든 가격은 부가세 10% {taxIncludedPages.includes(activeTab) ? '포함' : '별도'}입니다 ※
+      </div>
+    );
+  };
+
+  useEffect(() => {
+    const preventDefaultAction = (e) => {
+      e.preventDefault();
+      return false;
+    };
+
+    const preventContextMenu = (e) => {
+      e.preventDefault();
+      return false;
+    };
+
+    const preventKeyboardShortcuts = (e) => {
+      // Ctrl + S, Ctrl + U, Ctrl + Shift + I, F12 등 방지
+      if (
+        (e.ctrlKey && e.keyCode === 83) || // Ctrl + S
+        (e.ctrlKey && e.keyCode === 85) || // Ctrl + U
+        (e.ctrlKey && e.shiftKey && e.keyCode === 73) || // Ctrl + Shift + I
+        e.keyCode === 123 // F12
+      ) {
+        e.preventDefault();
+        return false;
+      }
+    };
+
+    // 이미지 드래그 방지
+    const preventDragStart = (e) => {
+      e.preventDefault();
+      return false;
+    };
+
+    // 텍스트 선택 방지
+    const preventSelect = (e) => {
+      e.preventDefault();
+      return false;
+    };
+
+    // 이벤트 리스너 등록
+    document.addEventListener('contextmenu', preventContextMenu);
+    document.addEventListener('dragstart', preventDragStart);
+    document.addEventListener('selectstart', preventSelect);
+    document.addEventListener('keydown', preventKeyboardShortcuts);
+    document.addEventListener('copy', preventDefaultAction);
+    document.addEventListener('cut', preventDefaultAction);
+    document.addEventListener('paste', preventDefaultAction);
+
+    // CSS 추가
+    const style = document.createElement('style');
+    style.textContent = `
+      img {
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        user-drag: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+      }
+      body {
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+    `;
+    document.head.appendChild(style);
+
+    // 클린업 함수
+    return () => {
+      document.removeEventListener('contextmenu', preventContextMenu);
+      document.removeEventListener('dragstart', preventDragStart);
+      document.removeEventListener('selectstart', preventSelect);
+      document.removeEventListener('keydown', preventKeyboardShortcuts);
+      document.removeEventListener('copy', preventDefaultAction);
+      document.removeEventListener('cut', preventDefaultAction);
+      document.removeEventListener('paste', preventDefaultAction);
+      document.head.removeChild(style);
+    };
+  }, []);
+
+  // 이미지 요소에 적용할 props
+  const imageProps = {
+    onContextMenu: (e) => e.preventDefault(),
+    draggable: false,
+    style: {
+      WebkitUserSelect: 'none',
+      MozUserSelect: 'none',
+      msUserSelect: 'none',
+      userSelect: 'none',
+    }
+  };
+
   return (
     <div className="relative">
       {showLanding && (
@@ -133,6 +238,7 @@ function App() {
             </div>
 
             <img 
+              {...imageProps}
               src="https://raw.githubusercontent.com/huggychoi/bettermeWeb/refs/heads/main/public/suneung-event.png"
               alt="수능 이벤트"
               className="w-full rounded-xl shadow-lg cursor-pointer hover:opacity-95 transition-opacity"
@@ -146,7 +252,7 @@ function App() {
         </div>
       )}
 
-    <div className="fixed inset-0 flex bg-gradient-to-br from-pink-50/90 via-yellow-50/80 to-rose-50/70 font-pretendard">
+      <div className="fixed inset-0 flex bg-gradient-to-br from-pink-50/90 via-yellow-50/80 to-rose-50/70 font-pretendard">
         {/* 왼쪽 카테고리 영역 - 유동적 너비 */}
         <div 
           className="min-w-[5rem] w-auto h-full overflow-y-auto bg-white/80 border-r border-pink-100/30 flex-shrink-0 scrollbar-hide backdrop-blur-sm"
@@ -189,11 +295,7 @@ function App() {
           
           <div className="max-w-4xl mx-auto p-4 min-h-0">
             {renderActivePage()}
-
-            {/* 부가세 안내 */}
-            <div className="mt-8 pb-4 text-center text-gray-500 text-sm border-t border-gray-200 pt-4">
-              ※ 부가세 10% 별도 ※
-            </div>
+            {renderVatNotice()}
           </div>
         </div>
       </div>

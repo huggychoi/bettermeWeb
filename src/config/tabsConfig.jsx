@@ -115,8 +115,8 @@ export const tabsConfig = {
   },
   hiracell: {
     icon: <Fingerprint size={16} strokeWidth={1} />,
-    label: "히라셀",
-    title: "히라셀",
+    label: "하라셀",
+    title: "하라셀",
     subtitle: "Haracell",
   },
   histolab: {
