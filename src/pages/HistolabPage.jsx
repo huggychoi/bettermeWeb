@@ -1,7 +1,7 @@
 import React from 'react';
 import MenuSection from '../components/MenuSection';
 
-const weddingData = {
+const histolabData = {
   sections: [
     {
       title: "앰플",
@@ -115,12 +115,12 @@ const weddingData = {
   ]
 };
 
-const WeddingPage = () => (
+const HistolabPage = () => (
   <>
-    {weddingData.sections.map((section, idx) => (
+    {histolabData.sections.map((section, idx) => (
       <MenuSection key={idx} {...section} />
     ))}
   </>
 );
 
-export default WeddingPage;
+export default HistolabPage;
