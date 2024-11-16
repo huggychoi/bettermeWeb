@@ -272,7 +272,7 @@ Error generating stack: `+l.message+`
  미국산 리포좀 제형 기술 적용하여 체내 흡수율 UP!`,salePrices:"40,000"}]},{title:"아르기닌",description:"건강한 29종 원료의 활력 부스터",items:[{name:"수퍼 아르기닌 6000 [1개월분]",description:`1포당 L-아르기닌 6000mg! 
  기존 자사 제품 대비 함량 UP 
  고함량 아르기닌과 건강한 
- 29종 원료로 활력을 더하세요`,salePrices:"68,000"},{name:"클리마젠",description:"갱년기 여성을 위한 종합 RNT",description:`갱년기 여성건강에 도움 피크노제놀 함유! 
+ 29종 원료로 활력을 더하세요`,salePrices:"68,000"}]},{title:"클리마젠",description:"갱년기 여성을 위한 종합 RNT",items:[{name:"클리마젠 플러스 [1개월분]",description:`갱년기 여성건강에 도움 피크노제놀 함유! 
  대두이소플라본, 비타민B6, 나이아신, 비타민D `,salePrices:"80,000"}]}]},Pf=()=>p.jsx(p.Fragment,{children:yf.sections.map((e,n)=>p.jsx(G,{...e},n))});/**
  * @license lucide-react v0.454.0 - ISC
  *
