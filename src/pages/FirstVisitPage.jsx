@@ -13,6 +13,11 @@ const firstVisitData = {
           salePrices: "10,000"
         },
         {
+          name: "백옥주사",
+          description: "체내 대사활동을 촉진하고 활성산소를 제거하여\n면역력 강화, 피로회복, 피부톤 개선",
+          salePrices: "10,000"
+        },
+        {
           name: "비타민 주사",
           description: "부족한 비타민 보충\n면역력 강화, 피로회복, 피부톤 개선",
           salePrices: "10,000"
@@ -96,11 +101,23 @@ const firstVisitData = {
 };
 
 const FirstVisitPage = () => (
-  <>
+  <div className="max-w-4xl mx-auto">
     {firstVisitData.sections.map((section, idx) => (
       <MenuSection key={idx} {...section} />
     ))}
-  </>
+    
+    {/* 하단 공지사항 */}
+    <div className="mt-8 pt-6 border-t border-[#EAE4DE]">
+      <div className="text-center font-nanum-square">
+        {/* <p className="text-[#7A6B5B] text-sm">
+          ※ 표시된 모든 가격은 부가세 10% 별도입니다 ※
+        </p> */}
+        <p className="text-[#9B8777] text-sm mt-2">
+          첫 방문 이벤트는 베러미 범어점 내원 이력이 없는 고객님만 이용 가능합니다
+        </p>
+      </div>
+    </div>
+  </div>
 );
 
 export default FirstVisitPage;

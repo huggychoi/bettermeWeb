@@ -1,32 +1,33 @@
+// MenuSection.jsx
 import React from 'react';
 import MenuItem from './MenuItem';
 
 const formatDescription = (text) => {
-  return text.split('\\n').map((line, i) => (
+  if (!text) return null;
+  return text.split('\n').map((line, i) => (
     <React.Fragment key={i}>
       {line}
-      {i !== text.split('\\n').length - 1 && <br />}
+      {i !== text.split('\n').length - 1 && <br />}
     </React.Fragment>
   ));
 };
 
 const MenuSection = ({ title, description, items }) => (
-  <div className="mb-3 bg-white rounded-lg shadow-sm border border-gray-200">
-    <div className="bg-gray-50 p-2 border-b">
-      <h2 className="text-sm font-semibold text-gray-900 text-left">{title}</h2>
+  <div className="mb-5">
+    {/* 섹션 헤더 */}
+    <div className="mb-3">
+      <h2 className="text-[#4A4039] text-lg font-bold text-center">{title}</h2>
       {description && (
-        <p className="text-xs text-gray-500 text-left whitespace-pre-line">
+        <p className="text-[#7A6B5B] text-sm mt-2 text-center leading-relaxed">
           {formatDescription(description)}
         </p>
       )}
     </div>
-    <div className="p-2.5">
+    
+    {/* 메뉴 아이템 그리드 */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {items.map((item, idx) => (
-        <MenuItem 
-          key={idx} 
-          {...item} 
-          description={item.description ? item.description.replace(/\\n/g, '\n') : null}
-        />
+        <MenuItem key={idx} {...item} />
       ))}
     </div>
   </div>

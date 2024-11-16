@@ -1,32 +1,36 @@
-import React from 'react';
+// MenuItem.jsx
+const MenuItem = ({ name, description, salePrices, originalPrice }) => {
+  const formatPrice = (price) => {
+    if (!price) return "0";
+    const numericPrice = price.toString().replace(/,/g, '');
+    return Number(numericPrice).toLocaleString();
+  };
 
-const MenuItem = ({ name, description, originalPrice, salePrices }) => (
-  <div className="border-b border-gray-100 last:border-0 py-2">
-    <div className="flex justify-between items-start">
-      <div className="flex-1">
-        <h3 className="text-sm font-medium text-gray-900 text-left">{name}</h3>
-        {description && (
-          <p className="text-xs text-gray-500 mt-0.5 text-left whitespace-pre-line">
-            {description}
-          </p>
-        )}
-      </div>
-      <div className="text-right min-w-[90px] ml-3">
+  return (
+    <div className="bg-white rounded-lg border border-[#EAE4DE] p-3 hover:border-[#E5D5C5] transition-all duration-200 hover:shadow-sm">
+      {/* 이름 */}
+      <h3 className="text-[#4A4039] font-bold text-[14px] mb-0.5">{name}</h3>
+      
+      {/* 설명 */}
+      {description && (
+        <p className="text-[#7A6B5B] text-[12px] leading-relaxed whitespace-pre-line mb-1">
+          {description}
+        </p>
+      )}
+      
+      {/* 가격 영역 */}
+      <div className="text-right">
         {originalPrice && (
-          <p className="text-xs text-gray-400 line-through">{originalPrice}원</p>
+          <span className="text-[#9B8777] text-xs line-through block mb-0.5">
+            {formatPrice(originalPrice)}원
+          </span>
         )}
-        {Array.isArray(salePrices) ? (
-          <div className="space-y-0.5">
-            {salePrices.map((price, idx) => (
-              <p key={idx} className="text-base font-semibold text-rose-500">{price}원</p>
-            ))}
-          </div>
-        ) : (
-          <p className="text-base font-semibold text-rose-500">{salePrices}원</p>
-        )}
+        <span className="text-[#FF6B6B] font-bold text-base">
+          {formatPrice(salePrices)}원
+        </span>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default MenuItem;

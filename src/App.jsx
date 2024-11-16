@@ -19,132 +19,105 @@ import SupplementsPage from './pages/SupplementsPage';
 import MembershipPage from './pages/MembershipPage';
 import AntiagingPage from './pages/AntiagingPage';
 import FirstVisitPage from './pages/FirstVisitPage';
-import { X, XCircle, EyeOff } from 'lucide-react';
+import { Menu, X, XCircle, EyeOff } from 'lucide-react';
 import { tabsConfig } from './config/tabsConfig';
+import Footer from './components/Footer';
 
 function App() {
-  const [showLanding, setShowLanding] = useState(() => {
-    const today = new Date().toDateString();
-    const hideUntil = localStorage.getItem('hideUntilDate');
-    
-    if (!hideUntil || new Date(hideUntil) < new Date()) {
-      localStorage.removeItem('hideUntilDate');
-      return true;
-    }
-    return false;
-  });
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('firstVisit');
   const contentRef = React.useRef(null);
+  
+  const [showLanding, setShowLanding] = useState(() => {
+    const hideUntil = localStorage.getItem('hideUntilDate');
+    return !hideUntil || new Date(hideUntil) < new Date();
+  });
 
   useEffect(() => {
-    localStorage.setItem('showLanding', JSON.stringify(showLanding));
+    if (!showLanding) {
+      localStorage.setItem('showLanding', 'false');
+    }
   }, [showLanding]);
 
+  // 메뉴 관련 핸들러
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  
   const handleTabClick = (key) => {
     setActiveTab(key);
+    setIsMenuOpen(false);
     if (contentRef.current) {
-      contentRef.current.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+      contentRef.current.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
-  const handleCloseLanding = () => {
-    setShowLanding(false);
-  };
+  // 랜딩 페이지 핸들러
+  const handleCloseLanding = () => setShowLanding(false);
 
   const handleHideToday = () => {
-    const today = new Date();
-    const tomorrow = new Date(today);
+    const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
     tomorrow.setHours(0, 0, 0, 0);
-    
     localStorage.setItem('hideUntilDate', tomorrow.toISOString());
     setShowLanding(false);
   };
 
+  // 활성 페이지 렌더링
   const renderActivePage = () => {
     switch(activeTab) {
-      case 'firstVisit':
-        return <FirstVisitPage />;
-      case 'botox':
-        return <BotoxPage />;
-      case 'rejuran':
-        return <RejuranPage />;
-      case 'lifting':
-        return <LiftingPage />;
-      case 'ulthera':
-        return <UltheraPage />;
-      case 'whitening':
-        return <WhiteningPage />;
-      case 'antiaging':
-        return <AntiagingPage />;
-      case 'body':
-        return <BodyPage />;
-      case 'virizen':
-        return <VirizenPage />;
-      case 'skincare':
-        return <SkincarePage />;
-      case 'booster':
-        return <BoosterPage />;
-      case 'acne':
-        return <AcnePage />;
-      case 'removal':
-        return <RemovalPage />;
-      case 'filler':
-        return <FillerPage />;
-      case 'haracell':
-        return <HaracellPage />;
-      case 'histolab':
-        return <HistolabPage />;
-      case 'supplements':
-        return <SupplementsPage />;
-      case 'wedding':
-        return <WeddingPage />;
-      case 'membership':
-        return <MembershipPage />;
-      default:
-        return <FirstVisitPage />; // 기본값 추가
+      case 'firstVisit': return <FirstVisitPage />;
+      case 'botox': return <BotoxPage />;
+      case 'rejuran': return <RejuranPage />;
+      case 'lifting': return <LiftingPage />;
+      case 'ulthera': return <UltheraPage />;
+      case 'whitening': return <WhiteningPage />;
+      case 'antiaging': return <AntiagingPage />;
+      case 'body': return <BodyPage />;
+      case 'virizen': return <VirizenPage />;
+      case 'skincare': return <SkincarePage />;
+      case 'booster': return <BoosterPage />;
+      case 'acne': return <AcnePage />;
+      case 'removal': return <RemovalPage />;
+      case 'filler': return <FillerPage />;
+      case 'haracell': return <HaracellPage />;
+      case 'histolab': return <HistolabPage />;
+      case 'supplements': return <SupplementsPage />;
+      case 'wedding': return <WeddingPage />;
+      case 'membership': return <MembershipPage />;
+      default: return <FirstVisitPage />;
     }
   };
 
+  // 하단 공지사항 렌더링
   const renderBottomNotice = () => {
-    // 멤버십 페이지일 경우 특별 공지
+    const taxIncludedPages = ['haracell', 'supplements', 'histolab'];
+    
     if (activeTab === 'membership') {
       return (
-        <div className="mt-8 pb-4 text-center border-t border-gray-200 pt-4">
-          <p className="text-gray-500 text-sm mb-2">※ 표시된 모든 가격은 부가세 10% 별도입니다 ※</p>
-          <p className="text-gray-500 text-sm">
+        <div className="text-center font-nanum-square">
+          <p className="text-[#9B8777] text-sm leading-relaxed">
             유효기간 1년 - 가족 양도 1회 가능, 초진고객 동반 내원시 본인 결제 금액 5% 적립금 페이백
           </p>
         </div>
       );
     }
-
-    // 기존 부가세 공지 (다른 페이지들)
-    const taxIncludedPages = ['haracell', 'supplements', 'histolab'];
+    
     return (
-      <div className="mt-8 pb-4 text-center text-gray-500 text-sm border-t border-gray-200 pt-4">
-        ※ 표시된 모든 가격은 부가세 10% {taxIncludedPages.includes(activeTab.toLowerCase()) ? '포함' : '별도'}입니다 ※
+      <div className="text-center font-nanum-square">
+        <p className="text-[#7A6B5B] text-sm">
+          ※ 부가세 10% {taxIncludedPages.includes(activeTab.toLowerCase()) ? '포함' : '별도'}입니다 ※
+        </p>
       </div>
     );
   };
 
+  // 보안 기능 설정
   useEffect(() => {
-    const preventDefaultAction = (e) => {
-      e.preventDefault();
-      return false;
-    };
-
-    const preventContextMenu = (e) => {
+    const preventActions = (e) => {
       e.preventDefault();
       return false;
     };
 
     const preventKeyboardShortcuts = (e) => {
-      // Ctrl + S, Ctrl + U, Ctrl + Shift + I, F12 등 방지
       if (
         (e.ctrlKey && e.keyCode === 83) || // Ctrl + S
         (e.ctrlKey && e.keyCode === 85) || // Ctrl + U
@@ -156,28 +129,16 @@ function App() {
       }
     };
 
-    // 이미지 드래그 방지
-    const preventDragStart = (e) => {
-      e.preventDefault();
-      return false;
-    };
-
-    // 텍스트 선택 방지
-    const preventSelect = (e) => {
-      e.preventDefault();
-      return false;
-    };
-
     // 이벤트 리스너 등록
-    document.addEventListener('contextmenu', preventContextMenu);
-    document.addEventListener('dragstart', preventDragStart);
-    document.addEventListener('selectstart', preventSelect);
+    document.addEventListener('contextmenu', preventActions);
+    document.addEventListener('dragstart', preventActions);
+    document.addEventListener('selectstart', preventActions);
     document.addEventListener('keydown', preventKeyboardShortcuts);
-    document.addEventListener('copy', preventDefaultAction);
-    document.addEventListener('cut', preventDefaultAction);
-    document.addEventListener('paste', preventDefaultAction);
+    document.addEventListener('copy', preventActions);
+    document.addEventListener('cut', preventActions);
+    document.addEventListener('paste', preventActions);
 
-    // CSS 추가
+    // 보안 관련 스타일 추가
     const style = document.createElement('style');
     style.textContent = `
       img {
@@ -202,20 +163,19 @@ function App() {
     `;
     document.head.appendChild(style);
 
-    // 클린업 함수
     return () => {
-      document.removeEventListener('contextmenu', preventContextMenu);
-      document.removeEventListener('dragstart', preventDragStart);
-      document.removeEventListener('selectstart', preventSelect);
+      document.removeEventListener('contextmenu', preventActions);
+      document.removeEventListener('dragstart', preventActions);
+      document.removeEventListener('selectstart', preventActions);
       document.removeEventListener('keydown', preventKeyboardShortcuts);
-      document.removeEventListener('copy', preventDefaultAction);
-      document.removeEventListener('cut', preventDefaultAction);
-      document.removeEventListener('paste', preventDefaultAction);
+      document.removeEventListener('copy', preventActions);
+      document.removeEventListener('cut', preventActions);
+      document.removeEventListener('paste', preventActions);
       document.head.removeChild(style);
     };
   }, []);
 
-  // 이미지 요소에 적용할 props
+  // 이미지 props
   const imageProps = {
     onContextMenu: (e) => e.preventDefault(),
     draggable: false,
@@ -228,7 +188,8 @@ function App() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative h-screen">
+      {/* Landing Overlay */}
       {showLanding && (
         <div className="fixed inset-0 bg-pink-50/30 flex items-center justify-center z-50">
           <div className="max-w-2xl w-full mx-4 relative">
@@ -240,7 +201,6 @@ function App() {
                 <EyeOff size={14} />
                 <span>오늘 하루 안보기</span>
               </button>
-              
               <button 
                 onClick={handleCloseLanding}
                 className="p-2 rounded-full bg-white/80 hover:bg-white shadow-md text-gray-600 hover:text-gray-900"
@@ -248,7 +208,6 @@ function App() {
                 <X size={16} />
               </button>
             </div>
-
             <img 
               {...imageProps}
               src="https://raw.githubusercontent.com/huggychoi/bettermeWeb/refs/heads/main/public/suneung-event.png"
@@ -264,31 +223,49 @@ function App() {
         </div>
       )}
 
+      {/* Main Layout */}
       <div className="fixed inset-0 flex">
-        {/* 왼쪽 카테고리 영역 */}
+        {/* Sidebar Overlay */}
+        {isMenuOpen && (
+          <div 
+            className="fixed inset-0 bg-black/20 z-40"
+            onClick={() => setIsMenuOpen(false)}
+          />
+        )}
+
+        {/* Sidebar */}
         <div 
-          className="min-w-[5.5rem] w-min h-full overflow-y-auto bg-[#F2EAE1] border-r border-[#E5D5C5]/40 flex-shrink-0 scrollbar-hide"
+          className={`
+            fixed left-0 top-0 h-full bg-[#F2EAE1] border-r border-[#E5D5C5]/40 
+            transition-transform duration-300 ease-in-out z-50
+            ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}
+          `}
           style={{
-            msOverflowStyle: 'none',
-            scrollbarWidth: 'none'
+            width: '15vw',
+            minWidth: '250px',
+            maxWidth: '280px'
           }}
         >
-          {/* 상단 CATEGORY 텍스트 */}
-          <div className="sticky top-0 bg-[#F2EAE1]/95 backdrop-blur-sm z-10 p-2.5 border-b border-[#E5D5C5]/40">
-            <p className="text-[11px] text-center font-bold text-[#9B8777] tracking-[0.2em]">
-              CATEGORY
-            </p>
+          {/* Sidebar Header */}
+          <div className="h-14 flex items-center justify-between px-4 border-b border-[#E5D5C5]/40">
+            <p className="text-[#7A6B5B] font-bold">MENU</p>
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="p-2 rounded-lg hover:bg-[#E5D5C5] transition-colors"
+            >
+              <X size={20} className="text-[#7A6B5B]" />
+            </button>
           </div>
 
-          {/* 메뉴 버튼들 */}
-          <div className="p-2 space-y-1.5">
+          {/* Menu Buttons */}
+          <div className="p-1.5 space-y-1 pb-20 overflow-y-auto h-[calc(100%-3.5rem)]">
             {Object.entries(tabsConfig).map(([key, config]) => (
               <button
                 key={key}
                 onClick={() => handleTabClick(key)}
                 className={`
-                  w-full px-3 py-2.5 rounded-lg transition-all duration-300 ease-in-out
-                  flex flex-col items-center justify-center gap-1.5 group
+                  w-full px-2 py-2 rounded-lg transition-all duration-300 ease-in-out
+                  flex flex-col items-center justify-center gap-1 group
                   ${activeTab === key 
                     ? 'bg-[#E5D5C5] text-[#7A6B5B] shadow-sm transform scale-[1.02]' 
                     : 'text-[#9B8777] hover:bg-[#EAE0D5] hover:text-[#7A6B5B] hover:transform hover:scale-[1.02]'
@@ -296,7 +273,7 @@ function App() {
                 `}
               >
                 <div className={`
-                  transition-colors duration-300
+                  transition-colors duration-300 text-base
                   ${activeTab === key 
                     ? 'text-[#7A6B5B]' 
                     : 'text-[#9B8777] group-hover:text-[#7A6B5B]'
@@ -305,11 +282,8 @@ function App() {
                   {config.icon}
                 </div>
                 <span className={`
-                  text-[10px] tracking-wide transition-all duration-300
-                  ${activeTab === key 
-                    ? 'font-bold' 
-                    : 'font-medium'
-                  }
+                  text-[9px] tracking-wide transition-all duration-300 whitespace-nowrap
+                  ${activeTab === key ? 'font-bold' : 'font-medium'}
                 `}>
                   {config.label}
                 </span>
@@ -318,26 +292,46 @@ function App() {
           </div>
         </div>
 
-        {/* 오른쪽 메뉴판 영역 */}
+        {/* Main Content Area */}
         <div 
           ref={contentRef}
-          className="flex-1 h-full overflow-y-auto bg-white"
+          className="flex-1 h-full overflow-y-auto bg-white font-nanum-square"
         >
-          <div className="sticky top-0 bg-white/70 backdrop-blur-sm border-b border-[#E5D5C5]/30 z-10">
-            <div className="max-w-4xl mx-auto px-4 py-2.5">
-              <h1 className="text-sm font-bold text-[#7A6B5B] tracking-wide">
-                {tabsConfig[activeTab].title}
-              </h1>
-              <p className="text-[10px] text-[#9B8777] tracking-wider">
-                {tabsConfig[activeTab].subtitle}
-              </p>
+          {/* Header */}
+          <div className="sticky top-0 bg-[#EAE4DE] z-10 border-b border-[#E5D5C5]/30">
+            <div className="flex items-center h-14">
+              <button
+                onClick={toggleMenu}
+                className="p-4 hover:bg-[#E5D5C5]/30 transition-colors"
+              >
+                <Menu size={20} className="text-[#7A6B5B]" />
+              </button>
+              
+              <div className="flex-1 px-4">
+                <h1 className="text-base font-bold text-[#7A6B5B] tracking-wide">
+                  {tabsConfig[activeTab].title}
+                </h1>
+                <p className="text-[11px] text-[#9B8777] tracking-wider">
+                  {tabsConfig[activeTab].subtitle}
+                </p>
+              </div>
             </div>
           </div>
-          
-          <div className="max-w-4xl mx-auto p-4 min-h-0">
-            {renderActivePage()}
-            {renderBottomNotice()} {/* 여기를 수정 */}
+
+          {/* Content Area */}
+          <div className="max-w-4xl mx-auto p-6 min-h-0 bg-white">
+            <div className="bg-white rounded-lg">
+              {renderActivePage()}
+            </div>
+
+            {/* Bottom Notice with increased bottom padding */}
+            <div className="mt-8 pt-6 pb-28 border-t border-[#EAE4DE]">
+              {renderBottomNotice()}
+            </div>
           </div>
+
+          {/* Footer */}
+          <Footer />
         </div>
       </div>
     </div>

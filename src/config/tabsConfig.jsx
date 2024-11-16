@@ -91,8 +91,8 @@ export const tabsConfig = {
   },
   acne: {
     icon: <Pointer size={16} strokeWidth={1} />,
-    label: "여드름\n&모공",
-    title: "여드름\n&모공",
+    label: "여드름&모공",
+    title: "여드름&모공",
     subtitle: "Acne Care",
   },
   removal: {
@@ -127,8 +127,8 @@ export const tabsConfig = {
   },
   supplements: {
     icon: <Leaf size={16} strokeWidth={1} />,
-    label: "건강\n기능식품",
-    title: "건강\n기능식품",
+    label: "건강기능식품",
+    title: "건강기능식품",
     subtitle: "Health Supplements",
   },
   membership: {
