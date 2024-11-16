@@ -20,7 +20,7 @@ import {
   Microscope,
   Leaf,
   Beaker
-} from 'lucide-react';
+  } from 'lucide-react';
 
 export const tabsConfig = {
   firstVisit: {
@@ -120,26 +120,27 @@ export const tabsConfig = {
     subtitle: "Haracell",
   },
   histolab: {
-    icon: <Flask size={16} strokeWidth={1} />,
+    icon: <Microscope size={16} strokeWidth={1} />,
     label: "히스토랩",
     title: "히스토랩",
     subtitle: "Histolab",
   },
   supplements: {
-    icon: <Apple size={16} strokeWidth={1} />,
+    icon: <Leaf size={16} strokeWidth={1} />,
     label: "건강기능식품",
     title: "건강기능식품",
     subtitle: "Health Supplements",
+  },
   membership: {
     icon: <Users size={16} strokeWidth={1} />,
     label: "멤버십",
     title: "멤버십",
     subtitle: "Membership",
   },
-  'test-ui': {
-    icon: <Beaker size={16} strokeWidth={1} className="text-black" />,
-    label: "UI 테스트",
-    title: "UI 스타일 테스트",
-    subtitle: "Test UI Styles",
-  },
+  // 'test-ui': {
+  //   icon: <Beaker size={16} strokeWidth={1} />,
+  //   label: "UI 테스트",
+  //   title: "UI 스타일 테스트",
+  //   subtitle: "Test UI Styles",
+  // }  // 마지막 쉼표 제거
 };

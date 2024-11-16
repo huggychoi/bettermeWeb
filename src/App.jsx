@@ -21,8 +21,7 @@ import AntiagingPage from './pages/AntiagingPage';
 import FirstVisitPage from './pages/FirstVisitPage';
 import { X, XCircle, EyeOff } from 'lucide-react';
 import { tabsConfig } from './config/tabsConfig';
-import { CardStyleSection, SectionStyle, MinimalGridStyle } from './components/MenuSectionSample';
-import TestUIPage from './pages/TestUIPage';
+
 
 function App() {
   const [showLanding, setShowLanding] = useState(() => {
@@ -36,33 +35,13 @@ function App() {
     }
     return false;
   });
+
   const [activeTab, setActiveTab] = useState('firstVisit');
   const contentRef = React.useRef(null);
 
   useEffect(() => {
     localStorage.setItem('showLanding', JSON.stringify(showLanding));
   }, [showLanding]);
-
-  //
-  const renderTestStyles = () => (
-    <div className="space-y-12">
-      <div>
-        <h2 className="text-xl font-bold mb-4 px-6">스타일 1: 카드 스타일</h2>
-        <CardStyleSection />
-      </div>
-      
-      <div>
-        <h2 className="text-xl font-bold mb-4 px-6">스타일 2: 섹션 구분 스타일</h2>
-        <SectionStyle />
-      </div>
-      
-      <div>
-        <h2 className="text-xl font-bold mb-4 px-6">스타일 3: 미니멀 그리드 스타일</h2>
-        <MinimalGridStyle />
-      </div>
-    </div>
-  );
-
 
   const handleTabClick = (key) => {
     setActiveTab(key);
@@ -129,50 +108,49 @@ function App() {
         return <WeddingPage />;
       case 'membership':
         return <MembershipPage />;
-      case 'test-ui':
-        return <TestUIPage />;
+
   };
 
   return (
     <div className="relative">
-      {/* 랜딩 페이지 */}
-      {showLanding && (
-        <div className="fixed inset-0 bg-pink-50/30 flex items-center justify-center z-50">
-          <div className="max-w-2xl w-full mx-4 relative">
-            {/* 버튼 그룹 */}
-            <div className="absolute top-4 right-4 z-10 flex gap-2">
-              {/* 오늘 하루 안보기 버튼 */}
-              <button 
-                onClick={handleHideToday}
-                className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-white/80 hover:bg-white shadow-md text-gray-600 hover:text-gray-900 text-xs"
-              >
-                <EyeOff size={14} />
-                <span>오늘 하루 안보기</span>
-              </button>
-              
-              {/* 닫기 버튼 */}
-              <button 
-                onClick={handleCloseLanding}
-                className="p-2 rounded-full bg-white/80 hover:bg-white shadow-md text-gray-600 hover:text-gray-900"
-              >
-                <X size={16} />
-              </button>
-            </div>
-
-            {/* 이미지 */}
-            <img 
-              src="https://raw.githubusercontent.com/huggychoi/bettermeWeb/refs/heads/main/public/suneung-event.png"
-              alt="수능 이벤트"
-              className="w-full rounded-xl shadow-lg cursor-pointer hover:opacity-95 transition-opacity"
+    {/* //랜딩 페이지 */}
+    {showLanding && (
+      <div className="fixed inset-0 bg-pink-50/30 flex items-center justify-center z-50">
+        <div className="max-w-2xl w-full mx-4 relative">
+          {/* 버튼 그룹 */}
+          <div className="absolute top-4 right-4 z-10 flex gap-2">
+            {/* 오늘 하루 안보기 버튼 */}
+            <button 
+              onClick={handleHideToday}
+              className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-white/80 hover:bg-white shadow-md text-gray-600 hover:text-gray-900 text-xs"
+            >
+              <EyeOff size={14} />
+              <span>오늘 하루 안보기</span>
+            </button>
+            
+            {/* 닫기 버튼 */}
+            <button 
               onClick={handleCloseLanding}
-              onError={(e) => {
-                console.error('Image load error:', e);
-                handleCloseLanding();
-              }}
-            />
+              className="p-2 rounded-full bg-white/80 hover:bg-white shadow-md text-gray-600 hover:text-gray-900"
+            >
+              <X size={16} />
+            </button>
           </div>
+
+          {/* 이미지 */}
+          <img 
+            src="https://huggychoi.github.io/betterme-menu/suneung-event.png"
+            alt="수능 이벤트"
+            className="w-full rounded-xl shadow-lg cursor-pointer hover:opacity-95 transition-opacity"
+            onClick={handleCloseLanding}
+            onError={(e) => {
+              console.error('Image load error:', e);
+              handleCloseLanding();
+            }}
+          />
         </div>
-      )}
+      </div>
+    )}
 
       {/* 메인 앱 UI */}
       <div className="fixed inset-0 flex bg-gradient-to-br from-pink-100/80 via-pink-50/70 to-yellow-50/70">
@@ -223,6 +201,6 @@ function App() {
       </div>
     </div>
   );
-}
+}}   
 
 export default App;
