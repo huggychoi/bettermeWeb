@@ -192,7 +192,7 @@ function App() {
 
             {/* 부가세 안내 */}
             <div className="mt-8 pb-4 text-center text-gray-500 text-sm border-t border-gray-200 pt-4">
-              ※ 표시된 모든 가격은 부가세 10% 별도입니다.
+              ※ 부가세 10% 별도 ※
             </div>
           </div>
         </div>
