@@ -14,7 +14,7 @@ const MenuSection = ({ title, description, items }) => {
   };
 
   return (
-    <div className="mt-8 first:mt-4">
+    <div className="mt-8 first:mt-0">
       {/* 섹션 헤더 */}
       <div className="bg-[#EAE4DE] py-5 mb-6 w-full">
         <div className="text-center">

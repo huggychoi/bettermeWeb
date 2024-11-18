@@ -113,7 +113,7 @@ const FirstVisitPage = () => (
           ※ 표시된 모든 가격은 부가세 10% 별도입니다 ※
         </p> */}
         <p className="text-[#9B8777] text-sm mt-2">
-          첫 방문 이벤트는 내원 이력이 없는 고객님만 이용 가능합니다
+          첫 방문 고객만 이용 가능합니다
         </p>
       </div>
     </div>
