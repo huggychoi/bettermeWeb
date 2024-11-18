@@ -14,7 +14,7 @@ const MenuSection = ({ title, description, items }) => {
   };
 
   return (
-    <div className="mt-16 first:mt-0 last:mt-8"> {/* first:mt-0 추가 */}
+    <div className="mt-8 first:mt-4">
       {/* 섹션 헤더 */}
       <div className="bg-[#EAE4DE] py-5 mb-6 w-full">
         <div className="text-center">
@@ -27,8 +27,8 @@ const MenuSection = ({ title, description, items }) => {
         </div>
       </div>
       
-      {/* 메뉴 아이템 리스트 */}
-      <div className="divide-y divide-[#F8F0ED]">
+      {/* 메뉴 아이템 리스트 - border 추가 */}
+      <div className="divide-y divide-[#F8F0ED] border-b border-[#F8F0ED]">
         {items.map((item, idx) => (
           <MenuItem key={idx} {...item} />
         ))}
