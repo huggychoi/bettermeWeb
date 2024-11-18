@@ -26,31 +26,45 @@ import Footer from './components/Footer';
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('firstVisit');
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const contentRef = React.useRef(null);
   
+  // Landing popup state
   const [showLanding, setShowLanding] = useState(() => {
     const hideUntil = localStorage.getItem('hideUntilDate');
     return !hideUntil || new Date(hideUntil) < new Date();
   });
 
+  // Handle landing popup
   useEffect(() => {
     if (!showLanding) {
       localStorage.setItem('showLanding', 'false');
     }
   }, [showLanding]);
 
-  // 메뉴 관련 핸들러
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  
-  const handleTabClick = (key) => {
+  // Handle page transitions
+  const handleTabClick = async (key) => {
+    setIsTransitioning(true);
+
+    if (contentRef.current) {
+      contentRef.current.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    // Fade out
+    await new Promise(resolve => setTimeout(resolve, 150));
+    
+    // Change page
     setActiveTab(key);
     setIsMenuOpen(false);
-    if (contentRef.current) {
-      contentRef.current.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+
+    // Fade in
+    await new Promise(resolve => setTimeout(resolve, 150));
+    setIsTransitioning(false);
   };
 
-  // 랜딩 페이지 핸들러
   const handleCloseLanding = () => setShowLanding(false);
 
   const handleHideToday = () => {
@@ -61,7 +75,7 @@ function App() {
     setShowLanding(false);
   };
 
-  // 활성 페이지 렌더링
+  // Render active page
   const renderActivePage = () => {
     switch(activeTab) {
       case 'firstVisit': return <FirstVisitPage />;
@@ -87,20 +101,9 @@ function App() {
     }
   };
 
-  // 하단 공지사항 렌더링
+  // Render bottom notice
   const renderBottomNotice = () => {
     const taxIncludedPages = ['haracell', 'supplements', 'histolab'];
-    
-    if (activeTab === 'membership') {
-      return (
-        <div className="text-center font-nanum-square">
-          <p className="text-[#9B8777] text-sm leading-relaxed">
-            유효기간 1년 - 가족 양도 1회 가능, 초진고객 동반 내원시 본인 결제 금액 5% 적립금 페이백
-          </p>
-        </div>
-      );
-    }
-    
     return (
       <div className="text-center font-nanum-square">
         <p className="text-[#7A6B5B] text-sm">
@@ -110,72 +113,7 @@ function App() {
     );
   };
 
-  // 보안 기능 설정
-  useEffect(() => {
-    const preventActions = (e) => {
-      e.preventDefault();
-      return false;
-    };
-
-    const preventKeyboardShortcuts = (e) => {
-      if (
-        (e.ctrlKey && e.keyCode === 83) || // Ctrl + S
-        (e.ctrlKey && e.keyCode === 85) || // Ctrl + U
-        (e.ctrlKey && e.shiftKey && e.keyCode === 73) || // Ctrl + Shift + I
-        e.keyCode === 123 // F12
-      ) {
-        e.preventDefault();
-        return false;
-      }
-    };
-
-    // 이벤트 리스너 등록
-    document.addEventListener('contextmenu', preventActions);
-    document.addEventListener('dragstart', preventActions);
-    document.addEventListener('selectstart', preventActions);
-    document.addEventListener('keydown', preventKeyboardShortcuts);
-    document.addEventListener('copy', preventActions);
-    document.addEventListener('cut', preventActions);
-    document.addEventListener('paste', preventActions);
-
-    // 보안 관련 스타일 추가
-    const style = document.createElement('style');
-    style.textContent = `
-      img {
-        -webkit-user-drag: none;
-        -khtml-user-drag: none;
-        -moz-user-drag: none;
-        -o-user-drag: none;
-        user-drag: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -o-user-select: none;
-        user-select: none;
-      }
-      body {
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-    `;
-    document.head.appendChild(style);
-
-    return () => {
-      document.removeEventListener('contextmenu', preventActions);
-      document.removeEventListener('dragstart', preventActions);
-      document.removeEventListener('selectstart', preventActions);
-      document.removeEventListener('keydown', preventKeyboardShortcuts);
-      document.removeEventListener('copy', preventActions);
-      document.removeEventListener('cut', preventActions);
-      document.removeEventListener('paste', preventActions);
-      document.head.removeChild(style);
-    };
-  }, []);
-
-  // 이미지 props
+  // Image props for security
   const imageProps = {
     onContextMenu: (e) => e.preventDefault(),
     draggable: false,
@@ -189,7 +127,7 @@ function App() {
 
   return (
     <div className="relative h-screen">
-      {/* Landing Overlay */}
+      {/* Landing Popup */}
       {showLanding && (
         <div className="fixed inset-0 bg-pink-50/30 flex items-center justify-center z-50">
           <div className="max-w-2xl w-full mx-4 relative">
@@ -210,8 +148,8 @@ function App() {
             </div>
             <img 
               {...imageProps}
-              src="https://raw.githubusercontent.com/huggychoi/bettermeWeb/refs/heads/main/public/suneung-event.png"
-              alt="수능 이벤트"
+              src="/bettermeBeomeoLogo.png"
+              alt="Better Me"
               className="w-full rounded-xl shadow-lg cursor-pointer hover:opacity-95 transition-opacity"
               onClick={handleCloseLanding}
               onError={(e) => {
@@ -233,84 +171,81 @@ function App() {
           />
         )}
 
-          {/* Sidebar */}
-          <div 
-            className={`
-              fixed left-0 top-0 h-full bg-[#F2EAE1] border-r border-[#E5D5C5]/40 
-              transition-transform duration-300 ease-in-out z-50
-              ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}
-            `}
-            style={{
-              width: '15vw',
-              minWidth: '220px',  // 최소 너비 축소
-              maxWidth: '250px'   // 최대 너비 축소
-            }}
-          >
-            {/* Sidebar Header */}
-            <div className="h-14 flex items-center justify-between px-4 border-b border-[#E5D5C5]/40">
-              <p className="text-[#7A6B5B] font-bold">MENU</p>
-              <button
-                onClick={() => setIsMenuOpen(false)}
-                className="p-2 rounded-lg hover:bg-[#E5D5C5] transition-colors"
-              >
-                <X size={20} className="text-[#7A6B5B]" />
-              </button>
-            </div>
-
-            {/* Menu Buttons */}
-            <div className="p-1 space-y-0.5 pb-20 overflow-y-auto h-[calc(100%-3.5rem)]">
-              {Object.entries(tabsConfig).map(([key, config]) => (
-                <button
-                  key={key}
-                  onClick={() => handleTabClick(key)}
-                  className={`
-                    w-full px-3 py-2.5 transition-all duration-300 ease-in-out
-                    flex items-center gap-3 group
-                    ${activeTab === key 
-                      ? 'bg-[#E5D5C5] text-[#7A6B5B] shadow-sm transform scale-[1.02]' 
-                      : 'text-[#9B8777] hover:bg-[#EAE0D5] hover:text-[#7A6B5B] hover:transform hover:scale-[1.02]'
-                    }
-                  `}
-                >
-                  <div className={`
-                    transition-colors duration-300
-                    ${activeTab === key 
-                      ? 'text-[#7A6B5B]' 
-                      : 'text-[#9B8777] group-hover:text-[#7A6B5B]'
-                    }
-                  `}>
-                    {config.icon}
-                  </div>
-                  <span className={`
-                    text-sm transition-all duration-300
-                    ${activeTab === key ? 'font-bold' : 'font-medium'}
-                  `}>
-                    {config.label}
-                  </span>
-                </button>
-              ))}
-            </div>
+        {/* Sidebar */}
+        <div 
+          className={`
+            fixed left-0 top-0 h-full bg-[#F2EAE1] border-r border-[#E5D5C5]/40 
+            transition-transform duration-300 ease-in-out z-50
+            ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}
+          `}
+          style={{
+            width: '15vw',
+            minWidth: '220px',
+            maxWidth: '250px'
+          }}
+        >
+          {/* Sidebar Header */}
+          <div className="h-14 flex items-center justify-between px-4 border-b border-[#E5D5C5]/40">
+            <p className="text-[#7A6B5B] font-bold">MENU</p>
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="p-2 rounded-lg hover:bg-[#E5D5C5] transition-colors"
+            >
+              <X size={20} className="text-[#7A6B5B]" />
+            </button>
           </div>
+
+          {/* Menu Buttons */}
+          <div className="p-1 space-y-0.5 pb-20 overflow-y-auto h-[calc(100%-3.5rem)]">
+            {Object.entries(tabsConfig).map(([key, config]) => (
+              <button
+                key={key}
+                onClick={() => handleTabClick(key)}
+                className={`
+                  w-full px-3 py-2.5 transition-all duration-300 ease-in-out
+                  flex items-center gap-3 group
+                  ${activeTab === key 
+                    ? 'bg-[#E5D5C5] text-[#7A6B5B] shadow-sm transform scale-[1.02]' 
+                    : 'text-[#9B8777] hover:bg-[#EAE0D5] hover:text-[#7A6B5B] hover:transform hover:scale-[1.02]'
+                  }
+                `}
+              >
+                <div className={`
+                  transition-colors duration-300
+                  ${activeTab === key 
+                    ? 'text-[#7A6B5B]' 
+                    : 'text-[#9B8777] group-hover:text-[#7A6B5B]'
+                  }
+                `}>
+                  {config.icon}
+                </div>
+                <span className={`
+                  text-sm transition-all duration-300
+                  ${activeTab === key ? 'font-bold' : 'font-medium'}
+                `}>
+                  {config.label}
+                </span>
+              </button>
+            ))}
+          </div>
+        </div>
 
         {/* Main Content Area */}
         <div 
           ref={contentRef}
           className="flex-1 h-full overflow-y-auto bg-white font-nanum-square"
         >
-        {/* Updated Header/GNB */}
-        <div className="sticky top-0 bg-white z-10 border-b border-[#F8F0ED]">
-          <div className="flex items-center h-14">
-            {/* Left: Hamburger Menu and Title */}
-            <div className="flex items-center">
+          {/* Header */}
+          <div className="sticky top-0 bg-white z-10 border-b border-[#F8F0ED]">
+            <div className="flex items-center h-14">
               <button
-                onClick={toggleMenu}
-                className="text-[#EAE4DE] hover:opacity-80 transition-opacity bg-white"
+                onClick={() => setIsMenuOpen(true)}
+                className="text-[#EAE4DE] hover:opacity-80 transition-opacity bg-white ml-4"
               >
                 <Menu size={24} />
               </button>
               
-              {/* Title Area */}
-              <div className="flex flex-col justify-end items-center pl-4 pr-4">
+              <div className="flex flex-col justify-center ml-4">
                 <h1 className="text-[#7A6B5B] font-bold text-base leading-tight">
                   {tabsConfig[activeTab].title}
                 </h1>
@@ -318,34 +253,39 @@ function App() {
                   {tabsConfig[activeTab].subtitle}
                 </p>
               </div>
-            </div>
 
-            {/* Right: Logo */}
-            <div className="flex-1 flex justify-end items-center pr-4">
-              <div className="flex items-center gap-2">
-                {/* <img 
-                  src="/bettermeBeomeoLogo.png" 
-                  alt="Better Me Logo" 
-                  className="h-6"
-                /> */}
-                <div className="text-left">
-                  <p className="text-sm font-bold leading-tight">BETTER ME CLINIC</p>
-                  <p className="text-xs text-[#9B8777]">베터미의원 대구 범어점</p>
+              <div className="flex-1 flex justify-end items-center pr-4">
+                <div className="flex items-center gap-2">
+                  {/* <img 
+                    src="/bettermeBeomeoLogo.png" 
+                    alt="Better Me Logo" 
+                    className="h-6"
+                  /> */}
+                  <div className="text-left">
+                    <p className="text-sm font-bold leading-tight">BETTER ME CLINIC</p>
+                    <p className="text-xs text-[#9B8777]">베러미의원 대구 범어점</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-          {/* Content Area */}
-          <div className="max-w-4xl mx-auto p-6 min-h-0 bg-white">
-            <div className="bg-white rounded-lg">
+          {/* Content Area with Transition */}
+          <div className="max-w-4xl mx-auto px-6 pt-6">
+            <div
+              className={`
+                content-transition
+                ${isTransitioning ? 'content-transition-entering' : 'content-transition-entered'}
+              `}
+            >
               {renderActivePage()}
             </div>
 
-            {/* Bottom Notice with increased bottom padding */}
-            <div className="mt-8 pt-6 pb-28 border-t border-[#EAE4DE]">
-              {renderBottomNotice()}
+            {/* Bottom Notices */}
+            <div className="mt-8 space-y-4 pb-28">
+              <div className="text-center font-nanum-square">
+                {renderBottomNotice()}
+              </div>
             </div>
           </div>
 

@@ -1,45 +1,71 @@
+/* App.css */
+
+/* 기본 스타일 리셋 */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/* 페이지 트랜지션 효과 */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateX(20px);
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 300ms ease-in-out;
 }
 
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.page-transition-exit {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+.page-transition-exit-active {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 300ms ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* 페이드 효과 */
+.fade-enter {
+  opacity: 0;
 }
 
-.card {
-  padding: 2em;
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
 }
 
-.read-the-docs {
-  color: #888;
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+/* 컨텐츠 영역 트랜지션 */
+.content-transition {
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.content-transition-entering {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.content-transition-entered {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.content-transition-exiting {
+  opacity: 0;
+  transform: translateY(-10px);
 }
