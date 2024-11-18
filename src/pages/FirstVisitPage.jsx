@@ -101,19 +101,19 @@ const firstVisitData = {
 };
 
 const FirstVisitPage = () => (
-  <div className="max-w-4xl mx-auto">
+  <div className="">
     {firstVisitData.sections.map((section, idx) => (
       <MenuSection key={idx} {...section} />
     ))}
     
     {/* 하단 공지사항 */}
-    <div className="mt-8 pt-6 border-t border-[#EAE4DE]">
+    <div className="mt-8 pt-6">
       <div className="text-center font-nanum-square">
         {/* <p className="text-[#7A6B5B] text-sm">
           ※ 표시된 모든 가격은 부가세 10% 별도입니다 ※
         </p> */}
         <p className="text-[#9B8777] text-sm mt-2">
-          첫 방문 이벤트는 베러미 범어점 내원 이력이 없는 고객님만 이용 가능합니다
+          첫 방문 이벤트는 내원 이력이 없는 고객님만 이용 가능합니다
         </p>
       </div>
     </div>

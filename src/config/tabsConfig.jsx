@@ -1,3 +1,5 @@
+// config/tabsConfig.js
+
 import React from 'react';
 import { 
   Users,
@@ -20,127 +22,126 @@ import {
   Microscope,
   Leaf,
   Beaker
-  } from 'lucide-react';
+} from 'lucide-react';
+
+const ICON_SIZE = 20;
+const STROKE_WIDTH = 1.5;
 
 export const tabsConfig = {
   firstVisit: {
-    icon: <Rocket size={16} strokeWidth={1} />,
+    icon: <Rocket size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
     label: "첫방문",
     title: "첫방문",
     subtitle: "First Visit",
   },
   botox: {
-    icon: <Syringe size={16} strokeWidth={1} />,
+    icon: <Syringe size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
     label: "보톡스",
     title: "보톡스/뻬띠",
     subtitle: "Botox",
   },
   rejuran: {
-    icon: <Sparkles size={16} strokeWidth={1} />,
+    icon: <Sparkles size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
     label: "리쥬란",
     title: "리쥬란 스킨부스터",
     subtitle: "REJURAN Skin Booster",
   },
   lifting: {
-    icon: <Zap size={16} strokeWidth={1} />,
+    icon: <Zap size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
     label: "리프팅",
     title: "리프팅",
     subtitle: "Lifting",
   },
   ulthera: {
-    icon: <Star size={16} strokeWidth={1} />,
+    icon: <Star size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
     label: "울쎄라",
     title: "울쎄라",
     subtitle: "Ulthera",
   },
   whitening: {
-    icon: <Sun size={16} strokeWidth={1} />,
+    icon: <Sun size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
     label: "미백/기미",
     title: "미백/기미",
     subtitle: "Whitening",
   },
   antiaging: {
-    icon: <Clock size={16} strokeWidth={1} />,
+    icon: <Clock size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
     label: "항노화",
     title: "항노화",
     subtitle: "Anti-aging",
   },
   body: {
-    icon: <Heart size={16} strokeWidth={1} />,
+    icon: <Heart size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
     label: "바디체형",
     title: "바디체형",
     subtitle: "Body Contouring",
   },
   virizen: {
-    icon: <CircleDot size={16} strokeWidth={1} />,
+    icon: <CircleDot size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
     label: "바이리즌",
     title: "바이리즌",
     subtitle: "Virizen",
   },
   skincare: {
-    icon: <Flower2 size={16} strokeWidth={1} />,
+    icon: <Flower2 size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
     label: "스킨케어",
     title: "스킨케어",
     subtitle: "Skin Care",
   },
   booster: {
-    icon: <Droplets size={16} strokeWidth={1} />,
+    icon: <Droplets size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
     label: "스킨부스터",
     title: "스킨부스터",
     subtitle: "Skin Booster",
   },
   acne: {
-    icon: <Pointer size={16} strokeWidth={1} />,
+    icon: <Pointer size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
     label: "여드름&모공",
     title: "여드름&모공",
     subtitle: "Acne Care",
   },
   removal: {
-    icon: <Scissors size={16} strokeWidth={1} />,
+    icon: <Scissors size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
     label: "제모",
     title: "제모",
     subtitle: "Hair Removal",
   },
   filler: {
-    icon: <Diamond size={16} strokeWidth={1} />,
+    icon: <Diamond size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
     label: "필러/실",
     title: "필러/실",
     subtitle: "Filler & Thread",
   },
   wedding: {
-    icon: <Gift size={16} strokeWidth={1} />,
+    icon: <Gift size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
     label: "웨딩",
     title: "웨딩",
     subtitle: "Wedding",
   },
   haracell: {
-    icon: <Fingerprint size={16} strokeWidth={1} />,
+    icon: <Fingerprint size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
     label: "하라셀",
     title: "하라셀",
     subtitle: "Haracell",
   },
   histolab: {
-    icon: <Microscope size={16} strokeWidth={1} />,
+    icon: <Microscope size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
     label: "히스토랩",
     title: "히스토랩",
     subtitle: "Histolab",
   },
   supplements: {
-    icon: <Leaf size={16} strokeWidth={1} />,
+    icon: <Leaf size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
     label: "건강기능식품",
     title: "건강기능식품",
     subtitle: "Health Supplements",
   },
   membership: {
-    icon: <Users size={16} strokeWidth={1} />,
+    icon: <Users size={ICON_SIZE} strokeWidth={STROKE_WIDTH} />,
     label: "멤버십",
     title: "멤버십",
     subtitle: "Membership",
-  },
-  // 'test-ui': {
-  //   icon: <Beaker size={16} strokeWidth={1} />,
-  //   label: "UI 테스트",
-  //   title: "UI 스타일 테스트",
-  //   subtitle: "Test UI Styles",
-  // }  // 마지막 쉼표 제거
+  }
 };
+
+export default tabsConfig;

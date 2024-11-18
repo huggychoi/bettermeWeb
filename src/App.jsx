@@ -233,90 +233,109 @@ function App() {
           />
         )}
 
-        {/* Sidebar */}
-        <div 
-          className={`
-            fixed left-0 top-0 h-full bg-[#F2EAE1] border-r border-[#E5D5C5]/40 
-            transition-transform duration-300 ease-in-out z-50
-            ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}
-          `}
-          style={{
-            width: '15vw',
-            minWidth: '250px',
-            maxWidth: '280px'
-          }}
-        >
-          {/* Sidebar Header */}
-          <div className="h-14 flex items-center justify-between px-4 border-b border-[#E5D5C5]/40">
-            <p className="text-[#7A6B5B] font-bold">MENU</p>
-            <button
-              onClick={() => setIsMenuOpen(false)}
-              className="p-2 rounded-lg hover:bg-[#E5D5C5] transition-colors"
-            >
-              <X size={20} className="text-[#7A6B5B]" />
-            </button>
-          </div>
-
-          {/* Menu Buttons */}
-          <div className="p-1.5 space-y-1 pb-20 overflow-y-auto h-[calc(100%-3.5rem)]">
-            {Object.entries(tabsConfig).map(([key, config]) => (
+          {/* Sidebar */}
+          <div 
+            className={`
+              fixed left-0 top-0 h-full bg-[#F2EAE1] border-r border-[#E5D5C5]/40 
+              transition-transform duration-300 ease-in-out z-50
+              ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}
+            `}
+            style={{
+              width: '15vw',
+              minWidth: '220px',  // 최소 너비 축소
+              maxWidth: '250px'   // 최대 너비 축소
+            }}
+          >
+            {/* Sidebar Header */}
+            <div className="h-14 flex items-center justify-between px-4 border-b border-[#E5D5C5]/40">
+              <p className="text-[#7A6B5B] font-bold">MENU</p>
               <button
-                key={key}
-                onClick={() => handleTabClick(key)}
-                className={`
-                  w-full px-2 py-2 rounded-lg transition-all duration-300 ease-in-out
-                  flex flex-col items-center justify-center gap-1 group
-                  ${activeTab === key 
-                    ? 'bg-[#E5D5C5] text-[#7A6B5B] shadow-sm transform scale-[1.02]' 
-                    : 'text-[#9B8777] hover:bg-[#EAE0D5] hover:text-[#7A6B5B] hover:transform hover:scale-[1.02]'
-                  }
-                `}
+                onClick={() => setIsMenuOpen(false)}
+                className="p-2 rounded-lg hover:bg-[#E5D5C5] transition-colors"
               >
-                <div className={`
-                  transition-colors duration-300 text-base
-                  ${activeTab === key 
-                    ? 'text-[#7A6B5B]' 
-                    : 'text-[#9B8777] group-hover:text-[#7A6B5B]'
-                  }
-                `}>
-                  {config.icon}
-                </div>
-                <span className={`
-                  text-[9px] tracking-wide transition-all duration-300 whitespace-nowrap
-                  ${activeTab === key ? 'font-bold' : 'font-medium'}
-                `}>
-                  {config.label}
-                </span>
+                <X size={20} className="text-[#7A6B5B]" />
               </button>
-            ))}
+            </div>
+
+            {/* Menu Buttons */}
+            <div className="p-1 space-y-0.5 pb-20 overflow-y-auto h-[calc(100%-3.5rem)]">
+              {Object.entries(tabsConfig).map(([key, config]) => (
+                <button
+                  key={key}
+                  onClick={() => handleTabClick(key)}
+                  className={`
+                    w-full px-3 py-2.5 transition-all duration-300 ease-in-out
+                    flex items-center gap-3 group
+                    ${activeTab === key 
+                      ? 'bg-[#E5D5C5] text-[#7A6B5B] shadow-sm transform scale-[1.02]' 
+                      : 'text-[#9B8777] hover:bg-[#EAE0D5] hover:text-[#7A6B5B] hover:transform hover:scale-[1.02]'
+                    }
+                  `}
+                >
+                  <div className={`
+                    transition-colors duration-300
+                    ${activeTab === key 
+                      ? 'text-[#7A6B5B]' 
+                      : 'text-[#9B8777] group-hover:text-[#7A6B5B]'
+                    }
+                  `}>
+                    {config.icon}
+                  </div>
+                  <span className={`
+                    text-sm transition-all duration-300
+                    ${activeTab === key ? 'font-bold' : 'font-medium'}
+                  `}>
+                    {config.label}
+                  </span>
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
 
         {/* Main Content Area */}
         <div 
           ref={contentRef}
           className="flex-1 h-full overflow-y-auto bg-white font-nanum-square"
         >
-          {/* Header */}
-          <div className="sticky top-0 bg-[#EAE4DE] z-10 border-b border-[#E5D5C5]/30">
-            <div className="flex items-center h-14">
+        {/* Updated Header/GNB */}
+        <div className="sticky top-0 bg-white z-10 border-b border-[#F8F0ED]">
+          <div className="flex items-center h-14">
+            {/* Left: Hamburger Menu and Title */}
+            <div className="flex items-center">
               <button
                 onClick={toggleMenu}
-                className="p-4 hover:bg-[#E5D5C5]/30 transition-colors"
+                className="text-[#EAE4DE] hover:opacity-80 transition-opacity bg-white"
               >
-                <Menu size={20} className="text-[#7A6B5B]" />
+                <Menu size={24} />
               </button>
               
-              <div className="flex-1 px-4">
-                <h1 className="text-base font-bold text-[#7A6B5B] tracking-wide">
+              {/* Title Area */}
+              <div className="flex flex-col justify-end items-center pl-4 pr-4">
+                <h1 className="text-[#7A6B5B] font-bold text-base leading-tight">
                   {tabsConfig[activeTab].title}
                 </h1>
-                <p className="text-[11px] text-[#9B8777] tracking-wider">
+                <p className="text-[#9B8777] text-xs mt-0.5">
                   {tabsConfig[activeTab].subtitle}
                 </p>
               </div>
             </div>
+
+            {/* Right: Logo */}
+            <div className="flex-1 flex justify-end items-center pr-4">
+              <div className="flex items-center gap-2">
+                {/* <img 
+                  src="/bettermeBeomeoLogo.png" 
+                  alt="Better Me Logo" 
+                  className="h-6"
+                /> */}
+                <div className="text-left">
+                  <p className="text-sm font-bold leading-tight">BETTER ME CLINIC</p>
+                  <p className="text-xs text-[#9B8777]">베터미의원 대구 범어점</p>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
 
           {/* Content Area */}
           <div className="max-w-4xl mx-auto p-6 min-h-0 bg-white">
