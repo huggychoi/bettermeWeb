@@ -14,13 +14,13 @@ const MenuItem = ({ name, description, salePrices, originalPrice }) => {
       <div className="flex flex-col">
         {/* Title */}
         <div className="mb-2">
-          <h3 className="text-[#4A4039] font-bold text-lg">{name}</h3>
+          <h3 className="text-[#4A4039] font-bold text-base">{name}</h3>
         </div>
 
         {/* Description - if exists */}
         {description && (
           <div className="mb-2">
-            <p className="text-[#665A52] text-sm whitespace-pre-line">
+            <p className="text-[#665A52] text-xs whitespace-pre-line">
               {description}
             </p>
           </div>
@@ -33,7 +33,7 @@ const MenuItem = ({ name, description, salePrices, originalPrice }) => {
               {formatPrice(originalPrice)}원
             </span>
           )}
-          <span className="text-[#FF6B6B] font-bold text-lg">
+          <span className="text-[#FF6B6B] font-bold text-base">
             {formatPrice(salePrices)}원
           </span>
         </div>
