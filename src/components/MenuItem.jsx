@@ -14,7 +14,7 @@ const MenuItem = ({ name, description, salePrices, originalPrice }) => {
       <div className="flex flex-col">
         {/* Title */}
         <div className="mb-2">
-          <h3 className="text-[#4A4039] font-bold text-base">{name}</h3>
+          <h3 className="text-[#4A4039] font-bold text-sm">{name}</h3>
         </div>
 
         {/* Description - if exists */}
