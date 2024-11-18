@@ -107,7 +107,7 @@ function App() {
     return (
       <div className="text-center font-nanum-square">
         <p className="text-[#7A6B5B] text-sm">
-          ※ 부가세 10% {taxIncludedPages.includes(activeTab.toLowerCase()) ? '포함' : '별도'}입니다 ※
+          ※ 부가세 {taxIncludedPages.includes(activeTab.toLowerCase()) ? '포함' : '10% 별도'}입니다 ※
         </p>
       </div>
     );
