@@ -246,10 +246,10 @@ function App() {
               </button>
               
               <div className="flex flex-col justify-center ml-4">
-                <h1 className="text-[#7A6B5B] font-bold text-base leading-tight">
+                <h1 className="text-[#7A6B5B] font-bold text-sm leading-tight">
                   {tabsConfig[activeTab].title}
                 </h1>
-                <p className="text-[#9B8777] text-xs mt-0.5">
+                <p className="text-[#9B8777] text[10pt] mt-0.5">
                   {tabsConfig[activeTab].subtitle}
                 </p>
               </div>

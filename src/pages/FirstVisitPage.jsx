@@ -13,11 +13,6 @@ const firstVisitData = {
           salePrices: "10,000"
         },
         {
-          name: "백옥주사",
-          description: "체내 대사활동을 촉진하고 활성산소를 제거하여\n면역력 강화, 피로회복, 피부톤 개선",
-          salePrices: "10,000"
-        },
-        {
           name: "비타민 주사",
           description: "부족한 비타민 보충\n면역력 강화, 피로회복, 피부톤 개선",
           salePrices: "10,000"
