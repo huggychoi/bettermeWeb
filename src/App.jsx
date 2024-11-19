@@ -103,7 +103,7 @@ function App() {
 
   // Render bottom notice
   const renderBottomNotice = () => {
-    const taxIncludedPages = ['haracell', 'supplements', 'histolab'];
+    const taxIncludedPages = ['membership','haracell', 'supplements', 'histolab'];
     return (
       <div className="text-center font-nanum-square">
         <p className="text-[#7A6B5B] text-sm">
@@ -271,7 +271,7 @@ function App() {
           </div>
 
           {/* Content Area with Transition */}
-          <div className="max-w-4xl mx-auto px-6 pt-6">
+          <div className="max-w-4xl mx-auto pt-6">
             <div
               className={`
                 content-transition

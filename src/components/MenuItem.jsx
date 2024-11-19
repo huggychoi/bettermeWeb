@@ -10,7 +10,7 @@ const MenuItem = ({ name, description, salePrices, originalPrice }) => {
   };
 
   return (
-    <div className="py-4">
+    <div className=" px-6 py-4">
       <div className="flex flex-col">
         {/* Title */}
         <div className="mb-2">
@@ -19,7 +19,7 @@ const MenuItem = ({ name, description, salePrices, originalPrice }) => {
 
         {/* Description - if exists */}
         {description && (
-          <div className="mb-2">
+          <div className=" px-6 mb-2">
             <p className="text-[#665A52] text-xs whitespace-pre-line">
               {description}
             </p>
@@ -27,7 +27,7 @@ const MenuItem = ({ name, description, salePrices, originalPrice }) => {
         )}
 
         {/* Price */}
-        <div className="text-right">
+        <div className=" px-6 text-right">
           {originalPrice && (
             <span className="text-[#998C84] text-sm line-through block mb-0.5">
               {formatPrice(originalPrice)}원
