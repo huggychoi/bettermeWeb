@@ -261,10 +261,10 @@ function App() {
                     alt="Better Me Logo" 
                     className="h-6"
                   />
-                  <div className="text-right">
+                  {/* <div className="text-right">
                     <p className="text-sm font-bold leading-tight">BETTER ME CLINIC</p>
                     <p className="text-xs text-[#9B8777]">베러미의원 대구 범어점</p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
