@@ -148,7 +148,7 @@ function App() {
             </div>
             <img 
               {...imageProps}
-              src="/bettermeBeomeoLogo.png"
+              src="https://github.com/huggychoi/bettermeWeb/blob/main/public/suneung-event.png?raw=true"
               alt="Better Me"
               className="w-full rounded-xl shadow-lg cursor-pointer hover:opacity-95 transition-opacity"
               onClick={handleCloseLanding}
