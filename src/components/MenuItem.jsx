@@ -19,7 +19,7 @@ const MenuItem = ({ name, description, salePrices, originalPrice }) => {
 
         {/* Description - if exists */}
         {description && (
-          <div className=" px-6 mb-2">
+          <div className="mb-2">
             <p className="text-[#665A52] text-xs whitespace-pre-line">
               {description}
             </p>
