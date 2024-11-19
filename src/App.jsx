@@ -257,11 +257,14 @@ function App() {
               <div className="flex-1 flex justify-end items-center pr-4">
                 <div className="flex items-center gap-2">
                   <img 
-                    src="/bettermeBeomeoLogo.png" 
+                    src="https://github.com/huggychoi/bettermeWeb/blob/main/public/Group%201@1x.png?raw=true" 
                     alt="Better Me Logo" 
                     className="h-6"
                   />
-/
+                  <div className="text-right">
+                    <p className="text-sm font-bold leading-tight">BETTER ME CLINIC</p>
+                    <p className="text-xs text-[#9B8777]">베러미의원 대구 범어점</p>
+                  </div>
                 </div>
               </div>
             </div>
