@@ -256,11 +256,13 @@ function App() {
 
               <div className="flex-1 flex justify-end items-center pr-4">
                 <div className="flex items-center gap-2">
-                  <img 
-                    src="https://github.com/huggychoi/bettermeWeb/blob/main/public/Group%201@1x.png?raw=true" 
-                    alt="Better Me Logo" 
-                    className="h-6"
-                  />
+                  <a href="https://beomeo.bettermeclinic.co.kr/" target="blank" rel="noopener noreferrer">
+                    <img 
+                      src="https://github.com/huggychoi/bettermeWeb/blob/main/public/Group%201@1x.png?raw=true" 
+                      alt="Better Me Logo" 
+                      className="h-6"
+                    />
+                  </a>
                   {/* <div className="text-right">
                     <p className="text-sm font-bold leading-tight">BETTER ME CLINIC</p>
                     <p className="text-xs text-[#9B8777]">베러미의원 대구 범어점</p>
